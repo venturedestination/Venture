@@ -1,5 +1,7 @@
 Feature:
-As a registered Seller (You can be also get registred as buyer)
+Given: Registerry AS SELLER
+Then you can find it at MY ACCOUNT, USER PROFILE 
+As a registered Seller 
 I want to log in as a Seller
 So that I can manage or creat my new activities
 
