@@ -16,14 +16,14 @@ And: BOX2 e.mail
 And BOX3. for new password ,
 And BOX4.confirm new password
 And BOX5. Types of acctivities you like 
-And BOX6. Age 
-ANd BOX7 ACTIVITY LIST PREFERENCES
-Then: BOX8 5 MOODS TRIP PREFERENCE
+ANd BOX6 ACTIVITY LIST PREFERENCES
+Then: BOX7 5 MOODS TRIP PREFERENCE
 And: 1.% of day 1. Nature Adventure
 And: 2.% of day 2. Sightseeing
 And: 3.% of day 3. Relax and free time 
 And: 4.% of day 4. People , Cultua & Spectaclues 
 And: 5.% of day 5. Cousine & Gastronomy
+And BOX8. birthday OR YEAR AND COMITMENT
 
 
 3. Scenario 
@@ -90,22 +90,24 @@ And : PASWORD same procedure
 
 -------------------------------------------------------------------------------------------------
 7. Scenario
-Given: USER NEW PROFILE 1 header + 3 colums + 1FOTTER 
+Given: USER NEW PROFILE 1 header + 3 colums + 1FOTTER + CALENDAR+ bUTTON SELLER+ BUTTON FORUM
 Then: User at BUYER CONTROL PANEL DISPLAY 
-Then: 1. Account Use Nam
+Then: uSER PROFIL E1.HEADER
+And : Add picture psosibility
+And click over by defect picture POrfile to change it
+And Acount user name 
+Account Use NamE
 (phone just in case you alredy book/creat and activity so not yet displayed), 
 And: 2. Current Activity Balance: 
-And 1 colum A). Activities done history
+And 1 colum A). Activities done history, with access to trip , chat
 And 2 colum B) Activity booked not yet accomplished.
 And:3 Colum C) Adventurer Ranking (Adventure level). 
 Then: 1 FOTTER Activities available display 
 And: acccording to User activities preferences selected(inscription) 
-
-
-8 Scenario
-Give: THE USER PROFILE 
-
-And: 4. BECOME A SELLER
+And Calendar 
+And preference activities at the calendar 
+And: 4. BECOME A SELLER ADD A TOUR BUTTON AVIALBLE 
+And 5. ADD TO FORUM , OPEN A QUERY TO ON THE FORUM 
 
 -----------------------------------------------------------------------------------------
 
