@@ -15,19 +15,19 @@ Then: BOX1 User name/nick,
 And: BOX2 e.mail
 And BOX3. for new password ,
 And BOX4.confirm new password
-And BOX5. Types of acctivities you like ACTIVITY LIST PREFERENCES 
-Then: BOX6 5 MOODS TRIP PREFERENCE
-And: 1.% of day 1. Nature Adventure
-And: 2.% of day 2. Sightseeing
+And BOX5. ACTIVITY LIST PREFERENCES [Choose form DROPLIST] 
+Then: BOX6 5 MOODS TRIP PREFERENCE [Chosse 3 more impotatnt)
+And: 1.% of day 1. Nature Adventure, sport
+And: 2.% of day 2. City & Sites seeing, 
 And: 3.% of day 3. Relax and free time 
-And: 4.% of day 4. People , Cultua & Spectaclues 
+And: 4.% of day 4. People Cultua & music 
 And: 5.% of day 5. Cousine & Gastronomy
-And BOX7. birthday OR YEAR AND COMITMENT
+And BOX7. YEAR of birth AND COMITMENT
 
 
 3. Scenario 
 Given BASIC USER REGISRATION FORMULARIO 
-Given: User introuduce contac details 
+Given: User introuduce contac details 7 BOXES
 And: Nick Name 
 And: valid email account and pasword 
 Then: System recognizes a valid mail characterictics
@@ -75,8 +75,9 @@ Given: BASIC USER REGISTRATION FORMULARIO
 And : Information gets register at the API 
 Then: System will sellect accordign thier preferences 
 And: Will show simiilar activities at buyer profile footer
+And : Displyed also during navigation
 Then: Newsletter system will offer them similar activities 
-accordig thier preference 
+And: accordig thier preference chossen above
 
 5. Scenario: 
 Given: WORNG EMAIL OR PASSWORD  
@@ -96,15 +97,14 @@ And : Add picture psosibility
 And click over by defect picture POrfile to change it
 And Acount user name 
 Account Use NamE
-(phone just in case you alredy book/creat and activity so not yet displayed), 
 And: 2. Current Activity Balance: 
-And 1 colum A). Activities done history, with access to trip , chat
+And 1 colum A). Activities done, history record
 And 2 colum B) Activity booked not yet accomplished.
-And:3 Colum C) Adventurer Ranking (Adventure level). 
-Then: 1 FOTTER Activities available display 
-And: acccording to User activities preferences selected(inscription) 
-And Calendar 
-And preference activities at the calendar 
+And:3 Colum C) Adventurer Ranking (Adventurer level). 
+Then: 1 FOTTER Activities available according buyer preference displayed 
+And: acccording selected at user inscription. 
+And CALENDAR
+And preference activities at the CALENDAR
 And: 4. BECOME A SELLER ADD A TOUR BUTTON AVIALBLE 
 And 5. ADD TO FORUM , OPEN A QUERY ON YOUR ACTIVITY AT THE ORUM 
 
