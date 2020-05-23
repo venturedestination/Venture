@@ -10,20 +10,19 @@ Then: it appears the BASIC USER REGISRATION FORMULARIO
 
 2. Scenario
 Given BASIC USER REGISRATION FORMULARIO 
-And: User get 8 BOXES to be filled:
+And: User get 7 BOXES to be filled:
 Then: BOX1 User name/nick, 
 And: BOX2 e.mail
 And BOX3. for new password ,
 And BOX4.confirm new password
-And BOX5. Types of acctivities you like 
-ANd BOX6 ACTIVITY LIST PREFERENCES
-Then: BOX7 5 MOODS TRIP PREFERENCE
+And BOX5. Types of acctivities you like ACTIVITY LIST PREFERENCES 
+Then: BOX6 5 MOODS TRIP PREFERENCE
 And: 1.% of day 1. Nature Adventure
 And: 2.% of day 2. Sightseeing
 And: 3.% of day 3. Relax and free time 
 And: 4.% of day 4. People , Cultua & Spectaclues 
 And: 5.% of day 5. Cousine & Gastronomy
-And BOX8. birthday OR YEAR AND COMITMENT
+And BOX7. birthday OR YEAR AND COMITMENT
 
 
 3. Scenario 
@@ -107,7 +106,7 @@ And: acccording to User activities preferences selected(inscription)
 And Calendar 
 And preference activities at the calendar 
 And: 4. BECOME A SELLER ADD A TOUR BUTTON AVIALBLE 
-And 5. ADD TO FORUM , OPEN A QUERY TO ON THE FORUM 
+And 5. ADD TO FORUM , OPEN A QUERY ON YOUR ACTIVITY AT THE ORUM 
 
 -----------------------------------------------------------------------------------------
 
