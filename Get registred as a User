@@ -5,28 +5,34 @@ And: MY ACCOUNT display 2 optionS LOG IN, (Account already created)  or SING UP/
 And: I click SING UP its appear the BASIC USER REGISRATION FORMULARIO
 Then: I land to BASIC USER REGISRATION FORMULARIO I get 5 text boxes to be filled 
 (1 User name/nick, 2 e.mail and 3. for new password , 4.confirm new password 
-5. Types of acctivities you are intersted [DROPLIST WITH ALL ACTIVITIES to be checked] ( example: Surf, Climbing , Diving)
-when : BOX 1. I introuduce valid email account, system recognizes a valid mail has been place at the box , with a green tick at the BOX
+5. Types of acctivities you are intersted [DROPLIST WITH ALL ACTIVITIES to be checked] 
+( example: Surf, Climbing , Diving)
+when : BOX 1. I introuduce valid email account, system recognizes a valid mail has been place at the box , 
+with a green tick at the BOX
 ---------------------------------------------------------------------
-when: I get 5 BOXES filled a confirmation message is displayed  (information has been succesfully introduced and e-mail has been sent the email provide pleas confrim link reieved)
-Then: I go to my email and get to the LINK where it is said e-mail confirmation. 
-Then I click it and back to www.venturedestination.com I am now LOG IN
+when: I introuduce valid email account, I get 5 BOXES filled click SUBMIT and confirmation message is displayed  
+(information has been succesfully introduced and e-mail has been sent the email provide pleas confrim link reieved)
+Then: I go to my personal e-mail account and get to the LINK where it is said e-mail confirmation. 
+Then I click it and back to www.venturedestination.com I AM NOW LOG IN
 
 2. Scenario: Wrong or not valid e.mail address (when confirmation link can not be sent by system to e/mail provided)
 Given : I am at SING UP/ GET REGISTRED, I received a RED message please provide valid email address , with a red tick at the E-mail BOX
-When : I introuduce valid email account, system recognize a valid mail has been place on the E-mail box , with a green tick at the BOX
-Then: I get a confirmation message (information has been succesfully introduced and e-mail has been sent the email provide please confrim link reieved)
-Then: I go to my email and get to the LINK where it is said e-mail confirmation. 
-And : I  click it and back to www.venturedestination.com I can now LOG IN
+When : system recognize a valid mail has been place on the E-mail box , with a green tick at the BOX
+----------------------------------------------------------------------
+when: I introuduce valid email account, I get 5 BOXES filled click SUBMIT and confirmation message is displayed 
+(information has been succesfully introduced and e-mail has been sent the email provide pleas confrim link reieved)
+Then: I go to my personal e-mail account and get to the LINK where it is said e-mail confirmation. 
+Then I click it and back to www.venturedestination.com I AM NOW LOG IN
 
-
-5. Scenario: User getting to My ACCOUNT (top right corner every page)
+3. Scenario: User getting to My ACCOUNT (top right corner every page)
 Given :User introudce to acces 1. User Name or E-mail registred and 2. Password Created in Scenario 1. 
 Given: User Profile is now Displayed.  
-Given: User New Porfile shows: 1. Account User Contact Details on top ( Name , e-mail address),  
-(phone just in case you alredy book/creat and activity so not yet displayed), 2. Current Activity Balance: Activities done history,
-Activity booked not yet accomplished. Adventurer Ranking (Adventure level). 
-3. Activities available display down below acccording to User activities preferences    
+
+-------------------------------------------------------------------------------------------------
+Given: USER NEW PROFILE shows: 1. Account User Contact Details on top ( Name , e-mail address),  
+(phone just in case you alredy book/creat and activity so not yet displayed), 
+2. Current Activity Balance: A). Activities done history,B) Activity booked not yet accomplished.C) Adventurer Ranking (Adventure level). 
+3. Activities available display down below acccording to User activities preferences 4. BECOME A TRIP ORGANIZER
 
 
 When: 
