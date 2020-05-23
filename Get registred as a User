@@ -3,13 +3,16 @@ Given: I am in the landing page
 When: I go to right top corner MY ACCOUNT on landing page
 And: MY ACCOUNT display 2 optionS LOG IN, (Account already created)  or SING UP/ GET REGISTRED (new account)
 And: I click SING UP its appear the BASIC USER REGISRATION FORMULARIO
-Then: It apperas the BASIC USER REGISRATION FORMULARIO I get 4 text boxes to be filled (1 User name/nick, 2 e.mail and 3 for new password , 4 confirm new password
-when : I introuduce valid email account, system recognizes a valid mail has been place on the box , with a green tick at the BOX
-when: I get 3 BOXES filled a confirmation message is displayed  (information has been succesfully introduced and e-mail has been sent the email provide pleas confrim link reieved)
+Then: I land to BASIC USER REGISRATION FORMULARIO I get 5 text boxes to be filled 
+(1 User name/nick, 2 e.mail and 3. for new password , 4.confirm new password 
+5. Types of acctivities you are intersted [DROPLIST WITH ALL ACTIVITIES to be checked] ( example: Surf, Climbing , Diving)
+when : BOX 1. I introuduce valid email account, system recognizes a valid mail has been place at the box , with a green tick at the BOX
+---------------------------------------------------------------------
+when: I get 5 BOXES filled a confirmation message is displayed  (information has been succesfully introduced and e-mail has been sent the email provide pleas confrim link reieved)
 Then: I go to my email and get to the LINK where it is said e-mail confirmation. 
-Then I click it and back to www.venturedestination.com I can now LOG IN
+Then I click it and back to www.venturedestination.com I am now LOG IN
 
-2. Scenario: Wrong or not valid e.mail address (when confirmation link can not be found by system or email link confirmation cannot be sent)
+2. Scenario: Wrong or not valid e.mail address (when confirmation link can not be sent by system to e/mail provided)
 Given : I am at SING UP/ GET REGISTRED, I received a RED message please provide valid email address , with a red tick at the E-mail BOX
 When : I introuduce valid email account, system recognize a valid mail has been place on the E-mail box , with a green tick at the BOX
 Then: I get a confirmation message (information has been succesfully introduced and e-mail has been sent the email provide please confrim link reieved)
@@ -17,23 +20,29 @@ Then: I go to my email and get to the LINK where it is said e-mail confirmation.
 And : I  click it and back to www.venturedestination.com I can now LOG IN
 
 
-3. Scenario: User getting to My ACCOUNT (top right corner every page)
-Given : User introudce user Name or E-mail registred and Password Created in Scenario 1. 
-Given: threfore User Profile is now Displayed.  
-Given: User New Porfile shows 1. Account User Contact Details on top ( Name , e-mail address),  
-(phone just in case you alredy book/creat and activity so not yet displayed), 2. Activities participant history. 3. Activities booked not done yet. 
-4. 
+5. Scenario: User getting to My ACCOUNT (top right corner every page)
+Given :User introudce to acces 1. User Name or E-mail registred and 2. Password Created in Scenario 1. 
+Given: User Profile is now Displayed.  
+Given: User New Porfile shows: 1. Account User Contact Details on top ( Name , e-mail address),  
+(phone just in case you alredy book/creat and activity so not yet displayed), 2. Current Activity Balance: Activities done history,
+Activity booked not yet accomplished. Adventurer Ranking (Adventure level). 
+3. Activities available display down below acccording to User activities preferences    
+
+
 When: 
-And: I type my password properly
-And: I click log in
-Then: I get a wrong user name or password error
+And:
+And: 
+Then: 
 
-
-
-
-
-Scenario: Wrong user name
+3 Scenario: 
 Given : 
 When :
 And :
 And :
+
+
+
+
+
+
+
