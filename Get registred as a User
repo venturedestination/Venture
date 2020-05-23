@@ -1,55 +1,110 @@
 1. Scenario: 
 Given: User type www.venturedestination.com 
-Then: user am in the landing page 
-When: user go to right top corner MY ACCOUNT on landing page
-And: MY ACCOUNT box display 2 optionS 1. LOG IN, (Account already created) or 2.SING UP/ GET REGISTRED (new account)
+Then: user already at landing page 
+then: user go to right top corner MY ACCOUNT 
+And: MY ACCOUNT box display 2 optionS 
+And 1. LOG IN, (Account already created) 
+And 2.SING UP/ GET REGISTRED (new account)
 Then: As new user click SING UP 
 Then: it appears the BASIC USER REGISRATION FORMULARIO
 
 2. Scenario
 Given BASIC USER REGISRATION FORMULARIO 
-And: User get 5 BOXES to be filled:
+And: User get 8 BOXES to be filled:
 Then: BOX1 User name/nick, 
 And: BOX2 e.mail
 And BOX3. for new password ,
 And BOX4.confirm new password
-And BOX5. Types of acctivities 
+And BOX5. Types of acctivities you like 
+And BOX6. Age 
+ANd BOX7 ACTIVITY LIST PREFERENCES
+Then: BOX8 5 MOODS TRIP PREFERENCE
+And: 1.% of day 1. Nature Adventure
+And: 2.% of day 2. Sightseeing
+And: 3.% of day 3. Relax and free time 
+And: 4.% of day 4. People , Cultua & Spectaclues 
+And: 5.% of day 5. Cousine & Gastronomy
 
-3 Scenario 
-Given: BASIC USER REGISTRATION FROMULARIO AT BOX5 [ACTIVITY DROPLIST]
-Then: User marks or checks acctivities they are intersted at [DROPLIST ALL ACTIVITIES]
-Then: User click as much activties possible form DROPLIST {ADD Sumatory} ( example: Surf+Climbing+Diving+...)
 
-4 Scenario:
-Given: User introuduce contac details and valid email account and pasword 
-Then: System recognizes a valid mail when characterictics of same are correct
-And: place with a green tick at the BOX
-Then: User select activities of interest [Tick them at the Droplist BOX 5 Avtivities]
-Given: confirmation message is displayed (information has been succesfully introduced) 
-Then: An E-mail has been sent to email account provided with confirmation link to be confirmed.
-Then: User go to my personal e-mail account and click LINK received for e-mail confirmation. 
-Then User click it and back to www.venturedestination.com 
-And: User is NOW LOG IN
+3. Scenario 
+Given BASIC USER REGISRATION FORMULARIO 
+Given: User introuduce contac details 
+And: Nick Name 
+And: valid email account and pasword 
+Then: System recognizes a valid mail characterictics
+And: System places a green tick at the BOX 
+And : meaning email characteristics are OK
+Then: valid pasword for account 
+And: (not many requirements, not less than 6 any of them numbers) 
+Then: System recognizes a valid Passwords characterictics
+And: System places a green tick at the BOX 
+And: meaning Passwords characteristics are OK
+And: when valid email account and pasword 
+Then: System recognizes a valid mail characterictics
+And: System places a green tick at the BOX 
+And: meaning email characteristics are OK
+Then: valid pasword for account 
+And: not many requirements, not less than 6
+And: any of them numbers 
+Then: System recognizes a valid Passwords characterictics
+And: System places a green tick at the BOX 
+And: meaning Passwords characteristics are OK
+Then: AT BOX5 [ACTIVITY DROPLIST]
+Then: User select activities of interest 
+Then: [Tick them at the Droplist BOX 5 Avtivities]
+And: User click as much activties possible form DROPLIST {ADD Sumatory} 
+And: ( example: Surf+Climbing+Diving+...)
+Then: BOX6 birthday 
+And: Shape
+And : Select fro  (good regular bad)
+And: User push submit buttom information receorede API.
+
+4 Scenario 
+Given: confirmation message is displayed 
+And: says information has been succesfully submited 
+And: (***TO DISCUSS NEcessity of  EMAIL CONFIRMATION CHECK***)
+Then: E-mail has been sent to email account provided 
+And: with confirmation link to be confirmed.
+Then: User go to my personal e-mail account 
+And click LINK received for e-mail confirmation. 
+Then User click link 
+And: back to www.venturedestination.com 
+And: User is NOW LOGGED IN
+
+4 Scenario 
+Given: BASIC USER REGISTRATION FORMULARIO 
+And : Information gets register at the API 
+Then: System will sellect accordign thier preferences 
+And: Will show simiilar activities at buyer profile footer
+Then: Newsletter system will offer them similar activities 
+accordig thier preference 
 
 5. Scenario: 
 Given: WORNG EMAIL OR PASSWORD  
-Then: confirmation link can not be sent by system to e/mail provided)
-And: User received a RED message please provide valid email address , with a red tick at the E-mail BOX
+Then: confirmation link cannot be sent by system, to e/mail provided)
+And: User received a RED message please provide valid email address , 
+And: with a red tick at the E-mail BOX2
 When : system recognize a valid mail has been place on the E-mail box , 
-Then: with a green tick at the BOX information finally submited
+Then: with a green tick at the BOX3 information finally submited
 And : PASWORD same procedure
 
 -------------------------------------------------------------------------------------------------
-6. Scenario
-Given USER NEW PROFILE shows:  
-Then: User at BUYER CONTROL PANEL 
-
-7 scenario
-Given BUY
-Then: 1. Account User Contact Details on top ( Name , e-mail address),  
+7. Scenario
+Given: USER NEW PROFILE 1 header + 3 colums + 1FOTTER 
+Then: User at BUYER CONTROL PANEL DISPLAY 
+Then: 1. Account Use Nam
 (phone just in case you alredy book/creat and activity so not yet displayed), 
-And: 2. Current Activity Balance: A). Activities done history,B) Activity booked not yet accomplished.C) Adventurer Ranking (Adventure level). 
-And: 3. Activities available display down below acccording to User activities preferences 
+And: 2. Current Activity Balance: 
+And 1 colum A). Activities done history
+And 2 colum B) Activity booked not yet accomplished.
+And:3 Colum C) Adventurer Ranking (Adventure level). 
+Then: 1 FOTTER Activities available display 
+And: acccording to User activities preferences selected(inscription) 
+
+
+8 Scenario
+Give: THE USER PROFILE 
+
 And: 4. BECOME A SELLER
 
 -----------------------------------------------------------------------------------------
