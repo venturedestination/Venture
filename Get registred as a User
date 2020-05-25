@@ -1,64 +1,54 @@
 1. Scenario: 
-Given: User type www.venturedestination.com 
-Then: user already at landing page 
-then: user go to right top corner MY ACCOUNT 
-And: MY ACCOUNT box display 2 optionS 
-And 1. LOG IN, (Account already created) 
-And 2.SING UP/ GET REGISTRED (new account)
-Then: As new user click SING UP 
-Then: it appears the BASIC USER REGISRATION FORMULARIO
+Given: www.venturedestination.com 
+then: user go to MY ACCOUNT 
+And 2.User clicks SING UP/ GET REGISTRED (new account)
+Given: 1. Users go to LOG IN, (Account already created)
+Then: 2. USER gets to PROFILE ALREADY CREATED
 
-2. Scenario
-Given BASIC USER REGISRATION FORMULARIO 
-And: User get 7 BOXES to be filled:
-Then: BOX1 User name/nick, 
-And: BOX2 e.mail
-And BOX3. for new password ,
-And BOX4.confirm new password
-And BOX5. ACTIVITY LIST PREFERENCES [Choose form DROPLIST] 
-Then: BOX6 5 MOODS TRIP PREFERENCE [Chosse 3 more impotatnt)
-And: 1.% of day 1. Nature Adventure, sport
-And: 2.% of day 2. City & Sites seeing, 
-And: 3.% of day 3. Relax and free time 
-And: 4.% of day 4. People Cultua & music 
-And: 5.% of day 5. Cousine & Gastronomy
-And BOX7. YEAR of birth AND COMITMENT
-
-
-3. Scenario 
-Given BASIC USER REGISRATION FORMULARIO 
-Given: User introuduce contac details 7 BOXES
-And: Nick Name 
+3. Scenario
+Given User click in the USER REGISRATION FORMULARIO 
+And:User type BOX1 name/nick
+And System checks if it dose already exit.
+And: System places a green tick at the BOX if it dose not
+And: System places a red tick at the BOX if it dose
+And:User type BOX2 e.mail
 And: valid email account and pasword 
 Then: System recognizes a valid mail characterictics
 And: System places a green tick at the BOX 
 And : meaning email characteristics are OK
-Then: valid pasword for account 
+And User type BOX3. for new password ,
+Then: Insert valid pasword for account 
 And: (not many requirements, not less than 6 any of them numbers) 
 Then: System recognizes a valid Passwords characterictics
 And: System places a green tick at the BOX 
-And: meaning Passwords characteristics are OK
-And: when valid email account and pasword 
-Then: System recognizes a valid mail characterictics
+And User type BOX4.confirm new password
+Then: System recognizes a valid Passwords characterictics from above
 And: System places a green tick at the BOX 
-And: meaning email characteristics are OK
-Then: valid pasword for account 
-And: not many requirements, not less than 6
-And: any of them numbers 
-Then: System recognizes a valid Passwords characterictics
-And: System places a green tick at the BOX 
-And: meaning Passwords characteristics are OK
-Then: AT BOX5 [ACTIVITY DROPLIST]
-Then: User select activities of interest 
-Then: [Tick them at the Droplist BOX 5 Avtivities]
-And: User click as much activties possible form DROPLIST {ADD Sumatory} 
-And: ( example: Surf+Climbing+Diving+...)
-Then: BOX6 birthday 
-And: Shape
-And : Select fro  (good regular bad)
-And: User push submit buttom information receorede API.
+Then: User select activities of interest AT BOX5 [ACTIVITY DROPLIST]
+Then: User Tick them at the Droplist BOX5 Avtivities]
+And:Then: User select form DROPLIST ACTIVITIES 4 DIFERENTS FILEDS: 1LAND-2WATER-3AIR-4MIND ACTIVITIES
+And: User select From 1 DROP LIST LAND ACTIVITIS: LIST (Hiking, Cycling, Running, etc	
+And: User select From 2 DROP LIST WATER ACTIVITIS:LIST (Sailing, Rafting, Surf 
+And: User select from 3 DROP LIST AIR ACTIVITIES: LIST (Parachute , paragliding, Delta wing
+nd: User select from  4 DROP LIST MIND ACTIVITIES: LIST (Yoga, thai chi , Marcial arts ect.)
+And: User click as much activties possible form DROPLIST 
+And: {System ADD Sumatory} ( example: Surf+Climbing+Diving+...)
+Then: User choose how to BEST SPEND TIME DURING 1 DAY OF HOLYDAYS.
+And: User select PERFECT DAY DEDICATION from 5 difernt types 
+Then:  User select BOX6 5 MOODS TRIP PREFERENCE
+And: 1.% of day 1. Nature Adventure and sport
+And: 2.% of day 2. City & Sightseeing, 
+And: 3.% of day 3. Mind Activities , Relax and free time 
+And: 4.% of day 4. People Cultua & music 
+And: 5.% of day 5. Cousine & Gastronomy
+Then: BOX7 Year of birth an commitment 
+Then: User Choose form [DROPLIST]  78, 81, 82, 92,...
+And User choose physic demanding atctivities level preferred
+And : User Selects for (demanding , regular , not demanding activities)
+And: User pushs submit buttom information recorded API
 
-4 Scenario 
+
+3 Scenario 
 Given: confirmation message is displayed 
 And: says information has been succesfully submited 
 And: (***TO DISCUSS NEcessity of  EMAIL CONFIRMATION CHECK***)
@@ -73,7 +63,7 @@ And: User is NOW LOGGED IN
 4 Scenario 
 Given: BASIC USER REGISTRATION FORMULARIO 
 And : Information gets register at the API 
-Then: System will sellect accordign thier preferences 
+Then: System will sellect accordign their preferences 
 And: Will show simiilar activities at buyer profile footer
 And : Displyed also during navigation
 Then: Newsletter system will offer them similar activities 
@@ -90,11 +80,11 @@ And : PASWORD same procedure
 
 -------------------------------------------------------------------------------------------------
 7. Scenario
-Given: USER NEW PROFILE 1 header + 3 colums + 1FOTTER + CALENDAR+ bUTTON SELLER+ BUTTON FORUM
+Given: USER PROFILE 1 header + 3 colums + 1FOTTER + CALENDAR+ bUTTON SELLER+ BUTTON FORUM
 Then: User at BUYER CONTROL PANEL DISPLAY 
-Then: uSER PROFIL E1.HEADER
+Then: USER PROFIL E1.HEADER
 And : Add picture psosibility
-And click over by defect picture POrfile to change it
+And click over defect Picture to change it
 And Acount user name 
 Account Use NamE
 And: 2. Current Activity Balance: 
@@ -105,12 +95,25 @@ Then: 1 FOTTER Activities available according buyer preference displayed
 And: acccording selected at user inscription. 
 And CALENDAR
 And preference activities at the CALENDAR
-And: 4. BECOME A SELLER ADD A TOUR BUTTON AVIALBLE 
-And 5. ADD TO FORUM , OPEN A QUERY ON YOUR ACTIVITY AT THE ORUM 
+And: 4. BECOME A SELLER/INSTURCTOR ADD A TOUR BUTTON AVIALBLE 
+And 5. ADD TO FORUM , OPEN A QUERY ON YOUR ACTIVITY AT THE FORUM 
 
 -----------------------------------------------------------------------------------------
 
+Scenario 8 
+Given: User clicks button BECOME A GUIDE/INSTRUCTOR
+Then: User clicks in ADD TOUR OPTION 
+Then: INtroudce TRIP/ ACTIVITY the intinerary by destination
+Then: 1 Destination + No. days (and days by Mood - 5types)
+Then : Select No. of day for dstination
+And: User can chose also 1 day time activity
+Then: 
+And: User Add TEXT trip/Activity GOALS   
+And: User Add Pictures of Activity = 1 Pic by Destination
+And User Add 
 
+
+Then: For each Destination stage GUIDE 
 
 
 
