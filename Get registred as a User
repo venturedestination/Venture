@@ -11,10 +11,12 @@ And:User type BOX1 name/nick
 And System checks if it dose already exit.
 And: System places a green tick at the BOX if it dose not
 And: System places a red tick at the BOX if it dose
+And: System shows alternatives using similar words
+And user insert correct one 
 And:User type BOX2 e.mail
-And: valid email account and pasword 
+And: valid email account
 Then: System recognizes a valid mail characterictics
-And: System places a green tick at the BOX 
+And: System places a green tick at the BOX3
 And : meaning email characteristics are OK
 And User type BOX3. for new password ,
 Then: Insert valid pasword for account 
@@ -22,36 +24,41 @@ And: (not many requirements, not less than 6 any of them numbers)
 Then: System recognizes a valid Passwords characterictics
 And: System places a green tick at the BOX 
 And User type BOX4.confirm new password
-Then: System recognizes a valid Passwords characterictics from above
+Then: System recognizes a valid confirmed Passwords characterictics from above
 And: System places a green tick at the BOX 
+And: If it is wrong then red tick 
+And: System ask to repeat till both passwords finally matched 
 Then: User select activities of interest AT BOX5 [ACTIVITY DROPLIST]
 Then: User Tick them at the Droplist BOX5 Avtivities]
 And:Then: User select form DROPLIST ACTIVITIES 4 DIFERENTS FILEDS: 1LAND-2WATER-3AIR-4MIND ACTIVITIES
 And: User select From 1 DROP LIST LAND ACTIVITIS: LIST (Hiking, Cycling, Running, etc	
-And: User select From 2 DROP LIST WATER ACTIVITIS:LIST (Sailing, Rafting, Surf 
-And: User select from 3 DROP LIST AIR ACTIVITIES: LIST (Parachute , paragliding, Delta wing
-nd: User select from  4 DROP LIST MIND ACTIVITIES: LIST (Yoga, thai chi , Marcial arts ect.)
-And: User click as much activties possible form DROPLIST 
-And: {System ADD Sumatory} ( example: Surf+Climbing+Diving+...)
-Then: User choose how to BEST SPEND TIME DURING 1 DAY OF HOLYDAYS.
-And: User select PERFECT DAY DEDICATION from 5 difernt types 
-Then:  User select BOX6 5 MOODS TRIP PREFERENCE
+And: User select From 2 DROP LIST WATER ACTIVITIS:LIST (Sailing, Rafting, Surfing
+And: User select from 3 DROP LIST AIR ACTIVITIES: LIST (Parachuting , paragliding, Delta winging
+nd: User select from  4 DROP LIST MIND ACTIVITIES: LIST (Yoging, thai ching , Marcial arting : ) ect.)
+And: User click as much activties as he wants possible form DROPLIST 
+And: If not in the list then ADD OTHERS system will send it to Adminstration Panel (for Support)
+And: Support will also propouse User to add the activity or trip suggested.
+And: {System ADD Sumatory for activities clients} ( example: Surf+Climbing+Diving+...)
+Then: User choose also how to best spend time dutina and adventure.
+And: User select PERFECT DAY DEDICATION from 5 different roles
+Then: User rate BOX6 according thir interest 
 And: 1.% of day 1. Nature Adventure and sport
-And: 2.% of day 2. City & Sightseeing, 
+And: 2.% of day 2. Landscapes & Sightseeing
 And: 3.% of day 3. Mind Activities , Relax and free time 
-And: 4.% of day 4. People Cultua & music 
+And: 4.% of day 4. People, Culture & music 
 And: 5.% of day 5. Cousine & Gastronomy
-Then: BOX7 Year of birth an commitment 
+Then: BOX7 Year of birth 
 Then: User Choose form [DROPLIST]  78, 81, 82, 92,...
-And User choose physic demanding atctivities level preferred
-And : User Selects for (demanding , regular , not demanding activities)
+Then: User Choose form [DROPLIST] his Phisical Commitment for the adventure 
+And User choose physical demanding atctivities level preferred
+And : User Selects for (physical demanding , regular physical demand , not demanding activities)
 And: User pushs submit buttom information recorded API
 
 
 3 Scenario 
 Given: confirmation message is displayed 
-And: says information has been succesfully submited 
-And: (***TO DISCUSS NEcessity of  EMAIL CONFIRMATION CHECK***)
+And: System says information has been succesfully submited 
+And: (***TO DISCUSS the necessity of  EMAIL CONFIRMATION**)
 Then: E-mail has been sent to email account provided 
 And: with confirmation link to be confirmed.
 Then: User go to my personal e-mail account 
@@ -62,45 +69,36 @@ And: User is NOW LOGGED IN
 
 4 Scenario 
 Given: BASIC USER REGISTRATION FORMULARIO 
-And : Information gets register at the API 
+And : Information from Clients gets register at the API 
 Then: System will sellect accordign their preferences 
-And: Will show simiilar activities at buyer profile footer
-And : Displyed also during navigation
+And: Will show activities matches adventurer profile (footer)
+And : Displyed preferred activities during navigation
 Then: Newsletter system will offer them similar activities 
 And: accordig thier preference chossen above
-
-5. Scenario: 
-Given: WORNG EMAIL OR PASSWORD  
-Then: confirmation link cannot be sent by system, to e/mail provided)
-And: User received a RED message please provide valid email address , 
-And: with a red tick at the E-mail BOX2
-When : system recognize a valid mail has been place on the E-mail box , 
-Then: with a green tick at the BOX3 information finally submited
-And : PASWORD same procedure
+And: Be awared not to mail constantly only when activity really matches.
 
 -------------------------------------------------------------------------------------------------
 7. Scenario
-Given: USER PROFILE 1 header + 3 colums + 1FOTTER + CALENDAR+ bUTTON SELLER+ BUTTON FORUM
-Then: User at BUYER CONTROL PANEL DISPLAY 
-Then: USER PROFIL E1.HEADER
-And : Add picture psosibility
-And click over defect Picture to change it
-And Acount user name 
-Account Use NamE
-And: 2. Current Activity Balance: 
-And 1 colum A). Activities done, history record
-And 2 colum B) Activity booked not yet accomplished.
-And:3 Colum C) Adventurer Ranking (Adventurer level). 
-Then: 1 FOTTER Activities available according buyer preference displayed 
-And: acccording selected at user inscription. 
-And CALENDAR
-And preference activities at the CALENDAR
-And: 4. BECOME A SELLER/INSTURCTOR ADD A TOUR BUTTON AVIALBLE 
-And 5. ADD TO FORUM , OPEN A QUERY ON YOUR ACTIVITY AT THE FORUM 
+
+Given: USER PROFILE PANEL 
+Add picture possibility.
+And: If not icon/Sport signal with preferred user sport will be shown 
+And: The Adventurer name Inicial at the centre
+And: User can click over defect Picture (Sport signal + Inicial) to change it
+And: Acount user display also Name/Nick selected for client
+And: User can check its current Activity Balance: 
+And A). Activities done, history record
+And B) Activity booked not yet accomplished.
+And:C) Adventurer Ranking (Adventurer level). 
+Then: User CALENDAR will keep al above relevant dates mark in calendar with diferents colors.
+And User can also ceck at the CALENDAR favorite activities and destination currently available 
+Then: Pictures of Activities available according buyer preference will be displayed. 
+And: Creat a Trip/Activity  buttom available.
+And Joint to FORUM to open a QUERY ON YOUR FAVORITE ACTIVITY AT THE FORUM 
 
 -----------------------------------------------------------------------------------------
 
-Scenario 8 
+Scenario 8  
 Given: User clicks button BECOME A GUIDE/INSTRUCTOR
 Then: User clicks in ADD TOUR OPTION 
 Then: INtroudce TRIP/ ACTIVITY the intinerary by destination
