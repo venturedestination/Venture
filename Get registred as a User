@@ -9,7 +9,7 @@ Then: 2. USER gets to PROFILE ALREADY CREATED
 Given User click in the USER REGISRATION FORMULARIO 
 And:User type BOX1 name/nick
 And System checks if it dose already exit.
-And: System places a green tick at the BOX if it dose not
+And: System places a green tick at the BOX if it dose Not
 And: System places a red tick at the BOX if it dose
 And: System shows alternatives using similar words
 And user insert correct one 
@@ -18,12 +18,12 @@ And: valid email account
 Then: System recognizes a valid mail characterictics
 And: System places a green tick at the BOX3
 And : meaning email characteristics are OK
-And User type BOX3. for new password ,
+And User type at BOX3. for new password ,
 Then: Insert valid pasword for account 
 And: (not many requirements, not less than 6 any of them numbers) 
 Then: System recognizes a valid Passwords characterictics
 And: System places a green tick at the BOX 
-And User type BOX4.confirm new password
+And User type at BOX4.confirm new password
 Then: System recognizes a valid confirmed Passwords characterictics from above
 And: System places a green tick at the BOX 
 And: If it is wrong then red tick 
@@ -36,29 +36,31 @@ And: User select From 2 DROP LIST WATER ACTIVITIS:LIST (Sailing, Rafting, Surfin
 And: User select from 3 DROP LIST AIR ACTIVITIES: LIST (Parachuting , paragliding, Delta winging
 nd: User select from  4 DROP LIST MIND ACTIVITIES: LIST (Yoging, thai ching , Marcial arting : ) ect.)
 And: User click as much activties as he wants possible form DROPLIST 
-And: If not in the list then ADD OTHERS system will send it to Adminstration Panel (for Support)
-And: Support will also propouse User to add the activity or trip suggested.
+And: If Activity it is not in the list 
+Then ADD OTHERS system will send it to Adminstration Panel (for Support)
+And: Accordingly Support will also propouse User to add the activity or trip suggested to the system
 And: {System ADD Sumatory for activities clients} ( example: Surf+Climbing+Diving+...)
-Then: User choose also how to best spend time dutina and adventure.
+Then: User choose also how to best spend your time during adventure.
 And: User select PERFECT DAY DEDICATION from 5 different roles
-Then: User rate BOX6 according thir interest 
-And: 1.% of day 1. Nature Adventure and sport
-And: 2.% of day 2. Landscapes & Sightseeing
-And: 3.% of day 3. Mind Activities , Relax and free time 
-And: 4.% of day 4. People, Culture & music 
-And: 5.% of day 5. Cousine & Gastronomy
-Then: BOX7 Year of birth 
-Then: User Choose form [DROPLIST]  78, 81, 82, 92,...
+Then: User rate BOX6 according their interest.
+And: 1.% of day 1. Nature Adventure and sport.
+And: 2.% of day 2. Landscapes & Sightseeing.
+And: 3.% of day 3. Mind Activities , Relax and free time. 
+And: 4.% of day 4. People, Culture & music.
+And: 5.% of day 5. Cousine & Gastronomy.
+Then: BOX7 YEAR OF BIRTH 
+Then: User Choose form [DROPLIST] ALL YEARS available 78, 81, 82, 92,...
 Then: User Choose form [DROPLIST] his Phisical Commitment for the adventure 
-And User choose physical demanding atctivities level preferred
-And : User Selects for (physical demanding , regular physical demand , not demanding activities)
-And: User pushs submit buttom information recorded API
+And User choose physical demanding atctivities favorit level for their adventure
+And : User Selects form 1. physical demanding , 2. regular physical demand ,3. not demanding activities.
+And: User pushs submit buttom 
+And: information gets recorded at the API
 
 
 3 Scenario 
 Given: confirmation message is displayed 
 And: System says information has been succesfully submited 
-And: (***TO DISCUSS the necessity of  EMAIL CONFIRMATION**)
+And: (***TO DISCUSS the necessity of EMAIL CONFIRMATION**)
 Then: E-mail has been sent to email account provided 
 And: with confirmation link to be confirmed.
 Then: User go to my personal e-mail account 
@@ -69,7 +71,7 @@ And: User is NOW LOGGED IN
 
 4 Scenario 
 Given: BASIC USER REGISTRATION FORMULARIO 
-And : Information from Clients gets register at the API 
+And : Information from Clients gets registered at the API 
 Then: System will sellect accordign their preferences 
 And: Will show activities matches adventurer profile (footer)
 And : Displyed preferred activities during navigation
