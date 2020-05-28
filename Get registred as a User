@@ -5,60 +5,78 @@ Given: Users go to LOG IN if Account already created
 Then:  USER gets to already existing PROFILE.
 And 2.User clicks SING UP to GET REGISTRED as new user.
 
-2. Scenario
+2.1 Scenario
 Feature: SING UP USER REGISRATION FORMULARIO 
 And: User fill in name/nick at name GAP
 And if NAME dose already exit red tick at gap
-And: System shows alternatives using similar Names available.
-Then: System places a green tick at the name gap if it dose Not already exists.
-Then: User fill in e.mail
-And: valid email account
+And: System shows alternatives as similar Names available.
+And: if it dose Not already exists
+Then: System places a green tick at the name gap .
+Then: User click in to fill e.mail with valid email account
 Then: System recognizes a valid mail characterictics
 And: System places a green tick at the gap
+And in cas not red tick 
+And: User cannot proceed till valid e.mail is recognized.
+
+2.2 Scenario
 And User fill in new password
 Then: Insert valid pasword for account 
-And: Passwords requirements are shown (not less than 6 , any of them numbers) 
-Then: System recognizes a valid Passwords characterictic places a green tick at the gap
-And User fill in  confirm new password gap
-Then: System recognizes a valid confirmed Passwords characterictics from above
-And: System places a green tick at the gap 
+And: Passwords requirements are shown 
+And System show instruciton not less than 6 & alfanumeric.
+Then: System recognizes a valid PASSWORD characterictic 
+And: System places a green tick at the gap
+And User fill in CONFIRM NEW PASSWORD 
+Then: System CHECKS characterictics from above passwords
 And: If it is not correct 
 Then: system red tick at the gap 
 And: System ask to repeat till both passwords match
+Then: User type correct one 
+And: System places a green tick at the gap
+And: User can proceed fill in next gap
 
-3. Scenario
-Feature: User select/Tick FAVORITE ACTIVITIES FORM
+2.2 Scenario
+Feature: User select/Tick FAVORITE ACTIVITIES from ELEMENTS FORM
 And: User select LAND ACTIVITIS: (Hiking, Cycling, Running, etc	
 And: User select WATER ACTIVITIS: (Sailing, Rafting, Surfing
 And: User select AIR ACTIVITIES: (Parachuting , paragliding, Delta winging
 nd: User select MIND ACTIVITIES: (Yoging, thai ching , Marcial arting : ) ect.)
 And: User click as much activties as She/he wants form DROPLISTs above.
 
-3.1. Scenario
+2.3. Scenario
 And: If user finds Activity it is not in the list 
 Then: User clicks ADD OTHERS activities.
 And: System will send NO REGISTRED ACTIVITIES to ADMINISTRATOR PANEL for Support
-And: Support will consider IT and if so add acctivity to system accordingly.
-And: {System complie sumatory for ACTIVITY clients} ( example: Surf+Climbing+Diving+...)
+And: Support will consider IT and if aplicable add acctivity to system accordingly.
+And: {System complie sumatory for ACTIVITY clients} ( example:uSER1= Surf+Climbing+Diving+...)
+And : record the information at USER PROFILE
 
-4. Scenario
-Feature: User rate PERFECT TIME TOUR/ ADVENTURE DAY TIME DEDICATION FORM
-And: User add % of day dedicated to Nature Adventure and sport 
-And: User add % of day dedicated to Landscapes & Sightseeing.
+2.4 Scenario
+Feature: User rate FAVORITE TIME DEDICATION FOR ACTIVITY
+And: User add % of day dedicated to Adventure and sport 
+And: User add % of day dedicated to Nature Landscapes & Sightseeing.
 And: User add % of day dedicated to Mind Activities , Relax and free time. 
 And: User add % of day dedicated to People, Culture & music.
 And: User add % of day dedicated to Cousine & Gastronomy.
 
-5. Scenario
-Then: User select YEAR OF BIRTH form YEARS DROPLIST
+2.5 Scenario
+Then: User select YEAR OF BIRTH
+And: Click over year droplist
+And: Year of birth is recorded
+
+2.6 Scenario
 Feature: Select PHYSICAL COMMITMENT FOR ADVENTURE FORM 
-And : User CLICKS on physical demanding, regular demand , not demanding activities.
-And: User pushs submit buttom 
+And: If User physical commitment is high
+Then: User clicks physical demanding Adventures
+And: If User physical commitment is medium
+Then: User clicks physical regular demand ,
+And: If User physical commitment is low
+Then: User clicks Not demanding activities.
+And: User pushes submit buttom 
 And: information gets recorded in the system
 Then: information message is displayed 
-And: USER BASIC REGISTRATION PROCESS Is COMPLETED
+And: USER BASIC REGISTRATION FORM COMPLETED
 
-6. Scenario
+2.7 Scenario
 Then: E-mail has been sent to email account provided 
 And: with confirmation link to be confirmed.
 Then: User go to personal e-mail account selected. 
@@ -66,57 +84,99 @@ And click LINK received for e-mail confirmation.
 And: back to www.venturedestination.com 
 And: User is NOW LOGGED IN
 
-6. Scenario 
-Given: INFORMATION FROM BASIC USER REGISTRATION FORMULARIO gets registered at system
-Then: System will sellect accordign their preferences avialable to BE displayed
-And: Displying preferred activities during navigation available that matches adventurer profile (footer)
-Then: Newsletter system will offer them similar activities accordig thier preference chossen above
-And: Be awared not to mail constantly only when activity really matches revise periodicity
+2.8 Scenario 
+Given: BASIC USER REGISTRATION DATA gets registered at system
+Then: System will sellect TOURS/ACTIVITIES accordign registred data
+And: Displying preferred activities during navigation 
+Then: Newsletter system will sent by e-mail similar activities 
+And: Bonly when activity really matches (revise periodicity)
 
 -------------------------------------------------------------------------------------------------
-7. Scenario
-
-Feature: USER DASHBOARD PROFILE PANEL 
-Then: User profile picture given user Inicials
-Then: User click over defect Picture 
-Then: User select picture from won PC browser  
+3. Scenario
+Feature: USER DASHBOARD PANEL 
+Given: User gets a profile picture given by defect (user Inicials OR sport icon )
+Then: User click on top of by defect Picture 
+Then: System display up load picture browser  
 And: User upload picture from his computer
 Then: User change by defect picture for its own pic
-And: User name displayed Nick name selected for client & pic slected.
+And: User name displayed Nick name selected previously
 
-8. Scenario 
+3.1 Scenario
+Feature: USER PROPFILE CALENDARIO 
+Then: Shows adventures currently available EACH date.
+And: User check Activity Activities done & booked dates by moving in
+Then: USER PROFILE shows above relevant dates mark with differents colors.
+And: Adventurer Ranking is given according Adventurer level - ACTIVITIES DONE (LEVEL 1,2,3,Expert)
+
+3.2 Scenario
+Feature: USER PROFILE MESSAGES BOX
+Then: User click on conversations
+And: User open conversations
+Then: User click in conversation 
+Then: System opens a dalog box with conversation
+And: User can check messages
+
+3.3 
+Feature: REVIEW SYSTEM 
+ activity finished 
+
+3.3 Scenario
+Given: User clicks at USER PROPFILE CALENDARIO for specific date 
+Then: Calendar shows TOUR /ACTIVITY AVAILBLE that date
+
+3.4. Scenario 
+Given: USER PROFILE 
+And: User click in PAYMENT METHOD
 
 
-And: User check current Activity Balance, Activities done, history record Activity booked not yet accomplished.
-And: Adventurer Ranking is given accordingly (Adventurer level). 
-Then: CALENDAR will keep user above relevant dates mark with differents colors.
-Then: User clicks at the calendar specific date 
-And: Calendar shows destination and adventures currently available for that date.
-Then: Picrture of Activity and Tour available will be displayed at Footer according user preferences.
-And: UPDATE PAYMENT METHOD  
+3.5
 And: CREAT A TOUR/ACTIVITY buttom available user to press
 And JOINT TO FORUM/ OPEN A QUERY OR LOOK FOR ACTIVITY AT THE FORUM 
 And ON LINE CHATS AVALABLE
 
 -----------------------------------------------------------------------------------------
 
-8. Scenario  
-The user wants to become a guide, insturctor, collaborator
-Given:  clicks in ADD TOUR/ ACTIVITY OPTION 
-And: Choose DESTINATION at the map 
-Then: linked with google maps
+4. Scenario  
+Given: The user wants to become a guide, insturctor, collaborator
+Then: if only 1 destination involved.
+Then: User clicks in ADD ACTIVITY (insted od add tour)
+And: Choose MAIN DESTINATION by fill in the gap 
+Then: Map is linked with google maps and will show destination position
+And: Correct Name of the destination is slected by user 
+Then: Selected Location will be displayed as FIRST STAGE AT RUTE TABLE
+Then: User ADD number of days spent on first STAGE (No.)
 Then: Introudce main ACTIVITies/SPORTs from DROPLIST for the TOUR
-Then: User select STAGEs according to RUTE/itinerary at Destination selected, 
-Then: System creat a RUTE map with a linking line in between STAGES at the destination.
-And: System will show INTEREACTIVE MAP at the TOUR ACTITIVY OFFER
-Then: User introudce how many days spent for each STAGE  
-And: Colaborato asing a % TIME DEDICATION for each day of activity.
-And: User for example selecct FOR FIRST DAYS : 35% FOR 1. Nature Adventure and sport. 
-And: 10 % of day FOR 2. Landscapes & Sightseeing.
-And: 10% of day FOR 4. People, Culture & music.
-And: 30.% of day FOR 5. Cousine & Gastronomy
-And: 15.% of day FOR 3. Mind Activities , Relax and free time,
+Then: User ADD ACTIVITIES SCHEDULE FOR THAT DAY 
+And: Then ADD for each day dedication time planed
+And: User add % of day dedicated to Nature Adventure and sport 
+And: User add % of day dedicated to Landscapes & Sightseeing.
+And: User add % of day dedicated to Mind Activities , Relax and free time. 
+And: User add % of day dedicated to People, Culture & music.
+And: User add % of day dedicated to Cousine & Gastronomy.
+And: If just one time Destination and location press finish tour rute
+Then: LOCATION , No. DAYS, ACTIVITY is NOW recorde at RUTE TABLE for each STAGE. 
+
+8.1 Scenario
+Given: User click ADD TOUR when more than one location involve.  
+Then: User press add anther location instad of finish the RUTE/Itinerary
+And: Userr add NEW LOCATION by filling the 2 stage gap
+Then: Map is linked with google maps and will show destination position
+And: Correct Name of the LOCATION is slected by user 
+Then: System will add 2 location name to the TABLE RUTE
+Then: User ADD number of days spent on NEW STAGE
+Then: Introudce main ACTIVITies/SPORTs AT the STAGE
+And: Then ADD for each day dedication time planed at the STAGE
+And: User add % of day dedicated to Nature Adventure and sport 
+And: User add % of day dedicated to Landscapes & Sightseeing.
+And: User add % of day dedicated to Mind Activities , Relax and free time. 
+And: User add % of day dedicated to People, Culture & music.
+And: User add % of day dedicated to Cousine & Gastronomy.
 Then: Total of 100% TIME DEDICATION FOR EACH DAY PLANNED AT THE TOUR (circular icon)
+Then: LOCATION , No. DAYS, ACTIVITY is NOW recorde at RUTE TABLE for each second STAGE. 
+Then: System creat a RUTE map with a linking line in between STAGES at the destination.
+And: System will show INTEREACTIVE MAP at the TOUR ACTITIVY OFFER and RUTE TABLE 
+
+8.2 Scenario 
 Then: User Add OVERVIEW TEXT TOUR/Activity, DESCRIPTION,  GOALS, MOTIVES for building it.
 And: User Add GALLERY  MAIN PICTURE high resolution for Trip/ Activity will be shown at offer trip header 
 And: User ADD also at least 1 PICTURES for STAGES at the adventure/tour 
