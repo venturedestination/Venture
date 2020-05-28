@@ -1,79 +1,67 @@
 1. Scenario: 
 Given: www.venturedestination.com 
 then: user go to MY ACCOUNT 
-And 2.User clicks SING UP/ GET REGISTRED (new account)
-Given: 1. Users go to LOG IN, (Account already created)
-Then: 2. USER gets to PROFILE ALREADY CREATED
+Given: Users go to LOG IN if Account already created
+Then:  USER gets to already existing PROFILE.
+And 2.User clicks SING UP to GET REGISTRED as new user.
 
 2. Scenario
-Given After User click SING UP USER REGISRATION FORMULARIO opens 
-And:User type BOX1 name/nick
-And System checks if it dose already exit.
-And: System places a green tick at the BOX if it dose Not
-And: System places a red tick at the BOX if it dose
-And: System shows alternatives using similar words
-And user insert correct one 
-And:User type BOX2 e.mail
+Feature: SING UP USER REGISRATION FORMULARIO 
+And: User fill in name/nick at name GAP
+And if NAME dose already exit red tick at gap
+And: System shows alternatives using similar Names available.
+Then: System places a green tick at the name gap if it dose Not already exists.
+Then: User fill in e.mail
 And: valid email account
 Then: System recognizes a valid mail characterictics
-And: System places a green tick at the BOX3
-And : meaning email characteristics are OK
-And User type at BOX3. for new password ,
+And: System places a green tick at the gap
+And User fill in new password
 Then: Insert valid pasword for account 
-And: (not many requirements, not less than 6 any of them numbers) 
-Then: System recognizes a valid Passwords characterictics
-And: System places a green tick at the BOX 
-And User type at BOX4.confirm new password
+And: Passwords requirements are shown (not less than 6 , any of them numbers) 
+Then: System recognizes a valid Passwords characterictic places a green tick at the gap
+And User fill in  confirm new password gap
 Then: System recognizes a valid confirmed Passwords characterictics from above
-And: System places a green tick at the BOX 
-And: If it is wrong then red tick 
-And: System ask to repeat till both passwords finally match
-Then: User select activities of interest AT BOX5 [ACTIVITY DROPLIST]
-Then: User Tick them at the Droplist BOX5 Avtivities]
-And:Then: User select form DROPLIST ACTIVITIES 4 DIFERENTS FILEDS: 1LAND-2WATER-3AIR-4MIND ACTIVITIES
-And: User select From 1 DROP LIST LAND ACTIVITIS: LIST (Hiking, Cycling, Running, etc	
-And: User select From 2 DROP LIST WATER ACTIVITIS:LIST (Sailing, Rafting, Surfing
-And: User select from 3 DROP LIST AIR ACTIVITIES: LIST (Parachuting , paragliding, Delta winging
-nd: User select from  4 DROP LIST MIND ACTIVITIES: LIST (Yoging, thai ching , Marcial arting : ) ect.)
-And: User click as much activties as he wants form DROPLIST 
+And: System places a green tick at the gap 
+And: If it is not correct 
+Then: system red tick at the gap 
+And: System ask to repeat till both passwords match
+Then: User select activities of interest from the ACTIVITY DROPLIST
+Then: User Tick them at the Avtivities Droplist:
+And: User select From DROPLIST LAND ACTIVITIS: LIST (Hiking, Cycling, Running, etc	
+And: User select From DROPLIST WATER ACTIVITIS:LIST (Sailing, Rafting, Surfing
+And: User select from DROPLIST AIR ACTIVITIES: LIST (Parachuting , paragliding, Delta winging
+nd: User select from DROPLIST MIND ACTIVITIES: LIST (Yoging, thai ching , Marcial arting : ) ect.)
+And: User click as much activties as he wants form DROPLISTs above.
 And: If Activity it is not in the list 
-Then ADD OTHERS system will send it to Adminstration Panel (for Support)
-And: Accordingly Support will also propouse User to add the activity or TOUR suggested to the system
-And: {System complie sumatory for activities clients} ( example: Surf+Climbing+Diving+...)
-Then: User choose also how to best spend their time during the adventure or TOUR
-And: User rates at BOX6 PERFECT TIME SPENDING DAY/OR DEDICATION according their interest.
-Then: User rate from 5 different fileds:
-And: 1.% of day 1. Nature Adventure and sport.
-And: 2.% of day 2. Landscapes & Sightseeing.
-And: 3.% of day 3. Mind Activities , Relax and free time. 
-And: 4.% of day 4. People, Culture & music.
-And: 5.% of day 5. Cousine & Gastronomy.
-Then: BOX7 YEAR OF BIRTH / PHYSICAL COMMITMENT
-Then: User Choose form [DROPLIST] ALL YEARS available 78, 81, 82, 92,...
-Then: User Choose form [DROPLIST] his Physical Commitment for the adventure 
-And User choose physical demanding atctivities favorit level for their adventure
-And : User Selects form 1. physical demanding , 2. regular physical demand ,3. not demanding activities.
+Then: User clicks ADD OTHERS activities.
+And: System will send NO REGISTRED ACTIVITIES to Adminstration Panel for Support
+And: Support will consider and if so add acctivity to system accordingly.
+And: {System complie sumatory for ACTIVITY clients} ( example: Surf+Climbing+Diving+...)
+Then: User rate PERFECT TIME TOUR/ ADVENTURE DAY TIME DEDICATION FROM Nature Adventure and sport.
+And: Landscapes & Sightseeing.
+And: Mind Activities , Relax and free time. 
+And: People, Culture & music.
+And: Cousine & Gastronomy.
+Then: User select YEAR OF BIRTH form YEARS DROPLIST
+Then: User Choose PHYSICAL COMMITMENT FOR ADVENTURE. 
+And : User Selects from physical demanding, regular demand , not demanding activities.
 And: User pushs submit buttom 
 And: information gets recorded at the API
-
-
-3 Scenario 
-Given: confirmation message is displayed USER BASIC REGISTRATION PROCESS COMPLETED
+Then: information message is displayed 
+And: USER BASIC REGISTRATION PROCESS Is COMPLETED
 And: System says information has been succesfully submited 
-And: (***TO DISCUSS the necessity of EMAIL CONFIRMATION**)
+(***TO DISCUSS the necessity of EMAIL CONFIRMATION**)
 Then: E-mail has been sent to email account provided 
 And: with confirmation link to be confirmed.
-Then: User go to my personal e-mail account 
+Then: User go to personal e-mail account selected. 
 And click LINK received for e-mail confirmation. 
-Then User click link 
 And: back to www.venturedestination.com 
 And: User is NOW LOGGED IN
 
 4 Scenario 
 Given: INFORMATION FROM BASIC USER REGISTRATION FORMULARIO gets registered at the API 
-Then: System will sellect accordign their preferences avialable offer to display
-And: Will show all activities available that matches adventurer profile (footer)
-And : Displyed preferred activities during navigation
+Then: System will sellect accordign their preferences avialable to BE displayed
+And: Displying preferred activities during navigation available that matches adventurer profile (footer)
 Then: Newsletter system will offer them similar activities accordig thier preference chossen above
 And: Be awared not to mail constantly only when activity really matches.
 And : with long enough periodicity so not to bother clients
@@ -81,32 +69,35 @@ And : with long enough periodicity so not to bother clients
 -------------------------------------------------------------------------------------------------
 5. Scenario
 
-Given: USER PROFILE PANEL 
-Add picture possibility.
-And: If not icon/signal with the user inicial and favorit Sport will be shown insted 
-And: User can click over defect Picture (Sport signal + Inicial) to change it
+Feature: USER PROFILE PANEL 
+And: User click over defect Picture (Sport signal + Inicial) to change it
+Then: User click Picture upload borwser
+Then: User select 
 And: Acount user display also Name/Nick selected for client
-And: User can check its current Activity Balance: 
-And A). Activities done, history record
-And B) Activity booked not yet accomplished.
-And:C) Adventurer Ranking (Adventurer level). 
-Then: User CALENDAR will keep al relevant dates mark with differents colors.
-And User can also check the dates for favorite activities and destination currently available (registred)
-Then: Pictures of Activities available according buyer preference will be displayed (Footer)
-And: UODATE PAYMENT METHOD  
+And: User can check current Activity Balance: 
+And  Activities done, history record
+And  Activity booked not yet accomplished.
+And: Adventurer Ranking is given accordingly (Adventurer level). 
+Then: CALENDAR will keep above relevant dates mark with differents colors.
+And User clicks at the calendar specific date 
+And: Calendar shows destination and adventures currently available (registred)
+Then: Picrture of Activity and Tour available will be displayed (Footer)
+And: User can clicks in TOUR/ACTIVITY OFFER
+Given: The TOUR/ACTIVITY OFFER organizer by ON LINE CHAT
+And: UPDATE PAYMENT METHOD  
 And: CREAT A TOUR/ACTIVITY buttom available user to press
 And JOINT TO FORUM/ OPEN A QUERY OR LOOK FOR ACTIVITY AT THE FORUM 
 
 -----------------------------------------------------------------------------------------
 
 Scenario 6  
-Given: User clicks button ADD TOUR/ ACTIVITY to become guide, insturctor, collaborator
-Then: User clicks in ADD TOUR/ ACTIVITY OPTION 
+Given: User clicks in ADD TOUR/ ACTIVITY OPTION 
+And: to become guide, insturctor, collaborator
 And: Choose DESTINATION at the map linked with google maps
 Then: Introudce main ACTIVITies/SPORTs from DROPLIST for the TOUR
 Then: User select STAGEs according to RUTE/itinerary at Destination selected, 
 Then: System creat a RUTE map with a linking line in between STAGES at the destination.
-And: Sustem will show INTEREACTIVE MAP at the TOUR ACTITIVY OFFER
+And: System will show INTEREACTIVE MAP at the TOUR ACTITIVY OFFER
 Then: User introudce how many days spent for each STAGE  
 And: User asing a % of day planning to spent each day TIME according 5 diferent MOODS (Time dedication)
 And: User for example selecct FOR FIRST DAYS : 35% FOR 1. Nature Adventure and sport. 
@@ -118,15 +109,21 @@ Then: Total of 100% TIME MOOD FOR EACH DAY PLANNED AT THE TOUR (circular icon)
 Then: User Add OVERVIEW TEXT TOUR/Activity, DESCRIPTION,  GOALS, MOTIVES for building it.
 And: User Add GALLERY  MAIN PICTURE high resolution for Trip/ Activity will be shown at offer trip header 
 And: User ADD also at least 1 PICTURES for STAGES at the adventure/tour 
-Then: INTERACTIVE MAP when placeing mouse on top can show PICS overview TOUR AT each stage.
-Then: PACKAGE DETAILS 4 different fields to be filled 1 LODGE , 2 GEAR, 3 TRANSPORTATION & 4 DISCLAIMER.
+Then: System shows INTERACTIVE MAP when placing mouse on top can show PICS overview TOUR AT each stage.
+Then: User add PACKAGE DETAILS 4 different fields to be filled 1 LODGE , 2 GEAR, 3 TRANSPORTATION & 4 DISCLAIMER.
 And: User add PACKAGE DETAILS what it is INCLUDED and EXCLUDED and EXTRAS for EACH FIELD
 And: for DISCLAIMER A PDF CAN BE UPLOADED with activity risk 
 then: System add DISCLAIMER text to the TOUR/ACTIVITY OFFER booking activity
 Then: Add tour date to CALANEDAR , 1 time or periodically TOUR/ACTIVITY
 And: ADD prices TO CALACULATOR TOUR for LODGE, GEAR AN TRANSPORTATION
-And: Add DATA PAYMENT 
-And: Submite TOUR OFFER
+And: Add introduce DATA FOR RECEIVING PAYMENTS
+And: Submite TOUR/ACTIVITY OFFER
+
+---------------------------------------------------------------------------
+
+Scenario 7
+Given: TOUR/ ACTIVITY OFFER 
+
 
 
 
