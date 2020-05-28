@@ -25,8 +25,9 @@ And: System places a green tick at the gap
 And: If it is not correct 
 Then: system red tick at the gap 
 And: System ask to repeat till both passwords match
-Then: User select activities of interest from the ACTIVITY DROPLIST
-Then: User Tick them at the Avtivities Droplist:
+
+3. Scenario
+Feature: User select/Tick FAVORITE ACTIVITIES
 And: User select From DROPLIST LAND ACTIVITIS: LIST (Hiking, Cycling, Running, etc	
 And: User select From DROPLIST WATER ACTIVITIS:LIST (Sailing, Rafting, Surfing
 And: User select from DROPLIST AIR ACTIVITIES: LIST (Parachuting , paragliding, Delta winging
@@ -34,19 +35,24 @@ nd: User select from DROPLIST MIND ACTIVITIES: LIST (Yoging, thai ching , Marcia
 And: User click as much activties as he wants form DROPLISTs above.
 And: If Activity it is not in the list 
 Then: User clicks ADD OTHERS activities.
-And: System will send NO REGISTRED ACTIVITIES to Adminstration Panel for Support
-And: Support will consider and if so add acctivity to system accordingly.
+And: System will send NO REGISTRED ACTIVITIES to ADMINISTRATOR PANEL for Support
+And: Support will consider IT and if so add acctivity to system accordingly.
 And: {System complie sumatory for ACTIVITY clients} ( example: Surf+Climbing+Diving+...)
-Then: User rate PERFECT TIME TOUR/ ADVENTURE DAY TIME DEDICATION FROM Nature Adventure and sport.
-And: Landscapes & Sightseeing.
-And: Mind Activities , Relax and free time. 
-And: People, Culture & music.
-And: Cousine & Gastronomy.
+
+4. Scenario
+Feature: User rate PERFECT TIME TOUR/ ADVENTURE DAY TIME DEDICATION FROM 
+And: User add % of day dedicated to Nature Adventure and sport 
+And: User add % of day dedicated to Landscapes & Sightseeing.
+And: User add % of day dedicated to Mind Activities , Relax and free time. 
+And: User add % of day dedicated to People, Culture & music.
+And: User add % of day dedicated to Cousine & Gastronomy.
 Then: User select YEAR OF BIRTH form YEARS DROPLIST
-Then: User Choose PHYSICAL COMMITMENT FOR ADVENTURE. 
-And : User Selects from physical demanding, regular demand , not demanding activities.
+
+5. Scenario
+Feature: PHYSICAL COMMITMENT FOR ADVENTURE. 
+And : User CLICKS on physical demanding, regular demand , not demanding activities.
 And: User pushs submit buttom 
-And: information gets recorded at the API
+And: information gets recorded in the system
 Then: information message is displayed 
 And: USER BASIC REGISTRATION PROCESS Is COMPLETED
 And: System says information has been succesfully submited 
@@ -58,40 +64,40 @@ And click LINK received for e-mail confirmation.
 And: back to www.venturedestination.com 
 And: User is NOW LOGGED IN
 
-4 Scenario 
-Given: INFORMATION FROM BASIC USER REGISTRATION FORMULARIO gets registered at the API 
+6. Scenario 
+Given: INFORMATION FROM BASIC USER REGISTRATION FORMULARIO gets registered at system
 Then: System will sellect accordign their preferences avialable to BE displayed
 And: Displying preferred activities during navigation available that matches adventurer profile (footer)
 Then: Newsletter system will offer them similar activities accordig thier preference chossen above
-And: Be awared not to mail constantly only when activity really matches.
-And : with long enough periodicity so not to bother clients
+And: Be awared not to mail constantly only when activity really matches revise periodicity
 
 -------------------------------------------------------------------------------------------------
-5. Scenario
+7. Scenario
 
 Feature: USER PROFILE PANEL 
-And: User click over defect Picture (Sport signal + Inicial) to change it
-Then: User click Picture upload borwser
-Then: User select 
-And: Acount user display also Name/Nick selected for client
+Given: Profile Picture (Favorite Sport signal + user Inicials)
+And: User click over defect Picture (Sport signal selected + user Inicials)
+Then: User select picture from browser
+And: upload picture from his computer
+And: User click display Name/Nick selected for client
+And: User can check 
 And: User can check current Activity Balance: 
 And  Activities done, history record
 And  Activity booked not yet accomplished.
 And: Adventurer Ranking is given accordingly (Adventurer level). 
-Then: CALENDAR will keep above relevant dates mark with differents colors.
-And User clicks at the calendar specific date 
-And: Calendar shows destination and adventures currently available (registred)
-Then: Picrture of Activity and Tour available will be displayed (Footer)
-And: User can clicks in TOUR/ACTIVITY OFFER
-Given: The TOUR/ACTIVITY OFFER organizer by ON LINE CHAT
+Then: CALENDAR will keep user above relevant dates mark with differents colors.
+Then: User clicks at the calendar specific date 
+And: Calendar shows destination and adventures currently available for that date.
+Then: Picrture of Activity and Tour available will be displayed at Footer according user preferences.
 And: UPDATE PAYMENT METHOD  
 And: CREAT A TOUR/ACTIVITY buttom available user to press
 And JOINT TO FORUM/ OPEN A QUERY OR LOOK FOR ACTIVITY AT THE FORUM 
+And ON LINE CHATS AVALABLE
 
 -----------------------------------------------------------------------------------------
 
-Scenario 6  
-Given: User clicks in ADD TOUR/ ACTIVITY OPTION 
+8. Scenario  
+Given:  clicks in ADD TOUR/ ACTIVITY OPTION 
 And: to become guide, insturctor, collaborator
 And: Choose DESTINATION at the map linked with google maps
 Then: Introudce main ACTIVITies/SPORTs from DROPLIST for the TOUR
@@ -99,19 +105,22 @@ Then: User select STAGEs according to RUTE/itinerary at Destination selected,
 Then: System creat a RUTE map with a linking line in between STAGES at the destination.
 And: System will show INTEREACTIVE MAP at the TOUR ACTITIVY OFFER
 Then: User introudce how many days spent for each STAGE  
-And: User asing a % of day planning to spent each day TIME according 5 diferent MOODS (Time dedication)
+And: Colaborato asing a % TIME DEDICATION for each day of activity.
 And: User for example selecct FOR FIRST DAYS : 35% FOR 1. Nature Adventure and sport. 
 And: 10 % of day FOR 2. Landscapes & Sightseeing.
-And: 15.% of day FOR 3. Mind Activities , Relax and free time,
 And: 10% of day FOR 4. People, Culture & music.
 And: 30.% of day FOR 5. Cousine & Gastronomy
-Then: Total of 100% TIME MOOD FOR EACH DAY PLANNED AT THE TOUR (circular icon)
+And: 15.% of day FOR 3. Mind Activities , Relax and free time,
+Then: Total of 100% TIME DEDICATION FOR EACH DAY PLANNED AT THE TOUR (circular icon)
 Then: User Add OVERVIEW TEXT TOUR/Activity, DESCRIPTION,  GOALS, MOTIVES for building it.
 And: User Add GALLERY  MAIN PICTURE high resolution for Trip/ Activity will be shown at offer trip header 
 And: User ADD also at least 1 PICTURES for STAGES at the adventure/tour 
 Then: System shows INTERACTIVE MAP when placing mouse on top can show PICS overview TOUR AT each stage.
-Then: User add PACKAGE DETAILS 4 different fields to be filled 1 LODGE , 2 GEAR, 3 TRANSPORTATION & 4 DISCLAIMER.
 And: User add PACKAGE DETAILS what it is INCLUDED and EXCLUDED and EXTRAS for EACH FIELD
+Then: User add PACKAGE DETAILS 4 different fields to be filled like LODGE
+And: GEAR
+And: TRANSPORTATION
+And: DISCLAIMER.
 And: for DISCLAIMER A PDF CAN BE UPLOADED with activity risk 
 then: System add DISCLAIMER text to the TOUR/ACTIVITY OFFER booking activity
 Then: Add tour date to CALANEDAR , 1 time or periodically TOUR/ACTIVITY
@@ -121,8 +130,12 @@ And: Submite TOUR/ACTIVITY OFFER
 
 ---------------------------------------------------------------------------
 
-Scenario 7
-Given: TOUR/ ACTIVITY OFFER 
+9. Scenario
+Feature: TOUR/ ACTIVITY OFFER display
+And: User check for TOUR/ACTIVITY OFFER at search box.
+And: User can clicks in TOUR/ACTIVITY OFFER picture.
+
+Given: The TOUR/ACTIVITY OFFER organizer by ON LINE CHAT
 
 
 
