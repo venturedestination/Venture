@@ -86,10 +86,13 @@ And: User is NOW LOGGED IN
 
 2.8 Scenario 
 Given: BASIC USER REGISTRATION DATA gets registered at system
-Then: System will sellect TOURS/ACTIVITIES accordign registred data
-And: Displying preferred activities during navigation 
+Then: System will sellect TOURS/ACTIVITIES accordign registred data from user
+Then: System also recloect user navigation search activity 
+And: adding it to data user registration exitng preferences.
+Then: Displying preferred activities during navigation 
 Then: Newsletter system will sent by e-mail similar activities 
-And: Bonly when activity really matches (revise periodicity)
+And: when activity really matches (revise periodicity)
+and: Fvorit Activities, destinations, facorit adventure dedication time 
 
 -------------------------------------------------------------------------------------------------
 3. Scenario
@@ -118,18 +121,24 @@ And: User can check messages
 
 3.3 
 Feature: REVIEW SYSTEM 
- activity finished 
+Given: Tour or activity finished 
+Then: User receive a questioner
+And User rates activity
+Then User rates destination 
+And user rates Organizer, instructor, 
+Then: User revcived rating form instuctor
+Regaring commitment , devlepment and results
 
-3.3 Scenario
+3.4 Scenario
 Given: User clicks at USER PROPFILE CALENDARIO for specific date 
 Then: Calendar shows TOUR /ACTIVITY AVAILBLE that date
 
-3.4. Scenario 
+3.5. Scenario 
 Given: USER PROFILE 
 And: User click in PAYMENT METHOD
 
 
-3.5
+3.6
 And: CREAT A TOUR/ACTIVITY buttom available user to press
 And JOINT TO FORUM/ OPEN A QUERY OR LOOK FOR ACTIVITY AT THE FORUM 
 And ON LINE CHATS AVALABLE
