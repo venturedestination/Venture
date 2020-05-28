@@ -93,25 +93,37 @@ And:C) Adventurer Ranking (Adventurer level).
 Then: User CALENDAR will keep al above relevant dates mark in calendar with differents colors.
 And User can also check the dates for favorite activities and destination currently available (registred)
 Then: Pictures of Activities available according buyer preference will be displayed (Footer)
+And: PAYMENT METHOD 
 And: CREAT A TRIP/ACTIVITY buttom available user to press
 And JOINT TO FORUM/ OPEN A QUERY OR LOOK FOR ACTIVITY AT THE FORUM 
 
 -----------------------------------------------------------------------------------------
 
 Scenario 6  
-Given: User clicks button ADD TRIP / ACTIVITY to become guide, insturctor, collaborator
-Then: User clicks in ADD TOUR´s OPTION 
-Then: INtroudce TRIP/ ACTIVITY intinerary BY STAGES
-Then: User select STAGE 1 Destination + No. days for that destination 
-Then: Introudce how many days spent in that STAGE/DESTINATION 
-And: User asing % type of spent time by day dedication or moods of the day.
-And: User asing a % of day planning to spent according 5 diferent mood (Time dedication)
-And: User for example selecct 35% of day 1. Nature Adventure and sport. 10 % of day 2. Landscapes & Sightseeing.
+Given: User clicks button ADD TRIP/ ACTIVITY to become guide, insturctor, collaborator
+Then: User clicks in ADD TOUR/ ACTIVITY OPTION 
+And: Choose DESTINATION at the map linked with google maps
+Then: Introudce main ACTIVITies/SPORTs from DROPLIST for the TOUR
+Then: User select STAGEs according to Rute at Destination selected, 
+Then: System creat a RUTE map wiht with a linking line in between STAGES at the destination.
+Then: User introudce how many days spent for each STAGE  
+And: User asing a % of day planning to spent each day TIME according 5 diferent MOODS (Time dedication)
+And: User for example selecct 35% of day 1. Nature Adventure and sport. 10 % of day WILL BE  2. Landscapes & Sightseeing.
 And: 15.% of day 3. Mind Activities , Relax and free time, 5% of day 4. People, Culture & music.
-And: 30.% of day 5. Cousine & Gastronomy= 100% of the day planned for the activity.
-Then: User Add TEXT trip/Activity, DESCRIPTION,  GOALS, MOTIVES   
-And: User Add MAIN PICTURE high resolution for Trip/ Activity will be shoen at offer trip header 
-And: User can also add 1 picture by stage or destination can be show at the offer placeing mouse on top of it.
+And: 30.% of day 5. Cousine & Gastronomy= 100% FOR 1 day 
+Then: User Add OVERVIEW TEXT trip/Activity, DESCRIPTION,  GOALS, MOTIVES for building it.
+And: User Add GALLERY  MAIN PICTURE high resolution for Trip/ Activity will be shown at offer trip header 
+And: User can also add 1 picture by stage or destination can be show at the of INTERACTIV MAP when placeing mouse on top of it.
+Then: User add PACKAGE DETAILS INCLUDED and EXCLUDED at the tour
+And: Pacackage detail have to coniser 3 different fields are considered LODGE , GEAR & TRANSPORTATION 
+And: Fourth ADD PDF diclaimar for the activity with activity risk 
+then: System add DISCLAIMER text when client booking activity
+Then: Add tour date to CALANEDAR , unique o periodically
+And:ADD prices TO CALACULATOR TOUR for LODGE, GEAR AN TRANSPORTATION
+And: Add DATA PAYMENT 
+And: 
+
+
 
 
 
