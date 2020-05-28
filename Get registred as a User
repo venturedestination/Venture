@@ -27,11 +27,11 @@ Then: system red tick at the gap
 And: System ask to repeat till both passwords match
 
 3. Scenario
-Feature: User select/Tick FAVORITE ACTIVITIES
-And: User select From DROPLIST LAND ACTIVITIS: LIST (Hiking, Cycling, Running, etc	
-And: User select From DROPLIST WATER ACTIVITIS:LIST (Sailing, Rafting, Surfing
-And: User select from DROPLIST AIR ACTIVITIES: LIST (Parachuting , paragliding, Delta winging
-nd: User select from DROPLIST MIND ACTIVITIES: LIST (Yoging, thai ching , Marcial arting : ) ect.)
+Feature: User select/Tick FAVORITE ACTIVITIES FORM
+And: User select From DROPLIST LAND ACTIVITIS: (Hiking, Cycling, Running, etc	
+And: User select From DROPLIST WATER ACTIVITIS: (Sailing, Rafting, Surfing
+And: User select from DROPLIST AIR ACTIVITIES: (Parachuting , paragliding, Delta winging
+nd: User select from DROPLIST MIND ACTIVITIES: (Yoging, thai ching , Marcial arting : ) ect.)
 And: User click as much activties as he wants form DROPLISTs above.
 And: If Activity it is not in the list 
 Then: User clicks ADD OTHERS activities.
@@ -40,7 +40,7 @@ And: Support will consider IT and if so add acctivity to system accordingly.
 And: {System complie sumatory for ACTIVITY clients} ( example: Surf+Climbing+Diving+...)
 
 4. Scenario
-Feature: User rate PERFECT TIME TOUR/ ADVENTURE DAY TIME DEDICATION FROM 
+Feature: User rate PERFECT TIME TOUR/ ADVENTURE DAY TIME DEDICATION FORM
 And: User add % of day dedicated to Nature Adventure and sport 
 And: User add % of day dedicated to Landscapes & Sightseeing.
 And: User add % of day dedicated to Mind Activities , Relax and free time. 
@@ -49,7 +49,7 @@ And: User add % of day dedicated to Cousine & Gastronomy.
 Then: User select YEAR OF BIRTH form YEARS DROPLIST
 
 5. Scenario
-Feature: PHYSICAL COMMITMENT FOR ADVENTURE. 
+Feature: PHYSICAL COMMITMENT FOR ADVENTURE FORM 
 And : User CLICKS on physical demanding, regular demand , not demanding activities.
 And: User pushs submit buttom 
 And: information gets recorded in the system
