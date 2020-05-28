@@ -28,12 +28,14 @@ And: System ask to repeat till both passwords match
 
 3. Scenario
 Feature: User select/Tick FAVORITE ACTIVITIES FORM
-And: User select From DROPLIST LAND ACTIVITIS: (Hiking, Cycling, Running, etc	
-And: User select From DROPLIST WATER ACTIVITIS: (Sailing, Rafting, Surfing
-And: User select from DROPLIST AIR ACTIVITIES: (Parachuting , paragliding, Delta winging
-nd: User select from DROPLIST MIND ACTIVITIES: (Yoging, thai ching , Marcial arting : ) ect.)
-And: User click as much activties as he wants form DROPLISTs above.
-And: If Activity it is not in the list 
+And: User select LAND ACTIVITIS: (Hiking, Cycling, Running, etc	
+And: User select WATER ACTIVITIS: (Sailing, Rafting, Surfing
+And: User select AIR ACTIVITIES: (Parachuting , paragliding, Delta winging
+nd: User select MIND ACTIVITIES: (Yoging, thai ching , Marcial arting : ) ect.)
+And: User click as much activties as She/he wants form DROPLISTs above.
+
+3.1. Scenario
+And: If user finds Activity it is not in the list 
 Then: User clicks ADD OTHERS activities.
 And: System will send NO REGISTRED ACTIVITIES to ADMINISTRATOR PANEL for Support
 And: Support will consider IT and if so add acctivity to system accordingly.
@@ -46,17 +48,17 @@ And: User add % of day dedicated to Landscapes & Sightseeing.
 And: User add % of day dedicated to Mind Activities , Relax and free time. 
 And: User add % of day dedicated to People, Culture & music.
 And: User add % of day dedicated to Cousine & Gastronomy.
-Then: User select YEAR OF BIRTH form YEARS DROPLIST
 
 5. Scenario
-Feature: PHYSICAL COMMITMENT FOR ADVENTURE FORM 
+Then: User select YEAR OF BIRTH form YEARS DROPLIST
+Feature: Select PHYSICAL COMMITMENT FOR ADVENTURE FORM 
 And : User CLICKS on physical demanding, regular demand , not demanding activities.
 And: User pushs submit buttom 
 And: information gets recorded in the system
 Then: information message is displayed 
 And: USER BASIC REGISTRATION PROCESS Is COMPLETED
-And: System says information has been succesfully submited 
-(***TO DISCUSS the necessity of EMAIL CONFIRMATION**)
+
+6. Scenario
 Then: E-mail has been sent to email account provided 
 And: with confirmation link to be confirmed.
 Then: User go to personal e-mail account selected. 
@@ -74,16 +76,18 @@ And: Be awared not to mail constantly only when activity really matches revise p
 -------------------------------------------------------------------------------------------------
 7. Scenario
 
-Feature: USER PROFILE PANEL 
-Given: Profile Picture (Favorite Sport signal + user Inicials)
-And: User click over defect Picture (Sport signal selected + user Inicials)
-Then: User select picture from browser
-And: upload picture from his computer
-And: User click display Name/Nick selected for client
-And: User can check 
-And: User can check current Activity Balance: 
-And  Activities done, history record
-And  Activity booked not yet accomplished.
+Feature: USER DASHBOARD PROFILE PANEL 
+Then: User profile picture given user Inicials
+Then: User click over defect Picture 
+Then: User select picture from won PC browser  
+And: User upload picture from his computer
+Then: User change by defect picture for its own pic
+And: User name displayed Nick name selected for client & pic slected.
+
+8. Scenario 
+
+
+And: User check current Activity Balance, Activities done, history record Activity booked not yet accomplished.
 And: Adventurer Ranking is given accordingly (Adventurer level). 
 Then: CALENDAR will keep user above relevant dates mark with differents colors.
 Then: User clicks at the calendar specific date 
@@ -97,9 +101,10 @@ And ON LINE CHATS AVALABLE
 -----------------------------------------------------------------------------------------
 
 8. Scenario  
+The user wants to become a guide, insturctor, collaborator
 Given:  clicks in ADD TOUR/ ACTIVITY OPTION 
-And: to become guide, insturctor, collaborator
-And: Choose DESTINATION at the map linked with google maps
+And: Choose DESTINATION at the map 
+Then: linked with google maps
 Then: Introudce main ACTIVITies/SPORTs from DROPLIST for the TOUR
 Then: User select STAGEs according to RUTE/itinerary at Destination selected, 
 Then: System creat a RUTE map with a linking line in between STAGES at the destination.
