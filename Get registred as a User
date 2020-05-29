@@ -1,7 +1,5 @@
 1. Scenario: 
-Given: www.venturedestination.com 
-then: user go to MY ACCOUNT 
-Given: Users go to LOG IN if Account already created
+Given: Users click to LOG IN if Account already created
 Then:  USER gets to already existing PROFILE.
 And:to GET REGISTRED as new user.
 Then 2.User clicks SING UP 
@@ -62,10 +60,10 @@ And: Support will consider IT and if aplicable add acctivity to system according
 And: User can proceed fill in next gaps
 
 2.4 Scenario
-Feature: User rate FAVORITE DEDICATION TIME FOR ADVENTURE DAY 
-And: User add % of day dedicated to Sport, Nature, Landscapes & Sightseeing.
-And: User add % of day dedicated to Relax, free time or Mind Activities ,  
-And: User add % of day dedicated to People, Culture & Gastronomy.
+Feature: User rate FAVORITE DEDICATION TIME FOR AN ADVENTURE DAY 
+And: User add % of day time dedicated to Sport, Nature, Landscapes & Sightseeing.
+And: User add % of day time dedicated to Relax, free time or Mind Activities ,  
+And: User add % of day time dedicated to People, Culture & Gastronomy.
 And: {System complie  clients FAVORITE DEDICATION TIME FOR ADVENTURE} 
 ( example:uSER1= Adventure 60% +Relax 20%+ Culture20%, GAS...)
 And : record the information at USER PROFILE
@@ -110,7 +108,7 @@ And: User is NOW LOGGED IN
 Feature:System complie sumatory for ACTIVITY/BASIC USER REGISTRATION
 ( example:uSER1= Surf+Climbing+Diving+...)
 And : record the information at API USER PROFILE
-Then: Picture at the infromation profile will be kep by defect 
+Then: Picture at the infromation profile by default 
 Then: System asing an ELEMENT ICON from favorite activites
 And: Incials can be displaiy at the centre
 Given: USER personal iformation gets registered at system
@@ -138,16 +136,16 @@ And: User name displayed Nick name selected user basic formulario
 3.1 Scenario
 Given:Access to Historical data from actividies Books/done
 Then: User can click in activities 
-And: Actual offer for that Activity/ Tours opens
+And: Actual offer for that Activity/ Tours 
 Then: User clicks in organizer picture
-And access to Organizar public profile
+And: access to Organizar public profile
 And: Current acctivities available
 Then: User click on ASK organizer
 Than : A dilog box opens
 And: User text question to organizar
-Then: INformation is sent to Organizer inbox
+Then: message is sent to Organizer inbox
 And : In case both connected
-Then : They can chat on line
+Then : They can chat on line at dialog box 
 
 3.2 Scenario
 Feature: USER PROFILE MESSAGES BOX
@@ -155,9 +153,10 @@ Then: User click on Messegaes
 And: User sees all conversations
 Then: User clicks in a specific conversation 
 Then: System opens a dialog box with conversation intended
-And: User can check previos messages scrollin up and dwon.
+And: User can check conversation scrolling up and down.
 Then: If users click contact activity organizer 
 Then: Dialog conversation box will open
+And: If they both connected 
 ANd: Conversation can be follow at usser profile message box 
 
 3.1 Scenario
@@ -175,11 +174,11 @@ Given: Tour or activity finished
 Then: User receive a questioner
 And User rates activity
 Then User rates destination 
-And user rates Organizer, instructor, 
-Then: User revcived rating form instuctor
+And user rates Organizer in comunication skills
+And: Activity Knowlage
+And: organizationals skills 
+Then: User revceived rating form Organizar
 Regaring commitment , devlepment and results
-COMUNICACION ; CONCIMIENTO ACTIVIDAD ; CONCIMIENTO DESTINO
-Would you recommend activity , destiantion and organizer?
 
 3.4 Scenario
 Given: User clicks at USER PROPFILE CALENDARIO for specific date 
@@ -201,15 +200,23 @@ Then: User press ok
 And: Messages is shown
 And: New Payment method has been established
 
-3.6
-And: CREAT A TOUR/ACTIVITY buttom available user to press
+3.6 Scenario
+Feature: User direct access 
+And: CREAT A TOUR/ACTIVITY button available
 And JOINT TO FORUM/ OPEN A QUERY OR LOOK FOR ACTIVITY AT THE FORUM 
-And ON LINE CHATS AVALABLE
+And ON LINE CHAT
 
 -----------------------------------------------------------------------------------------
 
 8. Scenario  
-Given: The user wants to become a guide, insturctor or collaborator
+Given: The user wants to become a guide, insturctor or Organizer.
+Instructor : Certificates
+Guide: Companion 
+Organizer : Trip planed no paticipations
+Then: If the ACTIVITY/TIRPS 
+
+
+
 Feature:  CREATE AN ACTIVITY , RUTE and ITINERARY MAP
 Then: if only 1 destination involved.
 Then: User clicks in ADD ACTIVITY (insted od add tour)
@@ -283,11 +290,7 @@ And : If it can be included as an extra
 Then: User clicks Extra 
 ANd : If lodge included or and Extra
 Then: Users gives brief description of what it is included 
-And: Then click to add pictures fro user referrence
-And Then user can give a price  
-Then: User click MEALS
-Then user choose meals inluded and excluded
-And Then gives it a price 
+And: Then click to add pictures for user referrence 
 And: GEAR
 Then user choose Gear inluded and excluded
 And: If ti is exclud
