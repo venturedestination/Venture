@@ -3,7 +3,8 @@ Given: www.venturedestination.com
 then: user go to MY ACCOUNT 
 Given: Users go to LOG IN if Account already created
 Then:  USER gets to already existing PROFILE.
-And 2.User clicks SING UP to GET REGISTRED as new user.
+And:to GET REGISTRED as new user.
+Then 2.User clicks SING UP 
 
 2.1 Scenario
 Feature: SING UP USER REGISRATION FORMULARIO 
@@ -11,7 +12,7 @@ And: User fill in name/nick at name GAP
 And if NAME dose already exist 
 Then: system red tick at gap
 Then: system shows alternatives as similar Names available.
-And: if user select a name dose Not already exists
+And: if user select a name dose Not already exists at system
 Then: System places a green tick at the name gap .
 And: User can proceed fill in next gaps
 
@@ -30,7 +31,7 @@ And User fill in new password
 Then: Insert valid pasword for account 
 And: Passwords requirements are shown
 Then: not less than 6 & alfanumeric.
-Then: System recognizes a  PASSWORD characterictic 
+Then: System recognizes a PASSWORD characterictic 
 And: System places a green tick at the gap
 And User fill in CONFIRM NEW PASSWORD 
 Then: System CHECKS characterictics from above passwords
@@ -61,12 +62,12 @@ And: Support will consider IT and if aplicable add acctivity to system according
 And: User can proceed fill in next gaps
 
 2.4 Scenario
-Feature: User rate FAVORITE % TIME DEDICATION FOR THEIR ADVENTURE
+Feature: User rate FAVORITE DEDICATION TIME FOR ADVENTURE DAY 
 And: User add % of day dedicated to Sport, Nature, Landscapes & Sightseeing.
 And: User add % of day dedicated to Relax, free time or Mind Activities ,  
 And: User add % of day dedicated to People, Culture & Gastronomy.
-And: {System complie sumatory for clients FAVORITE TIME DEDICATION } 
-( example:uSER1= Adventure 60% +Relax 20%+ Culture15%, GAS...)
+And: {System complie  clients FAVORITE DEDICATION TIME FOR ADVENTURE} 
+( example:uSER1= Adventure 60% +Relax 20%+ Culture20%, GAS...)
 And : record the information at USER PROFILE
 And: User can proceed fill in next gaps
 
@@ -93,7 +94,7 @@ And: USER BASIC REGISTRATION FORM COMPLETED
 
 2.7 Scenario
 Then: In case User submite formulaire 
-And: There is any field / Gap still with a red tick
+And: There is any field / Gap still with a red tick OR NOT COMPLETED
 Then Sytem redirect user gaps failed to be filled
 Then: User can proceed when all info submitted is correct
 
@@ -112,7 +113,7 @@ And : record the information at API USER PROFILE
 Then: Picture at the infromation profile will be kep by defect 
 Then: System asing an ELEMENT ICON from favorite activites
 And: Incials can be displaiy at the centre
-Given: BASIC USER REGISTRATION DATA gets registered at system
+Given: USER personal iformation gets registered at system
 and: as well as Favorite Activities, destinations, favorite adventure dedication time 
 Then: System will sellect TOURS/ACTIVITIES accordign registred data from user
 Then: System also recollect user navigation search activity 
@@ -121,6 +122,7 @@ Then: Displying preferred activities during navigation
 Then: Newsletter system will sent by e-mail similar activities 
 And: when activity really matches 
 aND: With WEEK periodicity
+Then: Payment information will be added when user book first activity
 
 
 -------------------------------------------------------------------------------------------------
@@ -134,7 +136,7 @@ And: User upload picture from his computer
 And: User name displayed Nick name selected user basic formulario
 
 3.1 Scenario
-Given: Historical data from actividies Books/done
+Given:Access to Historical data from actividies Books/done
 Then: User can click in activities 
 And: Actual offer for that Activity/ Tours opens
 Then: User clicks in organizer picture
@@ -186,7 +188,9 @@ Then: User clicks in to see ACTIVITY selected
 Then: ACTIVITY / TOUR OFFERS PAGE OPENS
 
 3.5. Scenario 
-Given: USER PROFILE 
+Given: PAYMENT METHOD
+Then: It is not filled till first booking is done
+Then: USER PROFILE would show information 
 And: User click update PAYMENT METHOD
 Then: User selet payment method
 And: User select VISA payments
@@ -194,6 +198,7 @@ And. User type credit card number
 ANd: Type credit card Expiration date
 And: Type security number 
 Then: User press ok 
+And: Messages is shown
 And: New Payment method has been established
 
 3.6
@@ -203,9 +208,9 @@ And ON LINE CHATS AVALABLE
 
 -----------------------------------------------------------------------------------------
 
-4. Scenario  
+8. Scenario  
 Given: The user wants to become a guide, insturctor or collaborator
-Feature:  CREATE AN ACTIVITY
+Feature:  CREATE AN ACTIVITY , RUTE and ITINERARY MAP
 Then: if only 1 destination involved.
 Then: User clicks in ADD ACTIVITY (insted od add tour)
 And: Choose MAIN DESTINATION by fill in the gap 
@@ -215,16 +220,25 @@ Then: Selected Location will be displayed as FIRST STAGE AT RUTE TABLE
 Then: User ADD number of days spent on that first STAGE
 Then: Introudce main ACTIVITies/SPORTs from DROPLIST
 And: Then ADD for dedication time planned for that day.
-And: User add % of day dedicated to Spor, Nature, Landscapes & Sightseeing.
+And: User add % of day dedicated to Sport, Nature, Landscapes & Sightseeing.
 And: User add % of day dedicated to Relax, free time or Mind Activities ,  
 And: User add % of day dedicated to People, Culture & Gastronomy.
+Then: ACTIVITY shows location, destination
+And: If 1 location 
+then not stages  is created
+And: If more than one location 
+Then: RUTE TABLE showing each stage is created
+And: Each day will show percentage of day dadicated to each mood
+And: Itinerary Map will be shown at TOUR OFFER
+
+8.1 Scenario
 Then: Same process can be follow to generate multiscale tour
 And: when user finshed adding location
 And  Days by location 
 And Activity to be dvelope during that day
 And: Time spent by day in those location 
-Then: press finish tour 
-Then: RUTE TABLE showing each stage is created
+Then: User clicks add a new location 
+Then: RUTE TABLE showing a new stage is created
 And: Itinerary Map will be shown at TOUR OFFER
 
 8.1 Scenario
