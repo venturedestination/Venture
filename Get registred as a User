@@ -136,19 +136,19 @@ Regaring commitment , devlepment and results
 3.4 Scenario
 Given: User clicks at USER PROPFILE CALENDARIO for specific date 
 Then: Calendar shows TOUR /ACTIVITY AVAILBLE for that date
-Then: User clicks on the see ACTIVITY
+Then: User clicks in to see ACTIVITY selected
 Then: ACTIVITY / TOUR OFFERS PAGE OPENS
 
 3.5. Scenario 
 Given: USER PROFILE 
-And: User click in PAYMENT METHOD
+And: User click update PAYMENT METHOD
 Then: User selet payment method
 And: User select VISA payments
 And. User type credit card number 
 ANd: Type credit card Expiration date
 And: Type security number 
 Then: User press ok 
-And: New Payment method it is established
+And: New Payment method has been established
 
 3.6
 And: CREAT A TOUR/ACTIVITY buttom available user to press
@@ -158,28 +158,43 @@ And ON LINE CHATS AVALABLE
 -----------------------------------------------------------------------------------------
 
 4. Scenario  
-Given: The user wants to become a guide, insturctor, collaborator
+Given: The user wants to become a guide, insturctor or collaborator
+Feature:  CREATE AN ACTIVITY
 Then: if only 1 destination involved.
 Then: User clicks in ADD ACTIVITY (insted od add tour)
 And: Choose MAIN DESTINATION by fill in the gap 
-Then: Map is linked with google maps and will show destination position
-And: Correct Name of the destination is slected by user 
+Then: GAP is linked with google maps and will show destination position
+And: Correct Name of the destination is selected by user at the MAP
 Then: Selected Location will be displayed as FIRST STAGE AT RUTE TABLE
-Then: User ADD number of days spent on first STAGE (No.)
+Then: User ADD number of days spent on that first STAGE
 Then: Introudce main ACTIVITies/SPORTs from DROPLIST
-And: Then ADD for each day dedication time planed
+And: Then ADD for dedication time planned for thath day.
 And: User add % of day dedicated to Nature Adventure and sport 
 And: User add % of day dedicated to Landscapes & Sightseeing.
 And: User add % of day dedicated to Mind Activities , Relax and free time. 
 And: User add % of day dedicated to People, Culture & music.
 And: User add % of day dedicated to Cousine & Gastronomy.
-And: If just one time Destination and location press finish tour rute
-Then: LOCATION , No. DAYS, ACTIVITY is NOW recorde at RUTE TABLE for each STAGE. 
+Then: Same process can be follow to generate multiscale tour
+And: when user finshed adding location
+And  Days by location 
+And Activity to be dvelope during that day
+And: Time spent by day in those location 
+Then: press finish tour 
+Then: RUTE TABLE showing each stage is created
+And: Itinerary Map will be shown at TOUR OFFER
 
 8.1 Scenario
-Given: User click ADD TOUR when more than one location involve.  
-Then: User press add anther location instad of finish the RUTE/Itinerary
-And: Userr add NEW LOCATION by filling the 2 stage gap
+Given: The user wants to become a guide, insturctor or collaborator
+Feature: CREATE A TOUR
+Given: User click ADD TOUR when more than one location involved.  
+And: Choose location by fill in the MAIN DESTINATION gap 
+Then: GAP is linked with google maps and will show destination position at the map
+And: Correct Name of the destination is selected by user at the MAP
+Then: Selected Location will be displayed as FIRST STAGE AT RUTE TABLE
+Then: User ADD number of days spent on that first STAGE
+Then: User also Introudce main ACTIVITies/SPORTs from DROPLIST for that day
+Then: User press add anther location to create the RUTE/Itinerary
+And: Userr add NEW LOCATION by filling the second stage gap
 Then: Map is linked with google maps and will show destination position
 And: Correct Name of the LOCATION is slected by user 
 Then: System will add 2 location name to the TABLE RUTE
@@ -192,18 +207,34 @@ And: User add % of day dedicated to Mind Activities , Relax and free time.
 And: User add % of day dedicated to People, Culture & music.
 And: User add % of day dedicated to Cousine & Gastronomy.
 Then: Total of 100% TIME DEDICATION FOR EACH DAY PLANNED AT THE TOUR (circular icon)
-Then: LOCATION , No. DAYS, ACTIVITY is NOW recorde at RUTE TABLE for each second STAGE. 
 Then: System creat a RUTE map with a linking line in between STAGES at the destination.
+Then: LOCATION , No. DAYS, ACTIVITY is NOW recorde at RUTE TABLE for each second STAGE. 
 And: System will show INTEREACTIVE MAP at the TOUR ACTITIVY OFFER and RUTE TABLE 
 
 8.2 Scenario 
-Then: User Add OVERVIEW TEXT TOUR/Activity, DESCRIPTION,  GOALS, MOTIVES for building it.
-And: User Add GALLERY  MAIN PICTURE high resolution for Trip/ Activity will be shown at offer trip header 
+Then: User Add OVERVIEW TEXT TOUR/Activity
+aND: User introduce BASIC INFORMATION text for DESCRIPTION,  GOALS, MOTIVES.
+And: User Add GALLERY MAIN PICTURE high resolution for Trip/ Activity will be shown at offer trip header 
 And: User ADD also at least 1 PICTURES for STAGES at the adventure/tour 
 Then: System shows INTERACTIVE MAP when placing mouse on top can show PICS overview TOUR AT each stage.
 And: User add PACKAGE DETAILS what it is INCLUDED and EXCLUDED and EXTRAS for EACH FIELD
-Then: User add PACKAGE DETAILS 4 different fields to be filled like LODGE
+Then: User add PACKAGE DETAILS 4 different fields to be filled
+aND: User clicks LODGE 
+Then: Insert Lodge
+And: If lodge it is not included
+Then: User clicks not included 
+And : If it can be included as an extra 
+Then: User clicks Extra 
+ANd : If lodge included or and Extra
+Then: Users gives brief description of what it is included 
+And: Then click to add pictures fro user referrence
+And Then user can give a price  
+Then: User click MEALS
+Then user choose meals inluded and excluded
+And Then gives it a price 
 And: GEAR
+Then user choose Gear inluded and excluded
+And: If ti is exclud
 And: TRANSPORTATION
 And: DISCLAIMER.
 And: for DISCLAIMER A PDF CAN BE UPLOADED with activity risk 
