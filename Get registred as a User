@@ -15,7 +15,7 @@ Then: System places a green tick at the name gap .
 Then: User click in to fill e.mail with valid email account
 Then: System recognizes a valid mail characterictics
 And: System places a green tick at the gap
-And in cas not red tick 
+And if system place a red tick in the gap
 And: User cannot proceed till valid e.mail is recognized.
 
 2.2 Scenario
@@ -35,32 +35,32 @@ And: System places a green tick at the gap
 And: User can proceed fill in next gap
 
 2.2 Scenario
-Feature: User select/Tick FAVORITE ACTIVITIES from ELEMENTS FORM
-And: User select LAND ACTIVITIS: (Hiking, Cycling, Running, etc	
-And: User select WATER ACTIVITIS: (Sailing, Rafting, Surfing
-And: User select AIR ACTIVITIES: (Parachuting , paragliding, Delta winging
-nd: User select MIND ACTIVITIES: (Yoging, thai ching , Marcial arting : ) ect.)
-And: User click as much activties as She/he wants form DROPLISTs above.
+Feature: User select/Tick by elements FAVORITE ACTIVITIES FORM
+And: User select LAND ACTIVITIS: Hiking, Cycling, Running, etc	
+And: User select WATER ACTIVITIS: Sailing, Rafting, Surfing
+And: User select AIR ACTIVITIES:Parachuting , paragliding, Delta winging
+nd: User select MIND ACTIVITIES: Yoging, thai ching , Marcial arts,etc
+And: User click as much activties as She/he wants form DROPLISTs above. 
 
 2.3. Scenario
 And: If user finds Activity it is not in the list 
 Then: User clicks ADD OTHERS activities.
-And: System will send NO REGISTRED ACTIVITIES to ADMINISTRATOR PANEL for Support
+And: System will send NO REGISTRED ACTIVITIES to ADMINISTRATOR PANEL
 And: Support will consider IT and if aplicable add acctivity to system accordingly.
 And: {System complie sumatory for ACTIVITY clients} ( example:uSER1= Surf+Climbing+Diving+...)
 And : record the information at USER PROFILE
 
 2.4 Scenario
 Feature: User rate FAVORITE TIME DEDICATION FOR ACTIVITY
-And: User add % of day dedicated to Adventure and sport 
-And: User add % of day dedicated to Nature Landscapes & Sightseeing.
+And: User add % of day dedicated to Nature, Adventure and sport 
+And: User add % of day dedicated to Landscapes & Sightseeing.
 And: User add % of day dedicated to Mind Activities , Relax and free time. 
 And: User add % of day dedicated to People, Culture & music.
 And: User add % of day dedicated to Cousine & Gastronomy.
 
 2.5 Scenario
 Then: User select YEAR OF BIRTH
-And: Click over year droplist
+And: Click over years droplist
 And: Year of birth is recorded
 
 2.6 Scenario
@@ -87,12 +87,12 @@ And: User is NOW LOGGED IN
 2.8 Scenario 
 Given: BASIC USER REGISTRATION DATA gets registered at system
 Then: System will sellect TOURS/ACTIVITIES accordign registred data from user
-Then: System also recloect user navigation search activity 
+Then: System also recolect user navigation search activity 
 And: adding it to data user registration exitng preferences.
 Then: Displying preferred activities during navigation 
 Then: Newsletter system will sent by e-mail similar activities 
 And: when activity really matches (revise periodicity)
-and: Fvorit Activities, destinations, facorit adventure dedication time 
+and: Favorite Activities, destinations, favorite adventure dedication time 
 
 -------------------------------------------------------------------------------------------------
 3. Scenario
@@ -109,15 +109,19 @@ Feature: USER PROPFILE CALENDARIO
 Then: Shows adventures currently available EACH date.
 And: User check Activity Activities done & booked dates by moving in
 Then: USER PROFILE shows above relevant dates mark with differents colors.
-And: Adventurer Ranking is given according Adventurer level - ACTIVITIES DONE (LEVEL 1,2,3,Expert)
+And: Adventurer Ranking is given according Adventurer level 
+And: User gets LEVEL 1,2,3,Expert)
 
 3.2 Scenario
 Feature: USER PROFILE MESSAGES BOX
-Then: User click on conversations
-And: User open conversations
-Then: User click in conversation 
-Then: System opens a dalog box with conversation
-And: User can check messages
+Then: User click on Messegaes
+And: User open all conversations
+Then: User click in a specific conversation 
+Then: System opens a dialog box with conversation intended
+And: User can check previos messages 
+Then: If users click contact activity organizer 
+Then: Dialog conversation box will open
+ANd: Conversation can be follow at usser profile message box 
 
 3.3 
 Feature: REVIEW SYSTEM 
@@ -131,12 +135,20 @@ Regaring commitment , devlepment and results
 
 3.4 Scenario
 Given: User clicks at USER PROPFILE CALENDARIO for specific date 
-Then: Calendar shows TOUR /ACTIVITY AVAILBLE that date
+Then: Calendar shows TOUR /ACTIVITY AVAILBLE for that date
+Then: User clicks on the see ACTIVITY
+Then: ACTIVITY / TOUR OFFERS PAGE OPENS
 
 3.5. Scenario 
 Given: USER PROFILE 
 And: User click in PAYMENT METHOD
-
+Then: User selet payment method
+And: User select VISA payments
+And. User type credit card number 
+ANd: Type credit card Expiration date
+And: Type security number 
+Then: User press ok 
+And: New Payment method it is established
 
 3.6
 And: CREAT A TOUR/ACTIVITY buttom available user to press
@@ -154,8 +166,7 @@ Then: Map is linked with google maps and will show destination position
 And: Correct Name of the destination is slected by user 
 Then: Selected Location will be displayed as FIRST STAGE AT RUTE TABLE
 Then: User ADD number of days spent on first STAGE (No.)
-Then: Introudce main ACTIVITies/SPORTs from DROPLIST for the TOUR
-Then: User ADD ACTIVITIES SCHEDULE FOR THAT DAY 
+Then: Introudce main ACTIVITies/SPORTs from DROPLIST
 And: Then ADD for each day dedication time planed
 And: User add % of day dedicated to Nature Adventure and sport 
 And: User add % of day dedicated to Landscapes & Sightseeing.
