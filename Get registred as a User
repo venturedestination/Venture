@@ -12,11 +12,14 @@ And if NAME dose already exit red tick at gap
 And: System shows alternatives as similar Names available.
 And: if it dose Not already exists
 Then: System places a green tick at the name gap .
+
+2.2 Scenario
 Then: User click in to fill e.mail with valid email account
 Then: System recognizes a valid mail characterictics
 And: System places a green tick at the gap
 And if system place a red tick in the gap
-And: User cannot proceed till valid e.mail is recognized.
+And: when valid e.mail is recognized.
+Then: User can proceed 
 
 2.2 Scenario
 And User fill in new password
