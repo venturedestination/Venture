@@ -44,22 +44,22 @@ Then: System places a green tick at the gap
 2.3 Scenario
 Given: FAVORITE ACTIVITIES FORM
 Then: User select/Tick first type of ELEMENT Activity.
-Then select ACTIVITIES SPORT ICONS at DROPLIST
+Then select first your favorite ACTIVITIES SPORT ICONS at DROPLIST
 And: User select LAND ACTIVITIS: Hiking, Cycling, Running, etc	
 And: User select WATER ACTIVITIS: Sailing, Rafting, Surfing  etc	
 And: User select AIR ACTIVITIES:Parachuting , paragliding, Delta winging  etc	
 nd: User select MIND ACTIVITIES: Yoging, thai ching , Marcial arts,etc
-And: User click as much activties as She/he wants form ICON DROPLISTs above. 
+And: User then add as much activties as She/he wants form ICON DROPLISTs above. 
 And: {System complie sumatory for ACTIVITY clients} 
 ( example:USER1= Surf+Climbing+Diving+...)
 And : record the information at API USER PROFILE
 And: User can proceed fill in next FORMULARIO gaps
 
 2.4. Scenario
-Given:IF ACTIVITY IT IS NOT IN THE ACTIVITY LIST
+Given:ACTIVITY IS NOT IN THE ACTIVITY LIST
 Then: User CAN clicks ADD OTHERS activities.
-Then: Choose ELEMENT ACTIVITY type LAND-WATER-WIR-MIND
-And: fill in the NAME OF NOT REGISTRE ACTIVIVY at the gap
+Then: Choose ELEMENT ACTIVITY type LAND-WATER-AIR-MIND
+And: fill in the NAME OF NOT REGISTRE ACTIVITY at the gap
 Then: System will send NO REGISTRED ACTIVITIES to ADMINISTRATOR PANEL to be checked 
 And: SUPPORT will consider its inclusion at the GENERAL activities list
 Then: if a new ACTIVITIES is finally registred 
@@ -135,7 +135,7 @@ And: with WEEK periodicity
 
 Feature: PICTURE AT USER PROFILE UPDATE AUTOMATICALLY
 Then: IT is placed  by default 
-Then: System asing picture as ELEMENT ICON from favorite activit
+Then: System asing picture as ELEMENT ICON from favorite activity
 And: User Incials can be displaiy also at the centre
 
 Then: PAYMENT INFORMATION WILL BE ALSO RECORDED AT CLIENTS PROFILE 
