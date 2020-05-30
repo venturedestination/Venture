@@ -244,48 +244,40 @@ And: Messages is shown
 And: New Payment method has been updated
 
 3.9 Scenario
-Feature: User direct access 
+Feature: DIRECT ACCES FROM USER DASHBOARD 
 And: CREAT A TOUR/ACTIVITY button available
 And JOINT TO FORUM/ OPEN A QUERY OR LOOK FOR ACTIVITY AT THE FORUM 
-And ON LINE CHAT
+And ASK FOT SUPPORT
 
 -----------------------------------------------------------------------------------------
 
 8. Scenario  
-Fetrure: REGISTRE NEW ACTIVITY AS AN INSTRUCTOR, TOUR AS A GUIDE OR TRIP AS ORGANIZER
-Given: The user wants to become a guide, insturctor or Organizer.
-And: If it is just 1 time ACTIVITY (it can have a disclaimer)
-Then: User clicks add ACTIVITY INSTRUCTOR
-And: If user wants to participate guidng the activity/Tour
+Fetrure: REGISTRE NEW ACTIVITY, TOUR OR TRIP
+Given: The user will become an instructor, guide or Organizer.
+And: If it is just 1 time ACTIVITY 
+Then: User clicks add ACTIVITY INSTRUCTOR (risk disclaimer)
+And: If user wants to participate guiding an expedition
 Then: Cliks to add activity as a TOUR GUIDE (it can have a disclaimer)
 And: if user wants No direct participation (it can have a disclaimer)
 And : Clicks add activity a TRIPS ORGANIZER
 
 
 8.1 Scenario 
-Then: User can add an ACTIVITY or TOUR 
-aND: User will click Activity for just one day activities.
 Feature:  CREATE AN ACTIVITY ,
-Then: if only 1 destination involved.
-Then: User clicks in ADD ACTIVITY (insted od add tour)
+Then: INSTRUCTOR ADDING AN ACTIVITY 
+Then: INSTRUCTOR clicks in to ADD ACTIVITY 
 And: Choose MAIN DESTINATION by fill in the gap 
 Then: GAP is linked with google maps and will show destination position
 And: Correct Name of the destination is selected by user at the MAP
-Then: Then User select Location 
-Then: User ADD number of Location at Destination place
-Then: User add days or time spent at each Location. 
-Then: Introudce main ACTIVITies/SPORTs from DROPLIST at each location 
-And: Then ADD for dedication time planned for the day.
-And: User add % of day dedicated to Sport, Nature, Landscapes & Sightseeing.
+Then: User can also select exact Location by clicking the map as meating point.
+Then coordenate are recorded and sent ubication link to users
+And: Introudce main ACTIVITies/SPORTs at location 
+And: User add days time spent at Location. 
+And: time planned for that adventure day.
+Then: User add % of day dedicated to Sport, Nature, Landscapes & Sightseeing.
 And: User add % of day dedicated to Relax, free time or Mind Activities ,  
 And: User add % of day dedicated to People, Culture & Gastronomy.
-Then: ACTIVITY shows destination
-And: If 1 location 
-then not stages  is created
-And: If more than one location 
-
-
-8.1 Scenario
+Then: ACTIVITY shows destination location Activity
 Then: Same process can be follow to generate multiscale tour
 And: when user finshed adding location
 And  Days by location 
@@ -293,11 +285,11 @@ And Activity to be develope during that day
 And: Time spent by day in those location 
 Then: User clicks add a new location 
 Then: RUTE TABLE showing a new stage is created
-And: Itinerary Map will be shown at TOUR OFFER
+And: Itinerary Map will link locations/stages
 
 8.2 Scenario
 Feature: CREATE A TOUR AS A GUIDE
-Given: User click ADD TOUR when more than one location and own participation involved 
+Given: User click ADD TOUR when more than one location
 And: Choose location by fill in the MAIN DESTINATION gap 
 Then: GAP is linked with google maps and will show destination position at the map
 And: Correct Name of the destination is selected by user at the MAP
@@ -352,10 +344,10 @@ And: With sport icons and % of dedication time for advenutre art each STAGE.
 
 
 8.2 Scenario 
-Feature: CREAT CONTENT ACTIVITY / TOUR / TRIP PROFILE 
-Then: User Add OVERVIEW TEXT for ACTIVITY / TOUR / TRIP PROFILE
-aND: User introduce BASIC INFORMATION text for DESCRIPTION
-And: User Add GALLERY MAIN PICTURE high resolution for Trip/ Activity 
+Feature: CREATING CONTENT FOR ACTIVITY / TOUR / TRIP OFFER
+Then: User Add OVERVIEW TEXT for DESTINATION & ACTIVITY 
+aND: User introduce BASIC INFORMATION text BOTH DESCRIPTION
+And: User Add GALLERY MAIN PICTURE high resolution for DESTINATION
 And: Main picture will be shown by system at offer trip header 
 And: User ADD also 1 PICTURES by STAGES at the adventure/tour 
 Then: System shows INTERACTIVE MAP when placing mouse on top 
