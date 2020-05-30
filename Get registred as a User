@@ -21,7 +21,7 @@ And: when valid e.mail is recognized.
 And: System places a green tick at the gap
 And: when INvalid e.mail is recognized.
 Then: system place a red tick in the gap
-And: User can proceed fill in next gaps
+And: However user can proceed fill in next gaps
 
 
 2.2 Scenario
@@ -38,7 +38,7 @@ Then: system red tick at the gap
 And: System ask to repeat till both passwords match
 Then: User type matching password
 And: System places a green tick at the gap
-And: User can proceed fill in next gaps
+And: User can proceed fill in next FORMULARIO gaps
 
 2.2 Scenario
 Feature: User select/Tick BY ELEMENTS FAVORITE ACTIVITIES FORM
@@ -50,13 +50,13 @@ And: User click as much activties as She/he wants form DROPLISTs above.
 And: {System complie sumatory for ACTIVITY clients} 
 ( example:uSER1= Surf+Climbing+Diving+...)
 And : record the information at API USER PROFILE
-And: User can proceed fill in next gaps
+And: User can proceed fill in next FORMULARIO gaps
 
 2.3. Scenario
-Given: User finds Activity it is not in the list 
-Then: User clicks ADD OTHERS activities.
+Given: iF User finds Sport Activity it is not in the list 
+Then: User CAN clicks ADD OTHERS activities.
 And: System will send NO REGISTRED ACTIVITIES to ADMINISTRATOR PANEL
-And: Support will consider IT and if aplicable add acctivity to system accordingly.
+And: SUPPORT will consider IT and if aplicable add acctivity to system accordingly.
 And: User can proceed fill in next gaps, when new activity has been added.
 
 2.4 Scenario
@@ -105,22 +105,21 @@ And: back to www.venturedestination.com
 And: User is NOW LOGGED IN
 
 2.8 Scenario 
-Feature:System complie sumatory for ACTIVITY/BASIC USER REGISTRATION
-( example:uSER1= Surf+Climbing+Diving+...)
+Feature:System complie sumatory for ACTIVITY & BASIC USER REGISTRATION
+Given: USER personal iformation gets registered at system
 And : record the information at API USER PROFILE
-Then: Picture at the infromation profile by default 
+Then: Place a Picture at the infromation profile by default 
 Then: System asing an ELEMENT ICON from favorite activites
 And: Incials can be displaiy at the centre
-Given: USER personal iformation gets registered at system
-and: as well as favorite adventure dedication time 
+and: also keep favorite adventure dedication time 
 Then: System will sellect TOURS/ACTIVITIES accordign registred data from user
 Then: System also recollect user navigation search activity 
 And: adding it to data user registration exitng preferences.
 Then: Displying preferred activities during navigation 
 Then: Newsletter system will sent by e-mail similar activities 
 And: when activity really matches with WEEK periodicity
-Then: Payment information will be added when user book first activity
-And: When user clicks in the field to modify it.
+Then: Payment information will be added to USER DATA INFO when user book first activity
+And: OR When user clicks in the field to modify it.
 
 
 -------------------------------------------------------------------------------------------------
@@ -128,50 +127,63 @@ And: When user clicks in the field to modify it.
 Feature: NEW USER ARRIVE DASHBOARD PANEL 
 Given: User profile picture is given by defect (user Inicials OR sport icon )
 Then: User can change it for its own pic
-Then: User click on top of by defect Picture 
-Then: System display up load picture browser  
+Then: User click on top of, by defect Picture 
+Then: System displayS up load picture browser  
 And: User upload picture from his computer
+Then: System updates it at user data info 
 And: User Nick name also displayed
 And. According info given form user at registretaion formulario
 
 3.1 Scenario
-Given:Access to Historical data from actividies Books/done
+Feature:CALENDARIO USER PROPFILE
+Then: shows history relevant dates mark with differents colors.
+Then: where User can check Activities done & booked
+Then: User can also check for adventures currently available at each date.
+Given: User clicks at USER CALENDARIO for a specific date 
+Then: Calendar shows TOUR /ACTIVITY AVAILBLE for those dates
+Then: System keeps dates to show if new activities get available for those dates 
+Then: User clicks into see ACTIVITies and
+Then: ACTIVITY / TOUR for that OFFERS PAGE OPENS
+
+
+3.1 Scenario
+Given:Access  Actual Activity/Tours offer.
 Then: User can click in activities to rebook them.
-And: accessing to Actual Activity/Tours offer.
-Then: User clicks in the activity/Tour
-then: By clicking the organizer picture
+then: By clicking the organizer picture at activity/ Tour offer
 And: access to Organizar public profile
-And: Showing Current acctivities available from seller
-Then: User can ASK organizer by cliking in contact
+And: Current acctivities available from that ORGANIZER
+Then: User can ASK organizer by cliking in contact organizer
 Than : A dilog box opens user can type in 
-And: User text question to organizar
-Then: message is sent to Organizer inbox
+And: User text question to organizer
 And : In case both connected
 Then : They can chat real time at dialog box 
+And: If not both connected
+Then: message is sent to Organizer inbox
 
 3.2 Scenario
 Feature: USER PROFILE MESSAGES BOX
-Then: User click on Messegaes
-And: User sees all conversations
-Then: User clicks in a specific conversation 
-Then: System opens a dialog box with conversation intended
-And: User can check conversation scrolling up and down.
+Then: User click on Messages
+And: User can see all previous conversations
+Then: User can clicks in a specific conversation 
+Then: System will open a dialog box with conversation intended
+And: User can scroll up and down to check current conversation
+And: If user wants to contact a new activity organizer
+Then: User goes to ACTIVITY/ TOUR currently availabe at calendar
+And: By clicking on see activity at the date
+Then: User gets to ACTIVITY/ TOUR offer Page
 Then: If users click contact activity organizer 
 Then: Dialog conversation box will open
 And: If they both connected
 hen : They can chat real time at dialog box
 ANd: Conversation can be follow at usser profile message box 
 
-3.1 Scenario
-Feature: USER PROPFILE CALENDARIO 
-Then: Shows adventures currently available EACH date.
-And: User check Activity Activities done & booked dates by click in date
-Then: USER PROFILE shows history relevant dates mark with differents colors.
+3.3 Scenario
+Feature: ADVENTURER RANKING
 And: Adventurer Ranking is given according Adventurer level 
 And: User gets LEVEL 1,2,3 or Expert
 And: According numbre of activities done
 
-3.3 Scenario
+3.4 Scenario
 Feature: REVIEW SYSTEM 
 Given: Tour or activity finished 
 Then: User receive a questioner at in box messages
@@ -182,12 +194,6 @@ And: Activity Knowlage
 And: organizationals skills 
 Then: User revceived rating form Organizar
 Regaring commitment , devlepment and results
-
-3.4 Scenario
-Given: User clicks at USER CALENDARIO for specific date 
-Then: Calendar shows TOUR /ACTIVITY AVAILBLE for that dates
-Then: User clicks in see ACTIVITY
-Then: ACTIVITY / TOUR OFFERS PAGE OPENS
 
 3.5. Scenario 
 Given: PAYMENT METHOD
@@ -212,10 +218,15 @@ And ON LINE CHAT
 -----------------------------------------------------------------------------------------
 
 8. Scenario  
+Fetrure: REGISTRE NEW ACTIVITY AS AN INSTRUCTOR, GUIDE OR ORGANIZER
 Given: The user wants to become a guide, insturctor or Organizer.
-Instructor : normally activities need from insurance and certificate
-Guide: Organize activity and participate guidng activity
-Organizer : Organize activity and Trip planner(No direct participation)
+And: IF activities needS from certificateS OR insurance
+Then: User clicks add activity as INSTRUCTOR
+And: If user wants to participate guidng the activity/Tour
+Then: Cliks to add activity as a GUIDE 
+And: if user wants No direct participation
+And : Clicks add activity as ORGANIZER
+
 
 8.1 Scenario 
 Then: User can add an ACTIVITY or TOUR (RUTE and ITINERARY MAP). 
