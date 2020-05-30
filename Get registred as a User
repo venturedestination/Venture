@@ -33,18 +33,18 @@ Then: System recognizes a PASSWORD characterictic
 And: System places a green tick at the gap
 And User fill in CONFIRM NEW PASSWORD 
 Then: System CHECKS characterictics from above passwords
-And: If it is not correct 
+And: If it is dose not match
 Then: system red tick at the gap 
 And: System ask to repeat till both passwords match
-Then: User type correct one 
+Then: User type matching password
 And: System places a green tick at the gap
 And: User can proceed fill in next gaps
 
 2.2 Scenario
 Feature: User select/Tick BY ELEMENTS FAVORITE ACTIVITIES FORM
 And: User select LAND ACTIVITIS: Hiking, Cycling, Running, etc	
-And: User select WATER ACTIVITIS: Sailing, Rafting, Surfing
-And: User select AIR ACTIVITIES:Parachuting , paragliding, Delta winging
+And: User select WATER ACTIVITIS: Sailing, Rafting, Surfing  etc	
+And: User select AIR ACTIVITIES:Parachuting , paragliding, Delta winging  etc	
 nd: User select MIND ACTIVITIES: Yoging, thai ching , Marcial arts,etc
 And: User click as much activties as She/he wants form DROPLISTs above. 
 And: {System complie sumatory for ACTIVITY clients} 
@@ -57,7 +57,7 @@ Given: User finds Activity it is not in the list
 Then: User clicks ADD OTHERS activities.
 And: System will send NO REGISTRED ACTIVITIES to ADMINISTRATOR PANEL
 And: Support will consider IT and if aplicable add acctivity to system accordingly.
-And: User can proceed fill in next gaps
+And: User can proceed fill in next gaps, when new activity has been added.
 
 2.4 Scenario
 Feature: User rate FAVORITE DEDICATION TIME FOR AN ADVENTURE DAY 
@@ -112,40 +112,42 @@ Then: Picture at the infromation profile by default
 Then: System asing an ELEMENT ICON from favorite activites
 And: Incials can be displaiy at the centre
 Given: USER personal iformation gets registered at system
-and: as well as Favorite Activities, destinations, favorite adventure dedication time 
+and: as well as favorite adventure dedication time 
 Then: System will sellect TOURS/ACTIVITIES accordign registred data from user
 Then: System also recollect user navigation search activity 
 And: adding it to data user registration exitng preferences.
 Then: Displying preferred activities during navigation 
 Then: Newsletter system will sent by e-mail similar activities 
-And: when activity really matches 
-aND: With WEEK periodicity
+And: when activity really matches with WEEK periodicity
 Then: Payment information will be added when user book first activity
+And: When user clicks in the field to modify it.
 
 
 -------------------------------------------------------------------------------------------------
 3. Scenario
-Feature: USER DASHBOARD PANEL 
-Given: User profile picture given by defect (user Inicials OR sport icon )
-Then: User change by defect picture for its own pic
+Feature: NEW USER ARRIVE DASHBOARD PANEL 
+Given: User profile picture is given by defect (user Inicials OR sport icon )
+Then: User can change it for its own pic
 Then: User click on top of by defect Picture 
 Then: System display up load picture browser  
 And: User upload picture from his computer
-And: User name displayed Nick name selected user basic formulario
+And: User Nick name also displayed
+And. According info given form user at registretaion formulario
 
 3.1 Scenario
 Given:Access to Historical data from actividies Books/done
-Then: User can click in activities 
-And: Actual offer for that Activity/ Tours 
-Then: User clicks in organizer picture
+Then: User can click in activities to rebook them.
+And: accessing to Actual Activity/Tours offer.
+Then: User clicks in the activity/Tour
+then: By clicking the organizer picture
 And: access to Organizar public profile
-And: Current acctivities available
-Then: User click on ASK organizer
-Than : A dilog box opens
+And: Showing Current acctivities available from seller
+Then: User can ASK organizer by cliking in contact
+Than : A dilog box opens user can type in 
 And: User text question to organizar
 Then: message is sent to Organizer inbox
 And : In case both connected
-Then : They can chat on line at dialog box 
+Then : They can chat real time at dialog box 
 
 3.2 Scenario
 Feature: USER PROFILE MESSAGES BOX
@@ -156,7 +158,8 @@ Then: System opens a dialog box with conversation intended
 And: User can check conversation scrolling up and down.
 Then: If users click contact activity organizer 
 Then: Dialog conversation box will open
-And: If they both connected 
+And: If they both connected
+hen : They can chat real time at dialog box
 ANd: Conversation can be follow at usser profile message box 
 
 3.1 Scenario
@@ -171,8 +174,8 @@ And: According numbre of activities done
 3.3 Scenario
 Feature: REVIEW SYSTEM 
 Given: Tour or activity finished 
-Then: User receive a questioner
-And User rates activity
+Then: User receive a questioner at in box messages
+And User rates organizer and activity
 Then User rates destination 
 And user rates Organizer in comunication skills
 And: Activity Knowlage
@@ -181,9 +184,9 @@ Then: User revceived rating form Organizar
 Regaring commitment , devlepment and results
 
 3.4 Scenario
-Given: User clicks at USER PROPFILE CALENDARIO for specific date 
-Then: Calendar shows TOUR /ACTIVITY AVAILBLE for that date
-Then: User clicks in to see ACTIVITY selected
+Given: User clicks at USER CALENDARIO for specific date 
+Then: Calendar shows TOUR /ACTIVITY AVAILBLE for that dates
+Then: User clicks in see ACTIVITY
 Then: ACTIVITY / TOUR OFFERS PAGE OPENS
 
 3.5. Scenario 
@@ -198,7 +201,7 @@ ANd: Type credit card Expiration date
 And: Type security number 
 Then: User press ok 
 And: Messages is shown
-And: New Payment method has been established
+And: New Payment method has been updated
 
 3.6 Scenario
 Feature: User direct access 
@@ -210,39 +213,40 @@ And ON LINE CHAT
 
 8. Scenario  
 Given: The user wants to become a guide, insturctor or Organizer.
-Instructor : Certificates
-Guide: Companion 
-Organizer : Trip planed no paticipations
-Then: If the ACTIVITY/TIRPS 
+Instructor : normally activities need from insurance and certificate
+Guide: Organize activity and participate guidng activity
+Organizer : Organize activity and Trip planner(No direct participation)
 
-
-
-Feature:  CREATE AN ACTIVITY , RUTE and ITINERARY MAP
+8.1 Scenario 
+Then: User can add an ACTIVITY or TOUR (RUTE and ITINERARY MAP). 
+aND: User will click Activity for just one day activities.
+Feature:  CREATE AN ACTIVITY ,
 Then: if only 1 destination involved.
 Then: User clicks in ADD ACTIVITY (insted od add tour)
 And: Choose MAIN DESTINATION by fill in the gap 
 Then: GAP is linked with google maps and will show destination position
 And: Correct Name of the destination is selected by user at the MAP
-Then: Selected Location will be displayed as FIRST STAGE AT RUTE TABLE
-Then: User ADD number of days spent on that first STAGE
-Then: Introudce main ACTIVITies/SPORTs from DROPLIST
-And: Then ADD for dedication time planned for that day.
+Then: Then User select Location 
+Then: User ADD number of Location at Destination place
+Then: User add days or time spent at each Location. 
+Then: Introudce main ACTIVITies/SPORTs from DROPLIST at each location 
+And: Then ADD for dedication time planned for the day.
 And: User add % of day dedicated to Sport, Nature, Landscapes & Sightseeing.
 And: User add % of day dedicated to Relax, free time or Mind Activities ,  
 And: User add % of day dedicated to People, Culture & Gastronomy.
-Then: ACTIVITY shows location, destination
+Then: ACTIVITY shows destination
 And: If 1 location 
 then not stages  is created
 And: If more than one location 
 Then: RUTE TABLE showing each stage is created
-And: Each day will show percentage of day dadicated to each mood
+And: Each day will show percentage of day dadicated
 And: Itinerary Map will be shown at TOUR OFFER
 
 8.1 Scenario
 Then: Same process can be follow to generate multiscale tour
 And: when user finshed adding location
 And  Days by location 
-And Activity to be dvelope during that day
+And Activity to be develope during that day
 And: Time spent by day in those location 
 Then: User clicks add a new location 
 Then: RUTE TABLE showing a new stage is created
@@ -276,9 +280,10 @@ And: System will show INTEREACTIVE MAP at the TOUR ACTITIVY OFFER and RUTE TABLE
 
 8.2 Scenario 
 Then: User Add OVERVIEW TEXT TOUR/Activity
-aND: User introduce BASIC INFORMATION text for DESCRIPTION,  GOALS, MOTIVES.
-And: User Add GALLERY MAIN PICTURE high resolution for Trip/ Activity will be shown at offer trip header 
-And: User ADD also at least 1 PICTURES for STAGES at the adventure/tour 
+aND: User introduce BASIC INFORMATION text for DESCRIPTION
+And: User Add GALLERY MAIN PICTURE high resolution for Trip/ Activity 
+And: Main picture will be shown by system at offer trip header 
+And: User ADD also 1 PICTURES by STAGES at the adventure/tour 
 Then: System shows INTERACTIVE MAP when placing mouse on top can show PICS overview TOUR AT each stage.
 And: User add PACKAGE DETAILS what it is INCLUDED and EXCLUDED and EXTRAS for EACH FIELD
 Then: User add PACKAGE DETAILS 4 different fields to be filled
@@ -292,9 +297,28 @@ ANd : If lodge included or and Extra
 Then: Users gives brief description of what it is included 
 And: Then click to add pictures for user referrence 
 And: GEAR
+Then: Insert Gear
+And: If Gear it is not included
+Then: User clicks not included 
+And : If it can be included as an extra 
+Then: User clicks Extra 
+ANd : If Gear included or and Extra
+Then: Users gives brief description of what it is included 
+And: Then click to add Gear pictures for user referrence 
 Then user choose Gear inluded and excluded
-And: If ti is exclud
 And: TRANSPORTATION
+Then: Insert Transportation 
+And: If Transportation it is not included
+Then: User clicks not included 
+And : If it can be included as an extra 
+Then: User clicks Extra 
+ANd : If Transportation  included or and Extra
+Then: Users gives brief description of what it is included 
+And: Then click to add Transportation pictures for user referrence 
+Then user choose Gear inluded and excluded
+And: MEALS: INcluded or not
+
+
 And: DISCLAIMER.
 And: for DISCLAIMER A PDF CAN BE UPLOADED with activity risk 
 then: System add DISCLAIMER text to the TOUR/ACTIVITY OFFER booking activity
