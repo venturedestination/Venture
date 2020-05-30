@@ -4,17 +4,17 @@ Then:  Users gets to already existing PROFILE.
 And: to GET REGISTRED as new user.
 Then: User clicks SING UP 
 
-2.1 Scenario
-Feature: SING UP & USER REGISRATION FORMULARIO 
-And: User fill in NAME/NICK at name GAP
+2. Scenario
+Feature: USER REGISRATION FORMULARIO 
+Given: User clicks SING UP  
+And: User clicks in the gap to fill in NAME/NICK 
 And if NAME dose already exist 
 Then: system place a red tick at gap
-And:: shows alternatives for similar Names/Nicks available.
-And: if user select a name dose Not already exists at system
-Then: System after checking data places a green tick at the name gap .
-And: User can proceed fill in next gaps
+And: shows alternatives for similar Names/Nicks available.
+And: if user select not yet existing at system data Name/Nick
+Then: System places a green tick at the name gap .
 
-2.2 Scenario
+2.1 Scenario
 Given: EMAIL VALIDATION 
 Then: User click fill in e.mail with valid email account
 Then: System recognizes a valid mail characterictics
@@ -24,69 +24,68 @@ And: when INvalid e.mail is recognized.
 Then: system place a red tick in the gap
 And: However user can proceed fill in next gaps
 
-
 2.2 Scenario
-Feature: CONFIRM PASSWORD
-And User fill in new PASSWORD
-Then: clicks in Insert valid pasword for account 
-And: Passwords requirements are shown enclosed
-Then: not less than 6 alfanumeric characters
-Then: System recognizes a PASSWORD characterictic 
-And: System places a green tick at the gap
-And User fill in CONFIRM NEW PASSWORD 
+Given: CONFIRM PASSWORD
+Then: Passwords requirements 6 alphanumeric character
+Then: Requirements are shown enclosed
+Then: User clicks in the gap 
+And: fills in the new PASSWORD 
+And: If Insert valid pasword for account 
+Then: System recognizes a correct PASSWORD characterictic 
+And: places a green tick at the gap
+Then: User fill in CONFIRM NEW PASSWORD gap 
 Then: System CHECKS characterictics from above passwords
 And: If it is dose not match
 Then: system place a red tick at the gap 
 And: ask to repeat till both passwords match
-Then: User type matching password
+Then: User type matching password correctly
 Then: System places a green tick at the gap
-And: User can proceed 
 
-2.2 Scenario
-Feature: FAVORITE ACTIVITIES FORM
-Then: User select/Tick first ELEMENT
-Then select ACTIVITIES SPORT ICONS DROPLIST
+2.3 Scenario
+Given: FAVORITE ACTIVITIES FORM
+Then: User select/Tick first type of ELEMENT Activity.
+Then select ACTIVITIES SPORT ICONS at DROPLIST
 And: User select LAND ACTIVITIS: Hiking, Cycling, Running, etc	
 And: User select WATER ACTIVITIS: Sailing, Rafting, Surfing  etc	
 And: User select AIR ACTIVITIES:Parachuting , paragliding, Delta winging  etc	
 nd: User select MIND ACTIVITIES: Yoging, thai ching , Marcial arts,etc
 And: User click as much activties as She/he wants form ICON DROPLISTs above. 
 And: {System complie sumatory for ACTIVITY clients} 
-( example:uSER1= Surf+Climbing+Diving+...)
+( example:USER1= Surf+Climbing+Diving+...)
 And : record the information at API USER PROFILE
 And: User can proceed fill in next FORMULARIO gaps
 
-2.3. Scenario
-Given: ACTIVITY IT IS NOT IN THE LIST
+2.4. Scenario
+Given:IF ACTIVITY IT IS NOT IN THE ACTIVITY LIST
 Then: User CAN clicks ADD OTHERS activities.
 Then: Choose ELEMENT ACTIVITY type LAND-WATER-WIR-MIND
 And: fill in the NAME OF NOT REGISTRE ACTIVIVY at the gap
 Then: System will send NO REGISTRED ACTIVITIES to ADMINISTRATOR PANEL to be checked 
-And: SUPPORT will consider its inclusion at the activities list
-Then: if a new ACTIVITIES is registred 
+And: SUPPORT will consider its inclusion at the GENERAL activities list
+Then: if a new ACTIVITIES is finally registred 
 Then: a new ACTIVITIES SPORT ICONS will be created 
-Then: to be displayed at the DROPLIST 
-And: User can proceed fill in next gaps, 
-And: While wating for ACTIVITY VALIDATION PORCESS
+Then: to be displayed at the DROPLIST ICON activities
+And: user can proceed fill in next form gaps
 
-2.4 Scenario
-Feature: User rate FAVORITE DEDICATION TIME FOR AN ADVENTURE DAY 
-And: User add % of day time dedicated to Sport, Nature, Landscapes & Sightseeing.
-And: User add % of day time dedicated to Relax, free time or Mind Activities ,  
-And: User add % of day time dedicated to People, Culture & Gastronomy.
+2.5 Scenario
+Given: We would like to know better ways to spent time for users during activies
+Then: User rate FAVORITE DEDICATION TIME FOR A PERFECT ADVENTURE DAY BY % OF IT
+And: User add favorite % of day time dedicated to Sport, Nature, Landscapes & Sightseeing.
+And: User add favorite % of day time dedicated to Relax, free time or Mind Activities ,  
+And: User add favorite % of day time dedicated to People, Culture & Gastronomy.
 And: {System complie  clients FAVORITE DEDICATION TIME FOR ADVENTURE} 
 ( example:USER1= Adventure 60% + Relax 20% + Culture 20%= 100%)
 And : record the information at USER PROFILE
 And: User can proceed fill in next gaps
 
-2.5 Scenario
-Then: User select YEAR OF BIRTH
-And: Click over years droplist
-And: Year of birth is recorded
-And: User can proceed fill in next gaps
-
 2.6 Scenario
-Feature: Select PHYSICAL COMMITMENT FOR ADVENTURE FORM 
+Given: YEAR OF BIRTH
+Then: User select YEAR OF BIRTH 
+And: Click in birth years droplist
+And: Year of birth is recorded
+
+2.7 Scenario
+Given: PHYSICAL COMMITMENT FOR ADVENTURE FORM 
 And: If User physical commitment is high
 Then: User clicks physical demanding Adventures
 And: If User physical commitment is medium
@@ -100,33 +99,31 @@ And: information gets recorded in the system
 Then: information message is displayed 
 And: USER BASIC REGISTRATION FORM COMPLETED
 
-2.7 Scenario
-Given: WRONG OR NOT COMPLETED FIELD AT FORMULAIR
-Then: In case User wants to submite formulaire 
-And: There is any field / Gap which is still with a red tick OR NOT COMPLETED
-Then System redirects user gap failed to be filled
-Then: User can proceed when all info submitted is correct
-And: According to system
-
 2.8 Scenario
+Given: WRONG OR NOT COMPLETED GAP AT FORM
+Then: In case User wants to submite formulaire 
+And: There is any field / Gap which is still display a red tick OR NOT COMPLETED
+Then System redirects user to gap failed in order to be filled
+Then: User place correct info 
+And: press submit registration 
+Then: Gets e.mail confirmation.
+
+2.9 Scenario
 Feature: E:MAIL ACCOUNT CONRFIRMATION 
-Given: E-mail personal account in previous stage and registration completed
-Then: E-mail it is sent to user personal email account provided 
-And: with confirmation link to be confirmed.
-Then: User go to personal e-mail account selected. 
+Given: E-mail personal account provided
+Then: Confirmation accunt E-mail it is sent. 
+And: with confirmation link to personal email.
+Then: User go to personal e-mail account. 
 And click LINK received for e-mail confirmation. 
 And: back to www.venturedestination.com 
 And: User is NOW LOGGED IN
 
-2.8 Scenario 
-Feature:ACTIVITY & BASIC USER API DATA REGISTRATION
+2.10 Scenario 
+Feature:ACTIVITY & BASIC USER DATA API REGISTRATION
 Given: USER  iformation gets registered at system
-Then: PERSONAL CONTACT DATA
-And: User FAVORITE SPORT ACTIVITIES  
-And: Client FAVORITE TIME DEDICATION FOR DAY OF ADVENTURE
-Then: Picture is placed at the infromation profile by default 
-Then: System asing picture as ELEMENT ICON from favorite activites
-And: User Incials can be displaiy also at the centre
+Then: PERSONAL CONTACT DATA provided
+And: User FAVORITE SPORT ACTIVITIES selected  
+And: Client FAVORITE % TIME DEDICATION choosen
 Then: System will sellect TOURS/ACTIVITIES to offer user 
 And: Accordign registred data from user
 Then: System also recollect user navigation search activity 
@@ -135,6 +132,12 @@ And: Displying preferred activities during navigation
 Then: Newsletter system will sent by e-mail similar activities 
 And: when activity really matches 
 And: with WEEK periodicity
+
+Feature: PICTURE AT USER PROFILE
+Then: IT is placed at by default 
+Then: System asing picture as ELEMENT ICON from favorite activites
+And: User Incials can be displaiy also at the centre
+
 Then: PAYMENT INFORMATION WILL BE ALSO RECORDED AT CLIENTS PROFILE 
 aND: added TO USER DATA INFO when user book first activity
 And: OR When user clicks in the field to update it or modify it
@@ -148,7 +151,7 @@ Then: User can change it for its own pic
 Then: User click on top of by defect Picture 
 Then: System displayS up load picture from browser  
 And: User clicks upload picture from computer
-Then: System updates it at user data info 
+Then: System updates it at user data info registred
 And: User Nick name also will be displayed
 And. According info given form user at registretaion formulario
 
@@ -161,19 +164,21 @@ Then: if User clicks for a specific date at user dashboard calendario
 Then: Calendar shows TOUR /ACTIVITY AVAILBLE for those dates
 Then: System keeps dates from user search
 And: shows sent an email if new activities get available for those dates 
-Then: User can clicks in see ACTIVITies at calendar
-Then: Current ACTIVITY / TOUR OFFERS PAGE OPENS
+And: see SEE ACTIVITY/TOUR/TRIP at calendar
+Then: User can clicks in 
+Then: be redireccted to ACTIVITY/TOUR/TRIP OFFER
 
-
-3.1.2 Scenarion 
-Then:USER WANTS TO ASK TRIP ORGANIZER 
-And: BY CLICKING contact activity organizer
+3.2 Scenario
+Given: SEE ACTIVITY/TOUR/TRIP OFFER at USER DASHBOARD CALENDAR
+Then: User can click in dates at calandar see availble activity, tour or trip.
+Then: ACTIVITY / TOUR / TRIP OFFER selected is displayed. 
+then: User can click at the Instructor , guide or organizer picture displayed.
 Then User gets access to Organizar public profile 
-And: With its current activities on and reviews.
+And: With its current activities availabel and reviews.
 then: Choose the activity to question about
-ANd: Select atvity at organizer porfile 
+ANd: Select actvity at organizer porfile 
 Than : A dilog box wil opens with curent activity title
-And: text message will be addressed to activity/ tour/ trip organizar
+And: text message will be addressed to activity/ tour/ trip organizer
 And: User question about subject trip.
 And : In case both are connected on line
 Then : They can chat real time at dialog box 
@@ -181,14 +186,8 @@ And: If not connected
 Then: message will be sent to Organizer inbox
 And: Organizer can replay when availble
 
-3.1.1 Scenario
-Given: SEE ACTIVITY/TOUR/TRIP OFFER at USER DASHBOARD CALENDAR
-Then: User can click in dates at calandar see availble activity, tour or trip.
-Then: ACTIVITY / TOUR / TRIP OFFER selected is displayed. 
-then: User can click at the Instructor , guide or organizer picture displayed.
 
-
-3.2 Scenario
+3.3 Scenario
 Feature: USER PROFILE MESSAGES BOX
 Then: User click on Messages 
 And: User can see all previous conversations
@@ -208,13 +207,21 @@ ANd: Conversation can be follows
 Aand. IN any case message box will be sent to outbox user
 And: to in box organizer message 
 
-3.3 Scenario
+3.5 Scenario 
+Feature: WAETHER MAP
+Given: USER DASHBOARD 
+Then: the week local wather forecast is shown
+And Locally when at the USER DASBOARD
+And: ACCORDING TO DESTINATION PLACE AT ACTIVITY/ TOUR/ TIRP OFFER
+
+
+3.6 Scenario
 Feature: ADVENTURER RANKING
 And: Adventurer Ranking is given according Adventurer level 
 And: User gets LEVEL 1,2,3 or Expert
 And: According numbre of activities done
 
-3.4 Scenario
+3.7 Scenario
 Feature: REVIEW SYSTEM 
 Given: Tour or activity finished 
 Then: User receive a questioner at in box messages
@@ -225,7 +232,7 @@ And: organizationals skills
 Then: User revceived rating form Organizar
 Regaring commitment , devlepment and results
 
-3.5. Scenario 
+3.8. Scenario 
 Given: PAYMENT METHOD
 Then: It is not filled till first booking is done
 Then: USER PROFILE would show information 
@@ -239,7 +246,7 @@ Then: User press ok
 And: Messages is shown
 And: New Payment method has been updated
 
-3.6 Scenario
+3.9 Scenario
 Feature: User direct access 
 And: CREAT A TOUR/ACTIVITY button available
 And JOINT TO FORUM/ OPEN A QUERY OR LOOK FOR ACTIVITY AT THE FORUM 
@@ -452,6 +459,7 @@ TOTAL 100 BOOKED
 ACTIVITY OFFERs 
 TRIP OFFERs
 ACTIVITY VALIDATION PORCESS
+MEMBERS
 
 
 
