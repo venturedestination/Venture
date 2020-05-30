@@ -68,8 +68,8 @@ Then: to be displayed at the DROPLIST ICON activities
 And: user can proceed fill in next form gaps
 
 2.5 Scenario
-Given: We would like to know better ways to spent time for users during activies
-Then: User rate FAVORITE DEDICATION TIME FOR A PERFECT ADVENTURE DAY BY % OF IT
+Given: We would like to know better ways to spent time for users during THEIR activies
+Then: User rate FAVORITE DEDICATION TIME FOR A PERFECT ADVENTURE BY DAY %
 And: User add favorite % of day time dedicated to Sport, Nature, Landscapes & Sightseeing.
 And: User add favorite % of day time dedicated to Relax, free time or Mind Activities ,  
 And: User add favorite % of day time dedicated to People, Culture & Gastronomy.
@@ -133,9 +133,9 @@ Then: Newsletter system will sent by e-mail similar activities
 And: when activity really matches 
 And: with WEEK periodicity
 
-Feature: PICTURE AT USER PROFILE
-Then: IT is placed at by default 
-Then: System asing picture as ELEMENT ICON from favorite activites
+Feature: PICTURE AT USER PROFILE UPDATE AUTOMATICALLY
+Then: IT is placed  by default 
+Then: System asing picture as ELEMENT ICON from favorite activit
 And: User Incials can be displaiy also at the centre
 
 Then: PAYMENT INFORMATION WILL BE ALSO RECORDED AT CLIENTS PROFILE 
@@ -146,8 +146,7 @@ And: OR When user clicks in the field to update it or modify it
 -------------------------------------------------------------------------------------------------
 3. Scenario
 Feature: USER DASHBOARD  
-Given: User recieve a by defect profile picture (user Inicials OR sport icon )
-Then: User can change it for its own pic
+Given: User wants to change by defect profile picture (user Inicials OR sport icon )
 Then: User click on top of by defect Picture 
 Then: System displayS up load picture from browser  
 And: User clicks upload picture from computer
@@ -157,23 +156,21 @@ And. According info given form user at registretaion formulario
 
 3.1 Scenario
 Feature: USER DASHBOARD CALENDAR
-Then: shows Activity history relevant dates mark in differents colors.
+Then: shows Activity history relevant dates marks.
 Then: User can check Activities done & booked
-Then: User can also check for adventures currently available at new dates.
-Then: if User clicks for a specific date at user dashboard calendario 
+Then: User can also check for adventures currently available at any given dates.
+Then: User clicks for a specific date at user dashboard calendario 
 Then: Calendar shows TOUR /ACTIVITY AVAILBLE for those dates
-Then: System keeps dates from user search
-And: shows sent an email if new activities get available for those dates 
+Then: System keeps searched dates from user researches
+And: shows sent an email if new matching activities gets available for those dates 
 And: see SEE ACTIVITY/TOUR/TRIP at calendar
 Then: User can clicks in 
 Then: be redireccted to ACTIVITY/TOUR/TRIP OFFER
 
 3.2 Scenario
-Given: SEE ACTIVITY/TOUR/TRIP OFFER at USER DASHBOARD CALENDAR
-Then: User can click in dates at calandar see availble activity, tour or trip.
-Then: ACTIVITY / TOUR / TRIP OFFER selected is displayed. 
-then: User can click at the Instructor , guide or organizer picture displayed.
-Then User gets access to Organizar public profile 
+Feature: INSTRUCTOR , GUIDE , ORGANIZER PUBLIC PROFILE
+then: User can click at organizer picture displayed given at any offer
+Then User gets access to Organizer public profile 
 And: With its current activities availabel and reviews.
 then: Choose the activity to question about
 ANd: Select actvity at organizer porfile 
