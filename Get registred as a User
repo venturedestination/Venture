@@ -1,15 +1,15 @@
 1. Scenario: 
-Given: Users click to LOG IN if Account already created
-Then:  USER gets to already existing PROFILE.
-And:to GET REGISTRED as new user.
-Then 2.User clicks SING UP 
+Given: USER click to LOG IN if Account already created
+Then:  Users gets to already existing PROFILE.
+And: to GET REGISTRED as new user.
+Then: User clicks SING UP 
 
 2.1 Scenario
-Feature: SING UP USER REGISRATION FORMULARIO 
-And: User fill in name/nick at name GAP
+Feature: SING UP & USER REGISRATION FORMULARIO 
+And: User fill in NAME/NICK at name GAP
 And if NAME dose already exist 
 Then: system place a red tick at gap
-Then: also shows alternatives as similar Names available.
+And:: shows alternatives for similar Names/Nicks available.
 And: if user select a name dose Not already exists at system
 Then: System after checking data places a green tick at the name gap .
 And: User can proceed fill in next gaps
@@ -26,6 +26,7 @@ And: However user can proceed fill in next gaps
 
 
 2.2 Scenario
+Feature: CONFIRM PASSWORD
 And User fill in new PASSWORD
 Then: clicks in Insert valid pasword for account 
 And: Passwords requirements are shown enclosed
@@ -49,7 +50,7 @@ And: User select LAND ACTIVITIS: Hiking, Cycling, Running, etc
 And: User select WATER ACTIVITIS: Sailing, Rafting, Surfing  etc	
 And: User select AIR ACTIVITIES:Parachuting , paragliding, Delta winging  etc	
 nd: User select MIND ACTIVITIES: Yoging, thai ching , Marcial arts,etc
-And: User click as much activties as She/he wants form DROPLISTs above. 
+And: User click as much activties as She/he wants form ICON DROPLISTs above. 
 And: {System complie sumatory for ACTIVITY clients} 
 ( example:uSER1= Surf+Climbing+Diving+...)
 And : record the information at API USER PROFILE
@@ -164,9 +165,8 @@ Then: User can clicks in see ACTIVITies at calendar
 Then: Current ACTIVITY / TOUR OFFERS PAGE OPENS
 
 
-
 3.1.2 Scenarion 
-Then: User wants to ask organizer 
+Then:USER WANTS TO ASK TRIP ORGANIZER 
 And: BY CLICKING contact activity organizer
 Then User gets access to Organizar public profile 
 And: With its current activities on and reviews.
@@ -398,14 +398,14 @@ And: Then click to add Transportation pictures for user referrence
 Then user choose Gear inluded and excluded
 And: MEALS: INcluded or not
 
-8.7 Scenario
+8.5 Scenario
 Feature: ACTIVITY RISK
 Then: USER CAN add a PDF DISCLAIMER.
 And: PDF CAN BE UPLOADED with activity risk responsabilities.
 Then: System add DISCLAIMER TO TERMS & CONDITION FOR SUBJECT ACTIVITY/TOUR /TRIP OFFER 
 Then: When booking activity user needs to approve PDF disclarimer for subject ativity. 
 
-8.8 Scenario
+8.6 Scenario
 Feature: TRIP ORGANIZER CALCULATOR
 Given: LODGE , GEAR, TRANSPORTATION & MEALS
 Then. User can add an estimated price for each of above fields
@@ -416,15 +416,19 @@ Then: organizer can calculate price for its own trip accordingly
 And: befor Submite TOUR/ACTIVITY OFFER
 Then : add DATA FOR RECEIVING PAYMENTS
 
-8.8 Scenario SELECT ADVENTURE DATE AND TIME 
+8.7 Scenario SELECT ADVENTURE DATE AND TIME 
 SELECT EXPERINCE ENDING DATE AND TIME
 THE INSTRUCTOR / GUIDE OR ORGANIZER PROVIDES DATES FOR ACTITIVY
 Then: Add tour date AVAILABILITY to CALANEDAR 
 And: FOR ACTIVITIES 1 time or periodically TOUR/ACTIVITY
 
 
-8.9 Scenario
+8.8 Scenario
 Given: add DATA FOR RECEIVING PAYMENTS
+
+
+8.9 Scenario 
+Feature: ACTIVITY VALIDATION PORCESS
 
 
 
