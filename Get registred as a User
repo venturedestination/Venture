@@ -206,9 +206,9 @@ Feature: ADVENTURER RANKING
 And: Adventurer Ranking is given according Adventurer level 
 And: User gets LEVEL 1,2,3 or Expert
 And: According numbre of activities done
+Then: ADD COMMUNICATION  SKILLS
+And: addLenguages skills, 
 
-And: Lenguages skills, 
-Then: ADD OMMUNICATION  SKILLS
 
 3.9 Scenario
 Feature: DIRECT ACCES FROM USER DASHBOARD 
