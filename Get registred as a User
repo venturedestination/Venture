@@ -11,7 +11,7 @@ And: User clicks in the gap to fill in NAME/NICK
 And if NAME dose already exist 
 Then: system place a red tick at gap
 And: shows alternatives for similar Names/Nicks available.
-And: if user select not yet existing at system data Name/Nick
+And: if user select not yet existing at data Name/Nick
 Then: System places a green tick at the name gap .
 
 2.1 Scenario
@@ -22,12 +22,10 @@ And: when valid e.mail is recognized.
 And: System places a green tick at the gap
 And: when INvalid e.mail is recognized.
 Then: system place a red tick in the gap
-And: However user can proceed fill in next gaps
 
 2.2 Scenario
 Given: CONFIRM PASSWORD
-Then: Passwords requirements 6 alphanumeric character
-Then: Requirements are shown enclosed
+Then: System Passwords requirements 6 alphanumeric character 
 Then: User clicks in the gap 
 And: fills in the new PASSWORD 
 And: If Insert valid pasword for account 
@@ -44,7 +42,7 @@ Then: System places a green tick at the gap
 2.3 Scenario
 Given: FAVORITE ACTIVITIES FORM
 Then: User select/Tick first type of ELEMENT Activity.
-Then select first your favorite ACTIVITIES SPORT ICONS at DROPLIST
+Then select first your favorite SPORT ICONS at DROPLIST
 And: User select LAND ACTIVITIS: Hiking, Cycling, Running, etc	
 And: User select WATER ACTIVITIS: Sailing, Rafting, Surfing  etc	
 And: User select AIR ACTIVITIES:Parachuting , paragliding, Delta winging  etc	
@@ -53,15 +51,16 @@ And: User select MIND ACTIVITIES: Yoging, thai ching , Marcial arts,etc
 And: User then add as much activties as She/he wants form ICON DROPLISTs above. 
 And: {System complie sumatory for ACTIVITY clients} 
 ( example:USER1= Surf+Climbing+Diving+...)
+Then: Favorite Sport Icon will be suse in by defect user porfile
 And : record the information at API USER PROFILE
 And: User can proceed fill in next FORMULARIO gaps
 
 2.4. Scenario
-Given:ACTIVITY IS NOT IN THE ICON DROPLIST
+Given:ACTIVITY IS NOT IN THE SPORT ICON DROPLIST
 Then: User CAN clicks ADD OTHERS activities.
-Then: Choose ELEMENT type LAND-WATER-AIR- SNOW OR MIND ACTIVITY
+Then: Choose ELEMENT type LAND-WATER-AIR-SNOW (And motor) & MIND ACTIVITY
 And: fill in the NAME OF NOT REGISTRE ACTIVITY at the gap
-Then: System will send NO REGISTRED ACTIVITIES to ADMINISTRATOR PANEL to be checked 
+Then: System will send NO REGISTRED ACTIVITIES to ADMINISTRATOR PANEL
 And: SUPPORT will consider its inclusion at the GENERAL activities list
 Then: if a new ACTIVITIES is finally registred 
 Then: a new ACTIVITIES SPORT ICONS will be created 
@@ -94,8 +93,8 @@ Then: User clicks physical regular demand ,
 And: If User physical commitment is low
 Then: User clicks Not demanding activities.
 And: User pushes submit buttom 
-And: {System complie sumatory for clients PHYSICAL COMMITMENT PREFERENCES}
-( example:uSER1= Not demanding activities)
+And:{System record clients PHYSICAL COMMITMENT PREFERENCES}
+( example:USER1= Not demanding activities)
 And: information gets recorded in the system
 Then: information message is displayed 
 And: USER BASIC REGISTRATION FORM COMPLETED
@@ -110,7 +109,7 @@ And: press submit registration
 Then: Gets e.mail confirmation.
 
 2.9 Scenario
-Feature: E:MAIL ACCOUNT CONRFIRMATION 
+Feature: E:MAIL ACCOUNT CONRFIRMATION FOR COMPLETE REGISTRATION
 Given: E-mail personal account provided
 Then: Confirmation accunt E-mail it is sent. 
 And: with confirmation link to personal email.
@@ -120,24 +119,25 @@ And: back to www.venturedestination.com
 And: User is NOW LOGGED IN
 
 2.10 Scenario 
-Feature:ACTIVITY & BASIC USER DATA API REGISTRATION
+Feature: BASIC ACTIVITY & USER DATA RECORDED AT API
 Given: USER  iformation gets registered at system
 Then: PERSONAL CONTACT DATA provided
 And: User FAVORITE SPORT ACTIVITIES selected  
 And: Client FAVORITE % TIME DEDICATION choosen
 Then: System will sellect TOURS/ACTIVITIES to offer user 
-And: Accordign registred data from user
-Then: System also recollect user navigation search activity 
+And: Accordign registred data FORM from user
+Then: System also recollect basic activity 
+And: user navigation search activity 
 And: adding its data to user registration exitng preferences.
 And: Displying preferred activities during navigation 
 Then: Newsletter system will sent by e-mail similar activities 
-And: when activity really matches 
+And: check for activity that matches user profile 
 And: within WEEK periodicity
 
-Feature: PICTURE AT USER PROFILE UPDATE AUTOMATICALLY
-Then: IT is placed  by default 
-Then: System asing picture as ELEMENT ICON from favorite activity
-And: User NICK can be displayed below the sport icon to diferenciate
+Feature: PICTURE AT USER PROFILE UPDATE
+Then: System asing picture as ELEMENT ICON according to favorite sport activity choosen
+And: Unique User NICK will be displayed below the sport icon to diferenciate
+Then: IT is placed  by default at user profile
 
 Then: PAYMENT INFORMATION WILL BE ALSO RECORDED AT CLIENTS PROFILE 
 aND: added TO USER DATA INFO when user book first activity
@@ -183,25 +183,24 @@ Then: User gets to ACTIVITY/ TOUR offer Page
 Then: If users click on organizer picture  
 Then User can contact activity organizer 
 Then: Dialog conversation box will open
-And: If they both connected and on line
-Then : Dialog box chat opens at organizer side 
-ANd: Conversation can be follows 
+And: If they both on line
+Then: Conversation can take place
 Aand. IN any case message box will be sent to outbox user
 And: to in box organizer message 
 
 
 3.5 Scenario 
 Feature: WEATHER MAP
-Given: USER DASHBOARD 
+Given: WEATHER MAP USER DASHBOARD 
 Then: the week local wather forecast is shown
-And Locally when at the USER DASBOARD
+And Locally when at the USER DASHBOARD
 And: OR ACCORDING TO DESTINATION
 AT ACTIVITY/ TOUR/ TIRP OFFER
 
 3.8. Scenario 
-Given: PAYMENT METHOD
+Given: USUER DASHBOARD PAYMENT METHOD
 Then: It is not filled till first booking is done
-Then: USER PROFILE would show information 
+Then: If user wants to add payment method
 And: User click update PAYMENT METHOD
 Then: User selet payment method
 And: User select VISA payments
@@ -209,14 +208,8 @@ And. User type credit card number
 ANd: Type credit card Expiration date
 And: Type security number 
 Then: User press ok 
-And: Messages is shown
+And: Confirmation Messages is shown
 And: New Payment method has been updated
-
-3.9 Scenario
-Feature: DIRECT ACCES FROM USER DASHBOARD 
-And: CREAT A TOUR/ACTIVITY button available
-And JOINT TO FORUM/ OPEN A QUERY OR LOOK FOR ACTIVITY AT THE FORUM 
-And ASK FOT SUPPORT
 
 3.7 Scenario
 Feature: REVIEW SYSTEM 
@@ -235,99 +228,102 @@ And: Adventurer Ranking is given according Adventurer level
 And: User gets LEVEL 1,2,3 or Expert
 And: According numbre of activities done
 
+And: Lenguages skills, 
+Then: ADD OMMUNICATION  SKILLS
+
+3.9 Scenario
+Feature: DIRECT ACCES FROM USER DASHBOARD 
+And: CREAT A TOUR/ACTIVITY button available
+And JOINT TO FORUM/ OPEN A QUERY OR LOOK FOR ACTIVITY AT THE FORUM 
+And ASK FOR SUPPORT
+
 
 -----------------------------------------------------------------------------------------
 
 8. Scenario  
-Fetrure: REGISTRE NEW ACTIVITY, TOUR OR TRIP
-Given: The user will become an instructor, guide or Organizer.
-And: If it is just 1 ACTIVITY involved
-Then: User clicks add ACTIVITY INSTRUCTOR (risk disclaimer)
+Feature: REGISTRE NEW ACTIVITY, TOUR OR TRIP
+Given: The user wants to become an instructor, guide or Organizer.
+Then: User clicks add ACTIVITY AS AN INSTRUCTOR
 And: If user wants to participate guiding an expedition
-Then: Cliks to add activity as a TOUR GUIDE (it can have a disclaimer)
-And: if user wants No direct participation (it can have a disclaimer)
-And : Clicks add activity a TRIPS ORGANIZER
+Then: Cliks to add activity as AS A TOUR GUIDE 
+And: if user wants Not direct participation 
+Then : Clicks add activity AS A TRIPS ORGANIZER
 
 
 8.1 Scenario 
-Feature:  CREATE AN ACTIVITY ,
-Then: INSTRUCTOR ADDING AN ACTIVITY 
-Then: INSTRUCTOR clicks in to ADD ACTIVITY 
-And: Choose MAIN DESTINATION by fill in the gap 
-Then: GAP is linked with google maps and will show destination position
-And: Correct Name of the destination is selected by user at the MAP
-Then: User can also select exact Location by clicking the map as meating point.
-Then coordenate are recorded and sent ubication link to users
-And: Introudce main ACTIVITies/SPORTs at location 
-And: User add days time spent at Location. 
-And: time planned for that adventure day.
-Then: User add % of day dedicated to Sport, Nature, Landscapes & Sightseeing.
-And: User add % of day dedicated to Relax, free time or Mind Activities ,  
-And: User add % of day dedicated to People, Culture & Gastronomy.
-Then: ACTIVITY shows destination location Activity
-Then: Same process can be follow to generate multiscale tour
-And: when user finshed adding location
-And  Days by location 
-And Activity to be develope during that day
-And: Time spent by day in those location 
-Then: User clicks add a new location 
-Then: RUTE TABLE showing a new stage is created
-And: Itinerary Map will link locations/stages
+Feature:  REGISTRING ACTIVITY, TOUR OR TRIP
+And: USERS wants to add a TITLE TO THE EXPERIENCE
+Then: TILE might contains, main activity 
+And: Main Destination (or Location) 
+Then: title will be ended by words, Activity , tour or tirp
+And: Accoridgn to above implication decision from seller.
+(Exmaple: 360º windsurfing Hawaii tour )
+And: System will limit Experience title extension 
+Then: maximun 40 characters could to be used 
 
-8.2 Scenario
-Feature: CREATE A TOUR AS A GUIDE
-Given: User click ADD TOUR when more than one location
-And: Choose location by fill in the MAIN DESTINATION gap 
-Then: GAP is linked with google maps and will show destination position at the map
-And: Correct Name of the destination is selected by user at the MAP
-Then: Selected Location will be displayed as FIRST STAGE AT RUTE TABLE
-Then: User ADD number of days spent on that first STAGE
-Then: User also Introudce main ACTIVITies/SPORTs from DROPLIST for that day
-Then: User press add anther location to create the RUTE/Itinerary
-And: User add NEW LOCATION by filling the second stage gap
-Then: Map is linked with google maps and will show destination position
-And: Correct Name of the LOCATION is slected by user 
-Then: System will add 2 location name to the TABLE RUTE as second stage
-Then: User ADD number of days spent on second NEW STAGE
-Then: Introudce main ACTIVITies/SPORTs AT the STAGE
-And: Then ADD for each day dedication time planed at the STAGE
-And: User add % of day dedicated to Spor, Nature, Landscapes & Sightseeing.
-And: User add % of day dedicated to Relax, free time or Mind Activities ,  
-And: User add % of day dedicated to People, Culture & Gastronomy.
-Then: Total of 100% TIME DEDICATION FOR EACH DAY PLANNED AT THE TOUR (circular icon)
-Then: System creat a RUTE map with a linking line in between STAGES at the destination.
-Then: LOCATION , No. DAYS, ACTIVITY is NOW recorde at RUTE TABLE for each STAGE. 
-And: System will show INTEREACTIVE MAP at the TOUR ACTITIVY OFFER and RUTE TABLE 
-And: With sport icons and % of dedication time for advenutre at each STAGE.
-Then: RUTE TABLE showing each stage is created
-And: Each day will show percentage of day dadicated
-And: Itinerary Map will be shown at TOUR OFFER
+8.2 Scenario 
+Feature: DESIGNING AND EPERIENCE ITINERARY 
+Then: Users want to establish their ITINERARY 
+Then: If activity moves through out different Location.
+Then: User clicks to Add ITINERARY TABLE 
+Then: ACTIVITY ITINERARY TABLE opens 
+And: Titled as the EXPERIENCE NAME
+Then: Click at 1 STAGES FROM ACTIVITY ITINERARY TABLE 
+Then: System should be linked to MAP DATA BASE (GOOGLE MAP)
+Then: User can clicks directly on the map to add loctaion tile to the stages
+And: Complete the name of location at the gap tilll systen finds a match (Dat base)
+Then: Then 1 Stage at itinerary table displays with EXACT location name
+Then: User clicks in the 1 STAGE to add brief stage description 100 characters
+Then: STAGE will only show the name of LOCATION SELECTED
+Then: By cliking on the stage Organizer add number of days 
+Then: FOR EACH DAY add by organizer System will drop A list with 3 histogram.  
+Then: Oranizer will Giving each day a % at 3 different categories.
+Then: User add % of that day dedicated to Sport, Nature, Landscapes & Sightseeing. 
+And: User add % of that day dedicated to Relax, free time or Mind Activities. 
+And: User add % of that day dedicated to People, Culture & Gastronomy. 
+Then: TOTAL DAY VALUE DAY will show sumatory % values at any given time
+And: as soon as any % value is added by orginazer to the categories 
+Then; Sytem will add inmediatly value to total day % value gap
+And: system wont allow more than 100% at total sumatory gap 
+Then: System will always place actumatically % value for last category to be filled. 
+Then: system wont allow more than 100% total value for the 3 categories.
+And: IN case organizer not agree with last valued added
+Then: Organizer can cliks on top of any category to change its value.
+And: Adding a new % value to it, autoomatically wil delivery differnt value to other categries.
+Then: Addin or deduce from categories half of incremented or deduce value excess or deficit.
+Then: till each category is rated an total sumatory is 100%
+( example:1DAY= Adventure 60% + Relax 20% + Culture 20%= total 100%
+(Then if %value introduce in that order sytem would add 20% for cultre)
+Then: System will show an PIE CHART FOR EACH DAY AT ITINERARY TABLE STAGES
+And: pie chart will be added to each day at stages
+And : display at ITINERARY TABLE FOR ACTIVITY OFFER
 
-8.3
-Feature: CREATE A TRIP AS AN ORGANIZER
-Given: User click ADD TTRIP when more than one location and own participation involved 
-And: Choose location by fill in the MAIN DESTINATION gap 
-Then: GAP is linked with google maps and will show destination position at the map
-And: Correct Name of the destination is selected by user at the MAP
-Then: Selected Location will be displayed as FIRST STAGE AT RUTE TABLE
-Then: User ADD number of days spent on that first STAGE
-Then: User also Introudce main ACTIVITies/SPORTs from DROPLIST for that day
-Then: User press add anther location to create the RUTE/Itinerary
-And: User add NEW LOCATION by filling the second stage gap
-Then: Map is linked with google maps and will show destination position
-And: Correct Name of the LOCATION is slected by user 
-Then: System will add 2 location name to the TABLE RUTE as second stage
-Then: User ADD number of days spent on second NEW STAGE
-Then: Introudce main ACTIVITies/SPORTs AT the STAGE
-And: Then ADD for each day dedication time planed at the STAGE
-And: User add % of day dedicated to Spor, Nature, Landscapes & Sightseeing.
-And: User add % of day dedicated to Relax, free time or Mind Activities ,  
-And: User add % of day dedicated to People, Culture & Gastronomy.
-Then: Total of 100% TIME DEDICATION FOR EACH DAY PLANNED AT THE TOUR (circular icon)
-Then: System creat a RUTE map with a linking line in between STAGES at the destination.
-Then: LOCATION , No. DAYS, ACTIVITY is NOW recorde at RUTE TABLE for each STAGE. 
-And: System will show INTEREACTIVE MAP at the TOUR ACTITIVY OFFER and RUTE TABLE 
-And: With sport icons and % of dedication time for advenutre art each STAGE.
+8.3 Scenario 
+Feature: ADVENTURE DATE AND TIME 
+And: Instructor PLACE DATES ACTIVITY AVAILABILITY AT interactive CALENDAR
+E INSTRUCTOR / GUIDE OR ORGANIZER PROVIDES DATES FOR ACTITIVY
+Then: Instructor fix HOURS ACTIVITY STARS & FINISHS
+And: SELECT START/ENDING DATE AND TIME
+Then: SELECT EXPERIENCE AVAILABILITY
+And: AddING PERIODICITY to calendar
+Then User can add periodicity adding
+And: or 1 time 
+
+8.3 Scenario 
+Feature: RUTE MAP
+Given: We want to make funny the process 
+And: atractive offer inphografic map will be created by sytem.
+Then: System can creat and inphographic RUTE MAP 
+And: INFORMATION will be taken from ITINERARY TABLE. 
+And: It could be linked to map and location service provider( google map) 
+Then: System will link locations with stages numbers
+Then: showing startin point for activity 
+And:  A line will link different location
+And: STAGES BY LOCATIONS names
+And: SPEND DAY TIME FOR DAY %
+Then: User cliking in each stage
+And: Can add a picture linked smal piecutre
+Then it can be display with shrot infro from each stage
 
 
 8.2 Scenario 
@@ -341,23 +337,24 @@ Then: System shows INTERACTIVE MAP when placing mouse on top
 And: can show PICS overview TOUR AT each stage.
 
 3.2 Scenario
-Feature: INSTRUCTOR , GUIDE , ORGANIZER PUBLIC PROFILE
-Then: ADD OMMUNICATION  SKILLS
-And: User Add lenguages skills, 
-And: SPORTs knowlage and experience
-then: User can click at organizer picture displayed given at any offer
-Then User gets access to Organizer public profile 
+Feature: INSTRUCTOR PUBLIC PROFILE
+Then: Current instructor Activity offer
 And: With its current activities availabel and reviews.
-then: Choose the activity to question about
+And: SPORTs knowlage and experience
+Brief instroduction 200 characters
+And: Lenguages skills, 
+Then: ADD OMMUNICATION  SKILLS
+Then By clicking the picture of colaborator at TIP OFFER
+tHEN: User gets access to Organizer public profile 
 ANd: Select actvity at organizer porfile 
+then: Click on the activity to question about
 Than : A dilog box wil opens with curent activity title
 And: text message will be addressed to activity/ tour/ trip organizer
-And: User question about subject trip.
-And : In case both are connected on line
-Then : They can chat real time at dialog box 
-And: If not connected
+And: User can now question about subject trip.
 Then: message will be sent to Organizer inbox
 And: Organizer can replay when availble
+And : In case both are connected on line
+Then : They can chat real time at dialog box 
 
 8.4 Scenario
 Given: OFFER PACKAGE DETAILS 
@@ -403,6 +400,15 @@ And: PDF CAN BE UPLOADED with activity risk responsabilities.
 Then: System add DISCLAIMER TO ACTIVITY/TOUR /TRIP OFFERTE RMS & CONDITION  
 Then: When booking activity user needs to approve PDF disclarimer for subject activity. 
 
+8.2 Scenario 
+Feature: METTING POINT 
+Given: User wnats to make a rendevous 
+Then: After MEETING  coordenates recorded AT OFFER API 
+And: System will sent ubication link will be sent to users
+And: it will Show dates , star & finish time 
+And: To be notify regarding subject activity comunicaton 
+Then:it can be sent by SMS, MAIL, INBOX user dashboard messages
+
 8.6 Scenario
 Feature: TRIP ORGANIZER CALCULATOR
 Given: LODGE , GEAR, TRANSPORTATION & MEALS
@@ -413,19 +419,25 @@ And: ADD prices TO CALACULATOR TOUR for LODGE, GEAR AN TRANSPORTATION, MEALS
 Then: organizer can calculate price for its own trip accordingly
 And: befor Submite TOUR/ACTIVITY OFFER
 
-8.7 Scenario SELECT ADVENTURE DATE AND TIME 
-SELECT EXPERINCE ENDING DATE AND TIME
-SELECT EXPERIENCE AVAILABILITY
-THE INSTRUCTOR / GUIDE OR ORGANIZER PROVIDES DATES FOR ACTITIVY
-Then: Add tour date AVAILABILITY to CALANEDAR 
-And: FOR ACTIVITIES 1 time or periodically TOUR/ACTIVITY
 
 8.8 Scenario
 Given: add DATA FOR RECEIVING PAYMENTS
 
 
-8.9 Scenario 
+8.4 Scenario 
 Feature: ACTIVITY VALIDATION PORCESS
+Given: Trip activity organizer wants to stay always on the safe side 
+Then: User can plan and lunch OFFER that need to meet certain criteria to be validated 
+Then: Organizer can determine minimun number of booking for its validation before certain date.
+And: Users can estabilsh a maximum Deposit of 30% from total activity cost.
+And: After validation date has expired
+And: booking requirements had been accomplished
+Then: System will validate activity automatically
+And: Showing ativity at the calendar as confirmed
+Then: System will allows maximun day for cancelation before Activiy takes place 
+And: It will be 3 days fro activities and tours and 15 days before organized trips takes place
+Then: User can also cancel trip due to Major cause or bad weather condition.
+And: Due to wather conditions prevously established values at disclaimer
 
 
 
