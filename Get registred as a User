@@ -40,7 +40,7 @@ Then: User type matching password correctly
 Then: System places a green tick at the gap
 
 2.3 Scenario
-Given: FAVORITE ACTIVITIES FORM
+Given: FAVORITE SPORT FORM
 Then: User select/Tick first type of ELEMENT Activity.
 Then select first your favorite SPORT ICONS at DROPLIST
 And: User select LAND ACTIVITIS: Hiking, Cycling, Running, etc	
@@ -69,7 +69,7 @@ And: user can proceed fill in next form gaps
 
 2.5 Scenario
 Given: We would like to know better ways to spent time for users during THEIR activies
-Then: User rate FAVORITE DEDICATION TIME FOR A PERFECT DAY ADVENTURE BY assinging a % of the day to it.
+Then: User rate FAVORITE DEDICATION TIME FOR A PERFECT DAY OF ADVENTURE BY assinging a % of the day to it.
 And: User add favorite % of day time dedicated to Outdor Sport, Nature, Landscapes & Sightseeing.
 And: User add favorite % of day time dedicated to Relax, free time or Mind Activities ,  
 And: User add favorite % of day time dedicated to People, Culture, Music & Gastronomy.
@@ -336,7 +336,7 @@ Then User can add periodicity adding
 And: or 1 time 
 
 8.2 Scenario 
-Feature: CREATING CONTENT EXPERIENCE OFFER
+Feature: CREATING NICE CONTENT FOR EXPERIENCE OFFER
 Then: User Add OVERVIEW TEXT for DESTINATION & ACTIVITY 
 aND: User introduce BASIC INFORMATION text BOTH DESCRIPTION
 And: User Add GALLERY MAIN PICTURE high resolution for DESTINATION
@@ -354,7 +354,8 @@ Then: Insert Lodge TYPE FROM DROPLIST
 And: If lodge it is not included
 Then: User clicks not included 
 And : If it can be included as an extra 
-Then: User clicks Extra 
+Then: User clicks Extra
+aND: aDD PRICE
 ANd : If lodge included or and Extra
 Then: Users gives brief description of what it is included 
 And: Then click to add pictures for user referrence 
