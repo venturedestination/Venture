@@ -130,7 +130,7 @@ And: Accordign registred data FORM from user
 Then: System also recollect basic activity 
 And: user navigation search activity 
 And: adding its data to user registration exitng preferences.
-And: Displying preferred activities during navigation 
+And: Displying similar  activities during navigation 
 Then: Newsletter system will sent by e-mail similar activities 
 And: check for activity that matches user profile 
 And: within WEEK periodicity
@@ -200,6 +200,8 @@ And: Activity Knowlage
 And: organizationals skills 
 Then: User revceived rating form Organizar
 Regaring commitment , devlepment and results
+Be the first to share your experience with us. 
+Send your feedback to support
 
 3.6 Scenario
 Feature: ADVENTURER RANKING
