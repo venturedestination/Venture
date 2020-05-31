@@ -246,7 +246,7 @@ And: New Payment method has been updated
 
 
 8. Scenario  
-Feature: REGISTRE NEW ACTIVITY, TOUR OR TRIP
+Feature: REGISTRE NEW EPERIENCES
 Given: The user wants to become an instructor, guide or Organizer.
 Then: User clicks add ACTIVITY AS AN INSTRUCTOR
 And: If user wants to participate guiding an expedition
@@ -256,7 +256,7 @@ Then : Clicks add activity AS A TRIPS ORGANIZER
 
 
 8.1 Scenario 
-Feature:  REGISTRING ACTIVITY, TOUR OR TRIP
+Feature:  EXPERIENCE TITLE
 And: USERS wants to add a TITLE TO THE EXPERIENCE
 Then: TILE might contains, main activity 
 And: Main Destination (or Location) 
@@ -267,40 +267,45 @@ And: System will limit Experience title extension
 Then: maximun 40 characters could to be used 
 
 8.2 Scenario 
-Feature: DESIGNING AND EXPERIENCE ITINERARY 
-Then: Users want to establish their ITINERARY 
+Feature: EXPERIENCE ITINERARY TABLE 
+Then: Users want to establish experience ITINERARY 
 Then: If activity moves through out different Location.
 Then: User clicks to Add ITINERARY TABLE 
 Then: ACTIVITY ITINERARY TABLE opens 
-And: Titled as the EXPERIENCE NAME
-Then: Click at 1 STAGES FROM ACTIVITY ITINERARY TABLE 
+And: Already Titled as the EXPERIENCE NAME from above.
+Then. Organizer add 1 STAGE NAME by its LOCATION.
 Then: System should be linked to MAP DATA BASE (GOOGLE MAP)
-Then: User can clicks directly on the map to add loctaion tile to the stages
-And: Complete the name of location at the gap tilll systen finds a match (Dat base)
-Then: Then 1 Stage at itinerary table displays with EXACT location name
-Then: User clicks in the 1 STAGE to add brief stage description 100 characters
+Then: User can clicks directly on the map to add LOCATION NAME to the 1 STAGE
+And: Sytem acn autocomplete the name of location at the gap typed by Organizer
+Then: Systen finds a match at MAP And LOCATION Data base
+Then: Then 1 STAGE at itinerary table now displays with EXACT location name 
+And: An ubication signal get ATTACHED TO MAP at location. 
+Then: User will now clicks in the 1 STAGE to add brief stage description 100 characters
 Then: STAGE will only show the name of LOCATION SELECTED
-Then: By cliking on the stage Organizer add number of days 
-Then: FOR EACH DAY add by organizer System will drop A list with 3 histogram.  
-Then: Oranizer will Giving each day a % at 3 different categories.
+aND: Only by placing mose on stage at map you get dilog text with brief description.
+Then: By cliking on the stage days number
+then : Organizer can add number of days spent at that stage
+Then: FOR EACH DAY seleccted sytem will show the indpendently
+And: organizer will marck 3 categories histogram with / value of activity desired.  
+Then: Oranizer will Giving each day a % at different categories.
 Then: User add % of that day dedicated to Sport, Nature, Landscapes & Sightseeing. 
 And: User add % of that day dedicated to Relax, free time or Mind Activities. 
 And: User add % of that day dedicated to People, Culture & Gastronomy. 
 Then: TOTAL DAY VALUE DAY will show sumatory % values at any given time
 And: as soon as any % value is added by orginazer to the categories 
-Then; Sytem will add inmediatly value to total day % value gap
-And: system wont allow more than 100% at total sumatory gap 
-Then: System will always place actumatically % value for last category to be filled. 
-Then: system wont allow more than 100% total value for the 3 categories.
+Then; Sytem will add inmediatly value to total day % value gap below.
+And: system wont allow more than 100% at total sumatory or categories gap
+Then: System will always place actumatically % value for last category 
+And: Until compleate 100& of day value.
 And: IN case organizer not agree with last valued added
 Then: Organizer can cliks on top of any category to change its value.
 And: Adding a new % value to it, autoomatically wil delivery differnt value to other categries.
-Then: Addin or deduce from categories half of incremented or deduce value excess or deficit.
+Then: Addin or deduce from categories half excess or deficit till 100 value for total day
 Then: till each category is rated an total sumatory is 100%
 ( example:1DAY= Adventure 60% + Relax 20% + Culture 20%= total 100%
 (Then if %value introduce in that order sytem would add 20% for cultre)
-Then: System will show an PIE CHART FOR EACH DAY AT ITINERARY TABLE STAGES
-And: pie chart will be added to each day at stages
+Then: System will now show an PIE CHART FOR EACH DAY AT ITINERARY TABLE STAGES
+And: pie chart will be added to the STAGE for EACH DAY 
 And : display at ITINERARY TABLE FOR ACTIVITY OFFER
 
 8.3 Scenario 
@@ -341,7 +346,7 @@ Then: System shows INTERACTIVE MAP when placing mouse on top
 And: can show PICS overview TOUR AT each stage.
 
 8.4 Scenario
-Given: OFFER PACKAGE DETAILS 
+Given: EXPERIENCE OFFER PACKAGE DETAILS 
 Feature: INCLUDED / EXCLUDED and EXTRAS PACKAGE DETAILS TOOL
 Then: PACKAGE DETAILS 4 different fields to be filled
 aND: User clicks LODGE 
@@ -401,14 +406,14 @@ And: Lenguages skills
 
 8.5 Scenario
 Feature: ACTIVITY RISK
-Then: USER CAN ADD PDF DISCLAIMER.
-And: PDF CAN BE UPLOADED with activity risk responsabilities.
-Then: System add DISCLAIMER TO ACTIVITY/TOUR /TRIP OFFERTE RMS & CONDITION  
+Then: ORGANIZER CAN ADD PDF DISCLAIMER.
+And: PDF HAVE TO BE UPLOADED with activity risk responsabilities.
+Then: System add DISCLAIMER TO ACTIVITY/TOUR /TRIP OFFERTE TERMS & CONDITION  
 Then: When booking activity user needs to approve PDF disclarimer for subject activity. 
 
 8.2 Scenario 
-Feature: METTING POINT 
-Given: User wnats to make a rendevous 
+Feature: METTING POINT MESSAGES 
+Given: User wants to make a rendevous 
 Then: After MEETING  coordenates recorded AT OFFER API 
 And: System will sent ubication link will be sent to users
 And: it will Show dates , star & finish time 
@@ -426,21 +431,28 @@ Then: organizer can calculate price for its own trip accordingly
 And: befor Submite TOUR/ACTIVITY OFFER
 
 
-
 8.4 Scenario 
 Feature: ACTIVITY VALIDATION PORCESS
 Given: Trip activity organizer wants to stay always on the safe side 
 Then: User can plan and lunch OFFER that need to meet certain criteria to be validated 
 Then: Organizer can determine minimun number of booking for its validation before certain date.
-And: Users can estabilsh a maximum Deposit of 30% from total activity cost.
+And: Users can also estabilsh a maximum Deposit of 30% from total activity cost.
 And: After validation date has expired
 And: booking requirements had been accomplished
 Then: System will validate activity automatically
 And: Showing ativity at the calendar as confirmed
 Then: System will allows maximun day for cancelation before Activiy takes place 
 And: It will be 3 days fro activities and tours and 15 days before organized trips takes place
-Then: User can also cancel trip due to Major cause or bad weather condition.
+Then: Organizer click to cancel experience due to Major cause or bad weather condition.
 And: Due to wather conditions prevously established values at disclaimer
+
+3.5 Scenario 
+Feature: WEATHER BANNER
+Given: WEATHER MAP USER DASHBOARD 
+Then: the week local wather forecast is shown
+And Locally when at the USER DASHBOARD
+And: OR ACCORDING TO DESTINATION
+AT ACTIVITY/ TOUR/ TIRP OFFER
 
 3.8. Scenario 
 Given: ORGANIZER DASHBOARD PAYMENT METHOD
