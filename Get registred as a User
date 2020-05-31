@@ -69,7 +69,7 @@ And: user can proceed fill in next form gaps
 
 2.5 Scenario
 Given: We would like to know better ways to spent time for users during THEIR activies
-Then: User rate FAVORITE DEDICATION TIME FOR A PERFECT ADVENTURE BY assinging a % of the day to it.
+Then: User rate FAVORITE DEDICATION TIME FOR A PERFECT DAY ADVENTURE BY assinging a % of the day to it.
 And: User add favorite % of day time dedicated to Outdor Sport, Nature, Landscapes & Sightseeing.
 And: User add favorite % of day time dedicated to Relax, free time or Mind Activities ,  
 And: User add favorite % of day time dedicated to People, Culture, Music & Gastronomy.
@@ -77,6 +77,7 @@ And: {System complie  clients FAVORITE DEDICATION TIME FOR their ADVENTUREs}
 ( example:USER1= Adventure 60% + Relax 20% + Culture 20%= 100%)
 And : record the information at USER PROFILE
 And: User can proceed fill in next gaps
+
 
 2.6 Scenario
 Given: YEAR OF BIRTH
@@ -156,18 +157,6 @@ Then: System updates new picture at user data info registred
 And: User Nick name can be also change by clicking on it
 And. if so updated at user at registretaion formulario
 
-3.1 Scenario
-Feature: USER DASHBOARD CALENDAR
-Then: shows Activity history relevant dates marks.
-Then: User can check Activities done & booked
-Then: User can also check for adventures currently available at any given dates.
-Then: User clicks for a specific date at user dashboard calendario 
-Then: Calendar shows TOUR /ACTIVITY AVAILBLE for those dates
-Then: System keeps searched dates from user researches
-And: shows sent an email if new matching activities gets available for those dates 
-And: see SEE ACTIVITY/TOUR/TRIP at calendar
-Then: User can clicks in 
-Then: be redireccted to ACTIVITY/TOUR/TRIP OFFER
 
 3.3 Scenario
 Feature: USER DASHBOARD MESSAGES BOX
@@ -188,28 +177,18 @@ Then: Conversation can take place
 Aand. IN any case message box will be sent to outbox user
 And: to in box organizer message 
 
-
-3.5 Scenario 
-Feature: WEATHER MAP
-Given: WEATHER MAP USER DASHBOARD 
-Then: the week local wather forecast is shown
-And Locally when at the USER DASHBOARD
-And: OR ACCORDING TO DESTINATION
-AT ACTIVITY/ TOUR/ TIRP OFFER
-
-3.8. Scenario 
-Given: USUER DASHBOARD PAYMENT METHOD
-Then: It is not filled till first booking is done
-Then: If user wants to add payment method
-And: User click update PAYMENT METHOD
-Then: User selet payment method
-And: User select VISA payments
-And. User type credit card number 
-ANd: Type credit card Expiration date
-And: Type security number 
-Then: User press ok 
-And: Confirmation Messages is shown
-And: New Payment method has been updated
+3.1 Scenario
+Feature: USER DASHBOARD CALENDAR
+Then: shows Activity history relevant dates marks.
+Then: User can check Activities done & booked
+Then: User can also check for adventures currently available at any given dates.
+Then: User clicks for a specific date at user dashboard calendario 
+Then: Calendar shows TOUR /ACTIVITY AVAILBLE for those dates
+Then: System keeps searched dates from user researches
+And: shows sent an email if new matching activities gets available for those dates 
+And: see SEE ACTIVITY/TOUR/TRIP at calendar
+Then: User can clicks in 
+Then: be redireccted to ACTIVITY/TOUR/TRIP OFFER
 
 3.7 Scenario
 Feature: REVIEW SYSTEM 
@@ -237,8 +216,34 @@ And: CREAT A TOUR/ACTIVITY button available
 And JOINT TO FORUM/ OPEN A QUERY OR LOOK FOR ACTIVITY AT THE FORUM 
 And ASK FOR SUPPORT
 
+3.5 Scenario 
+Feature: WEATHER MAP
+Given: WEATHER MAP USER DASHBOARD 
+Then: the week local wather forecast is shown
+And Locally when at the USER DASHBOARD
+And: OR ACCORDING TO DESTINATION
+AT ACTIVITY/ TOUR/ TIRP OFFER
+
+
+3.8. Scenario 
+Given: USUER DASHBOARD PAYMENT METHOD
+Then: It is not filled till first booking is done
+Then: If user wants to add payment method
+And: User click update PAYMENT METHOD
+Then: User selet payment method
+And: User select VISA payments
+And. User type credit card number 
+ANd: Type credit card Expiration date
+And: Type security number 
+Then: User press ok 
+And: Confirmation Messages is shown
+And: New Payment method has been updated
+
+
 
 -----------------------------------------------------------------------------------------
+
+
 
 8. Scenario  
 Feature: REGISTRE NEW ACTIVITY, TOUR OR TRIP
@@ -262,7 +267,7 @@ And: System will limit Experience title extension
 Then: maximun 40 characters could to be used 
 
 8.2 Scenario 
-Feature: DESIGNING AND EPERIENCE ITINERARY 
+Feature: DESIGNING AND EXPERIENCE ITINERARY 
 Then: Users want to establish their ITINERARY 
 Then: If activity moves through out different Location.
 Then: User clicks to Add ITINERARY TABLE 
@@ -299,17 +304,6 @@ And: pie chart will be added to each day at stages
 And : display at ITINERARY TABLE FOR ACTIVITY OFFER
 
 8.3 Scenario 
-Feature: ADVENTURE DATE AND TIME 
-And: Instructor PLACE DATES ACTIVITY AVAILABILITY AT interactive CALENDAR
-E INSTRUCTOR / GUIDE OR ORGANIZER PROVIDES DATES FOR ACTITIVY
-Then: Instructor fix HOURS ACTIVITY STARS & FINISHS
-And: SELECT START/ENDING DATE AND TIME
-Then: SELECT EXPERIENCE AVAILABILITY
-And: AddING PERIODICITY to calendar
-Then User can add periodicity adding
-And: or 1 time 
-
-8.3 Scenario 
 Feature: RUTE MAP
 Given: We want to make funny the process 
 And: atractive offer inphografic map will be created by sytem.
@@ -325,9 +319,19 @@ Then: User cliking in each stage
 And: Can add a picture linked smal piecutre
 Then it can be display with shrot infro from each stage
 
+8.3 Scenario 
+Feature: ADVENTURE DATE AND TIME 
+And: Instructor PLACE DATES ACTIVITY AVAILABILITY AT interactive CALENDAR
+E INSTRUCTOR / GUIDE OR ORGANIZER PROVIDES DATES FOR ACTITIVY
+Then: Instructor fix HOURS ACTIVITY STARS & FINISHS
+And: SELECT START/ENDING DATE AND TIME
+Then: SELECT EXPERIENCE AVAILABILITY
+And: AddING PERIODICITY to calendar
+Then User can add periodicity adding
+And: or 1 time 
 
 8.2 Scenario 
-Feature: CREATING CONTENT FOR ACTIVITY / TOUR / TRIP OFFER
+Feature: CREATING CONTENT EXPERIENCE OFFER
 Then: User Add OVERVIEW TEXT for DESTINATION & ACTIVITY 
 aND: User introduce BASIC INFORMATION text BOTH DESCRIPTION
 And: User Add GALLERY MAIN PICTURE high resolution for DESTINATION
@@ -335,26 +339,6 @@ And: Main picture will be shown by system at offer trip header
 And: User ADD also 1 PICTURES by STAGES at the adventure/tour 
 Then: System shows INTERACTIVE MAP when placing mouse on top 
 And: can show PICS overview TOUR AT each stage.
-
-3.2 Scenario
-Feature: INSTRUCTOR PUBLIC PROFILE
-Then: Current instructor Activity offer
-And: With its current activities availabel and reviews.
-And: SPORTs knowlage and experience
-Brief instroduction 200 characters
-And: Lenguages skills, 
-Then: ADD OMMUNICATION  SKILLS
-Then By clicking the picture of colaborator at TIP OFFER
-tHEN: User gets access to Organizer public profile 
-ANd: Select actvity at organizer porfile 
-then: Click on the activity to question about
-Than : A dilog box wil opens with curent activity title
-And: text message will be addressed to activity/ tour/ trip organizer
-And: User can now question about subject trip.
-Then: message will be sent to Organizer inbox
-And: Organizer can replay when availble
-And : In case both are connected on line
-Then : They can chat real time at dialog box 
 
 8.4 Scenario
 Given: OFFER PACKAGE DETAILS 
@@ -393,6 +377,28 @@ And: Then click to add Transportation pictures for user referrence
 Then user choose Gear inluded and excluded
 And: MEALS: INcluded or not
 
+
+3.2 Scenario
+Feature: ORGANIZER PUBLIC PROFILE
+Given: User at the ACTIVITY OFFER
+Then By clicking the picture of colaborator at ACTIVITY OFFER
+Then: User gets access to Organizer public profile 
+And: Select actvity at organizer porfile 
+then: Click on the activity to question about it.
+Than : A dilog box wil opens with curent activity title
+And: text message will be addressed to activity/ tour/ trip organizer
+And: User can now question about subject trip.
+Then: message will be sent to Organizer inbox
+And: Organizer can replay when availble
+And : In case both are connected on line
+Then : They can chat real time at dialog box 
+Then: User clicks reviews for activity selected
+Then: User clicks review from organizer.
+And: Check SPORTs knowlage and experience
+Ansd Self Brief description  200 characters
+And: Lenguages skills
+
+
 8.5 Scenario
 Feature: ACTIVITY RISK
 Then: USER CAN ADD PDF DISCLAIMER.
@@ -420,9 +426,6 @@ Then: organizer can calculate price for its own trip accordingly
 And: befor Submite TOUR/ACTIVITY OFFER
 
 
-8.8 Scenario
-Given: add DATA FOR RECEIVING PAYMENTS
-
 
 8.4 Scenario 
 Feature: ACTIVITY VALIDATION PORCESS
@@ -439,6 +442,19 @@ And: It will be 3 days fro activities and tours and 15 days before organized tri
 Then: User can also cancel trip due to Major cause or bad weather condition.
 And: Due to wather conditions prevously established values at disclaimer
 
+3.8. Scenario 
+Given: ORGANIZER DASHBOARD PAYMENT METHOD
+Then: It is not filled till first booking is done
+Then: If user wants to add payment method
+And: User click update PAYMENT METHOD
+Then: User selet payment method
+And: User select VISA payments
+And. User type credit card number 
+ANd: Type credit card Expiration date
+And: Type security number 
+Then: User press ok 
+And: Confirmation Messages is shown
+And: New Payment method has been updated
 
 
 ------------------------------------------------------
