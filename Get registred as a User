@@ -128,11 +128,10 @@ Feature: BASIC ACTIVITY & USER DATA RECORDED AT API
 Given: USER  iformation gets registered at system
 Then: PERSONAL CONTACT DATA provided
 And: User FAVORITE SPORT ACTIVITIES selected  
-And: Client FAVORITE % TIME DEDICATION choosen
-Then: System will sellect TOURS/ACTIVITIES to offer user 
+And: Client FAVORITE % TIME DAY DEDICATION choosen
 And: Accordign registred data FORM from user
-Then: System also recollect basic activity 
-And: user navigation search activity 
+Then: System will sellect TOURS/ACTIVITIES to offer user 
+Then: System also recollect user navigation search activity 
 And: adding its data to user registration exitng preferences.
 And: Displying similar  activities during navigation 
 Then: Newsletter system will sent by e-mail similar activities 
@@ -140,15 +139,17 @@ And: check for activity that matches user profile
 And: within WEEK periodicity
 
 Feature: PICTURE AT USER PROFILE UPDATE
-Then: System asing picture as ELEMENT ICON according to favorite sport activity choosen
-And: Unique User NICK will be displayed below the sport icon to diferenciate
-Then: IT is placed  by default at user profile database
+Then: System asing picture as favorit sport ICON 
+And: according to favorite sport activity user database
+And: Unique User NICK name will be displayed below the sport icon to diferenciate
+Then: IT is placed  by default at user profile database sice registration 
 
-Then: PAYMENT INFORMATION WILL BE ALSO RECORDED AT CLIENTS PROFILE 
-aND: added TO USER DATA INFO when user book first activity
-And: WHEN user become an instructor, guide or organizer
+Festure: PAYMENT IFROMATION 
+Then: PAYMENT INFORMATION WILL BE ALSO RECORDED AT USER PROFILE 
+aND: added TO USER DATA INFO when USER book first activity
+And: WHEN user become an ORGANIZER
 And: OR When user clicks in the field to update it or modify it
-
+Proces explain at USER DASHBOARD
 
 -------------------------------------------------------------------------------------------------
 3. Scenario
@@ -218,15 +219,14 @@ And: Adventurer Ranking is given according Adventurer level
 And: User gets LEVEL 1,2,3 or Expert
 And: According numbre of activities done
 Then: ADD COMMUNICATION  SKILLS
-
+--------------------
 3.5 Scenario
 Feature: ORGANIZER RANKING )
 And: Adventurer Ranking is given according Adventurer level 
 And: User gets LEVEL 1,2,3 or Expert
 And: According numbre of activities done
 Then: ADD COMMUNICATION  SKILLS
-
-
+--------------------------
 3.6 Scenario
 Feature: DIRECT ACCES FROM USER DASHBOARD 
 And: CREAT A TOUR/ACTIVITY button available
@@ -245,9 +245,8 @@ Then: Be awear to show correctly time zones
 It can be add to de sytem from databse linked service porvider
 And: also forecast can be linked accordingly
 
-
 3.8. Scenario 
-Given: USUER DASHBOARD PAYMENT METHOD
+Given: USUER DASHBOARD PAYMENT METHOD UPDATE
 Then: It is not filled till first booking is done
 Then: If user wants to add payment method
 And: User click update PAYMENT METHOD
@@ -260,11 +259,7 @@ Then: User press ok
 And: Confirmation Messages is shown
 And: New Payment method has been updated
 
-
-
 -----------------------------------------------------------------------------------------
-
-
 
 4. Scenario  
 Feature: REGISTRE NEW EPERIENCES
@@ -284,7 +279,7 @@ And: Main Destination (or Location)
 Then: title will be ended by words, Activity , tour or tirp
 And: Accoridgn to above implication decision from seller.
 (Exmaple: 360º ' windsurfing . Hawaii .tour )
-And: System will limit Experiences title extension 
+And: System will limit Experiences titel HIGHLITH extension 
 Then: at maximun 40 characters.
 
 4.2 Scenario 
@@ -297,25 +292,28 @@ And: ITINERARY IS TITLED by system as the EXPERIENCE NAME from above.
 Then. Organizer is adding 1 STAGE named by its LOCATION.
 Then: System should be linked to MAP DATA BASE (or GOOGLE MAP platform)
 Then: User can clicks directly on the map to add LOCATION NAME to the 1 STAGE
-And: Sytem autocomplete the name of location at the gap typed by Organizer
+And: Sytem autocomplete the name of location at the gap when Organizer typing in.
 Then: Systen finds a match at MAP And LOCATION Database
-Then: Then 1 STAGE at itinerary table now displays with EXACT location name 
-And: An ubication signal get ATTACHED TO MAP at location. 
-Then: User will now clicks in the 1 STAGE to add brief stage description 100 characters
-Then: STAGE will only show the name of LOCATION SELECTED
-aND: Only by placing mouse track on the LOCATION at map 
-Then: you will get dilog text to be fielled with LOCATION BRIEF DESCRIPTION.
-Then: By cliking on the stage days number
+Then: Then 1 STAGE ADDED at itinerary table 
+And: now displays with EXACT location name and coordenates
+Then: An UBICATION SIGNAL get ATTACHED TO MAP at LOCATION SELECTED
+Then: Organizer will now clicks in the 1 STAGE to add brief stage description
+Then: Organizer will get balnk tex box 
+Then: Organizer fill it with LOCATION BRIEF DESCRIPTION.100 characters
+Then: STAGE will only show the name of LOCATION SELECTED at the ITINERERY TABLE
+aND: Only by placing mouse track on the LOCATION at map USER GET stage description info.
+Then: ORGANIZER clikS on the stage days number
 then : Organizer can add number of days spent at that stage
-Then: FOR EACH DAY seleccted sytem will show the indpendently
-And: organizer will marck 3 categories histogram 
-Then: Organizer will assigned a % VALUE FOR ACTIVITIES PLANNED.  
-Then: Oranizer discribe DAYS ACTIVITY by iving each day a % at 3 different categories
+Then: FOR EACH DAY seleccted sytem will show 3 categories
+And: organizer will marck 3 categories by clicking progress bar at each histogram 
+Then: Organizer will assigned a % VALUE 
+Then FOR EACH DAY OFR EXPERINCE PLANNED.  
+Then: Oranizer discribe DAYS ACTIVITY by giving each day a % at 3 different categories
 Then: User add % of that day that will be dedicated to Sport, Nature, Landscapes & Sightseeing. 
 And: User add % of that day that will be dedicated to Relax, free time or Mind Activities. 
 And: User add % of that day that will be dedicated to People, Culture & Gastronomy. 
-Then: TOTAL DAY VALUE DAY will show sumatory % values at any given time
-And: as soon as any % value is added by orginazer to the categories 
+Then: TOTAL DAY % VALUE DAY ATTACHED TO THEM will show sumatory % values place by Organizer
+And: at any given time as soon as any % value is added by orginazer to the categories 
 Then; Sytem will add inmediatly value to total day % value gap below.
 And: system wont allow more than 100% at total sumatory or categories gap
 Then: System will always place actumatically % value for last category 
@@ -323,14 +321,14 @@ And: Until compleate 100& of day value.
 And: IN case organizer not agree with last valued added
 Then: Organizer can cliks on top of any category to change its value.
 And: Adding a new % value to it, autoomatically wil delivery differnt value to other categries.
-Then: Adding or deducing from categories half excess or deficit for a total 100% ecuation day
-Then: till each category is rated an total sumatory is 100%
+Then: Adding or deducing from each of categories in case going beyons total 100% day
+Given: Each category is rated an total sumatory is 100%
 ( example:1DAY= Adventure 60% + Relax 20% + Culture 20%= total 100%
 (Then if %value introduce in that order sytem would add 20% for cultre)
 Then: System will now show an PIE CHART FOR EACH DAY AT ITINERARY TABLE STAGES
-And: pie chart will be added to the STAGE for EACH DAY 
-And : DISPLAYED at ITINERARY TABLE FOR ACTIVITY OFFER
-Then: Recorded at DATABASE ACTVITIES OFFER
+And: PIE CHART will be added to the STAGE INFO for EACH DAY (1 DAY= 1PIE)
+And : DISPLAYED at ITINERARY TABLE FOR ACTIVITY EXPERIENCE OFFER
+Then: Recorded at DATABASE EXPERINCES OFFER
 
 4.3 Scenario 
 Feature: RUTE MAP
@@ -343,7 +341,7 @@ Then: System will link locations with stages numbers
 Then: showing startin point for activity 
 And:  A line will link different location
 And: Can add a SMALL picture linked to each stage of Experience.
-Then it can be display with shrot infro from each stage
+Then it can be displayED with shrot infro from each stage
 
 4.4 Scenario 
 Feature: ORGANIZER CALENDAR FOR ADVENTURE OFFER DATE AND TIME 
@@ -359,9 +357,10 @@ And: or JUST CLICKING ON AVALAIBLE DATES
 4.5 Scenario 
 Feature: CREATING NICE CONTENT FOR EXPERIENCE OFFER
 Then: Organizer Add OVERVIEW TEXT for DESTINATION & ACTIVITY 
-aND: Organizer introduce BASIC INFORMATION text BOTH DESCRIPTION
+aND: Organizer introduce BASIC INFORMATION DESCRIPTION
 And: Organizer Add GALLERY MAIN PICTURE high resolution for DESTINATION
 And: Main picture will be shown by system at offer trip header 
+And: After OFFER VALIDATONs PROCESS BY SUPPORT ( ADMINSTRARION DASHBOARD)
 And: Organizer ADD also 1 PICTURES by STAGES at the adventure/tour 
 Then: System shows INTERACTIVE MAP when placing mouse on top 
 And: can show PICS overview TOUR AT each stage.
@@ -372,28 +371,31 @@ Feature: INCLUDED / EXCLUDED and EXTRAS PACKAGE DETAILS
 Featre: CALCULATOR TABLE 
 Then: PACKAGE DETAILS 4 different fields to be filled
 aND: Organizer clicks LODGE 
-Then: Insert Lodge TYPE FROM DROPLIST
+Then: Insert Lodge TYPE TEXT
 And: If lodge it is not included
 Then: Organizer clicks not included 
-And : If it can be included as an extra 
-Then:Organizer clicks Extra
-aND: aDD PRICE
-ANd : If lodge included or and Extra
-Then: Organizer gives brief description of what it is included 
-And: Then click to add pictures for user referrence 
-And: Insert price at CALCULATOR TABLE
-And: GEAR
+And : If it can be included
+Then: Organizer inluds it 
+And: Gives a brief description text 200 Characters
+Then: Organizer clicks Extra 
+aND:  aDD PRICE
+And: Then user can added TOTAL PRICE when boooking EXPERIENCE  
+And: Organizer can add a PIRCTURE FOR LODGE 
+And: click to add pictures for user referrence 
+Then: Organizer can Insert price at CALCULATOR TABLE FOR LODGE
+-----------------
+tHEN: GEAR
 Then: Insert Gear
 And: If Gear it is not included
 Then: Organizer clicks not included 
-And : If it can be included as an extra 
+And : If it can be included 
+ANd : If Gear included desription
+And: if as an extra 
 Then: Organizerclicks Extra 
-ANd : If Gear included desription 
-And: if it it is an Extra
-Then: Organizer can add a price
+And: Add prices to be added later total expierence amount
 Then: Organizer gives brief description of what it is included 
 And: Then click to add Gear pictures for user referrence 
-Then Organizer choose Gear inluded and excluded or extra
+----------------------
 And: TRANSPORTATION
 Then: Insert Transportation 
 And: If Transportation it is not included
@@ -405,7 +407,8 @@ ANd : If Transportation  included or and Extra
 Then: Users gives brief description of what WOULD BE INCLUDED
 And: Then click to add Transportation pictures for user referrence 
 Then user choose Gear inluded and excluded
-And: MEALS: INcluded or not
+-----------------------------
+And: MEALS: INcluded or not extra....
 
 
 4.7. Scenario
