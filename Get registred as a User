@@ -8,7 +8,7 @@ Then: User clicks SING UP
 Feature: USER REGISRATION FORMULARIO 
 Given: User clicks SING UP  
 And: User clicks in the gap to fill in NAME/NICK 
-Then: Sustem compare it with database nicks
+Then: System compare it with database nicks (UNIQUE KEY)
 And if NAME dose already exist at database
 Then: system place a red tick at gap
 And: shows alternatives for similar Names/Nicks available.
@@ -27,12 +27,12 @@ Then: system place a red tick in the gap
 
 2.2 Scenario
 Feature: USER PASSWORD REGISTRATION
-Given: System Passwords requirements 6 alphanumeric character 
+Given: *System Passwords requirements 6 alphanumeric character 
 Then: User clicks in the gap 
 And: fills in the new PASSWORD 
 And: If Insert valid pasword for account  
 And: According database requierements 
-Then: System recognizes a correct PASSWORD characterictic .
+Then: System recognizes a correct PASSWORD characterictics* 
 And: places a green tick at the gap
 Then: System recorded at database PASSWORD
 Then: User now fill in CONFIRM NEW PASSWORD gap 
@@ -45,21 +45,19 @@ Then: System places a green tick at the gap
 
 2.3 Scenario
 Given: FAVORITE SPORT REGISTRATION
-Then: User click on type sorted by ELEMENT DROPLIST
-Then: User select favorite sport/Activity
-Then first selected will be assinge as THE FOVORITE ONE
-Then User click to add MORE
-And: User select from element droolist LAND ACTIVITIS: Hiking, Cycling, Running, Motor, etc	
+Then: User click on ELEMENT DROPLIST
+Then User click to add TO FAVORITES
+And: User select from element droolist LAND ACTIVITIS: Hiking, Cycling, Running, etc	
 And: User select WATER ACTIVITIS: Sailing, Rafting, Surfing  etc	
 And: User select AIR ACTIVITIES:Parachuting , paragliding, Delta winging  etc	
 And: User selects SNOW ACTIVITIES: Skiing , Snowboard, make an iglu..
 And: User select MIND ACTIVITIES: Yoging, thai ching , Marcial arts,etc
 Then: System complie AT DATABASE sumatory for ACTIVITY per client
-( example:USER1= Favorite ONE: Surf- ADD MORE: Climbing and Diving and...)
-Then: FAVORITE SPORT ICON will be used AS USER PROFILE PICTURE 
-And: And will be related and linked with nickname at database.
-Then: To cerate a unique ID USER NUMBER where record its infromation.
-
+Then: User select favorite OF ALLO sport/Activity
+Then LAST SPORT/ACTIVITY selected will THE FOVORITE ONE
+tHEN: FOVORITE ICON SPORT/ ACTIVITY will be used AS USER PROFILE PICTURE 
+And: And will be related and linked to UNIQUE KEY at database.
+Then: To cerate a unique ID USER NUMBER for database records.
 
 2.4. Scenario
 Given:ACTIVITY IS NOT IN THE SPORT ICON DROPLIST
@@ -75,7 +73,7 @@ And: displayed at the DROPLIST ICON activities
 2.5 Scenario
 Given:SELECT FAVORITE WAYS TO SPEND TIME AT USER EXPERIENCES
 Then: User rate FAVORITE DEDICATION TIME FOR A PERFECT DAY OF EXPERIENCE BY assinging a % of each category.
-Given: 3 categories to be rated at one day time
+Given: 3 categories to be rated for that one day ideal experince.
 Then: User add favorite % of day time dedicated to Outdor Sport, Nature, Landscapes & Sightseeing.
 And: User add favorite % of day time dedicated to Relax, free time or Mind Activities ,  
 And: User add favorite % of day time dedicated to People, Culture, Music & Gastronomy.
@@ -84,28 +82,43 @@ And: {System complie  clients FAVORITE DEDICATION TIME FOR their ADVENTUREs}
 And : record the information at USER PROFILE database.
 ***PROCCES EXPLAIN AT ORGANIZER EXPERIENCE REGISTRATION***
 
-2.6 Scenario
-Given: YEAR OF BIRTH
-Then: User select YEAR OF BIRTH 
-And: Click in birth years droplist
-And: Year of birth is also registred
-And: recorded at USER PROFILE database.
-
+3.2 Scenario
+Feature: ADDDING BRIEF PRESONAL DESCRIPTION & LENGUAGE 
+Then: User fill with with 200 charcters text THINGS USER LIKE IN LIFE
+It will be shown at USER PROFILE when checked at any given time
+¨ i like to spent time in contact with nautre and wildlife 
+I love mountains, and have climbed highest peaks int the world¨
+Then: ADD COMMUNICATION  SKILLS
+And: add Lenguages skills from droplist
+User: Cliscks lenguages
+And: Add to databse USER PROFILE
 2.7 Scenario
-Given: PHYSICAL COMMITMENT FOR EXPERIENCE REGISTRATION
-And: If User physical commitment is HIGH.
+
+Given: PHYSICAL COMMITMENT DESAIRE FOR EXPERIENCE 
+And: If User physical commitment diser is HIGH.
 Then: User clicks physical DEMANDING EXPERIENCES
-And: If User physical commitment is MEDIUM.
+And: If User physical commitment disire is MEDIUM.
 Then: User clicks physical  REGULAR DEAMND EXPERIENCE
-And: If User physical commitment is LOW.
+And: If User physical commitment disere is LOW.
 Then: User clicks NOT DEMANDING EXPERIENCES.
 And: User pushes submit buttom 
 And:System recordS USER PHYSICAL COMMITMENT PREFERENCES
 ( example:USER1= Not demanding activities)
+Then: User select YEAR OF BIRTH 
+And: Click in birth years droplist
+And: Year of birth is also registred
+And: recorded at USER PROFILE database.
 And: information gets recorded in the system
 Then: information message is displayed 
 And: USER BASIC REGISTRATION FORM COMPLETED
 
+2.7 Scenario
+CURRENT 3 MOST DESIRABLE VENTURE DESTINATIONS
+sELECT FROM WORLD MAP SERVICE PROVIDER 
+USER PORVIDE COORDANATES
+
+
+ 
 2.8 Scenario
 Given: WRONG OR NOT COMPLETED GAP AT REGISTRATION 
 Then: User wants to submite formulaire 
@@ -125,23 +138,6 @@ And click LINK received for e-mail confirmation.
 And: back to www.venturedestination.com 
 And: User is NOW LOGGED IN
 
-2.10 Scenario 
-Given:: USER SYSTEM REGISTRATION 
-Feature: USER BASIC REGISTRATION DATA IS RECORDED & USED 
-Given: USER above iformation gets registered at system
-Then: PERSONAL CONTACT DATA provided
-And: User FAVORITE SPORT & ACTIVITIES selected  
-And: User FAVORITE % TIME DAY DEDICATION choosen
-And: User PHYSICAL COMMITMENT FOR PREFERRED EXPERIENCES
-Then: System will sellect EXPERIENCA ACTIVITIES to offer user 
-Then: System also recollect user navigation search activity 
-Then: System keeps searched dates from user researches
-And: adding its data to user registration exitng preferences.
-And: Displying similar activities at similar dates serches during user navigation 
-Then: Newsletter system will sent by e-mail similar activities 
-And: check for activity that matches user profile 
-And: within PREVOUSLY ADMINISTRATION DASHBOARD
-And: AGREEDED periodicity
 
 Feature: USER PROFILE BY DEFAULT PICTURE 
 Given: it is placed  by default at user profile database sice registration 
@@ -158,9 +154,37 @@ And: WHEN user become an ORGANIZER
 And: OR When user clicks in AT USER DASHBOARD
 And: Fill, update or modify it
 ***Proces explain at USER DASHBOARD***
+
+2.10 Scenario 
+Given:: USER info SYSTEM REGISTRATION 
+Feature: USER BASIC REGISTRATION DATA IS RECORDED & USED 
+Given: USER above iformation gets registered at system
+Then: PERSONAL CONTACT DATA provided
+And: User FAVORITE SPORT & ACTIVITIES selected  
+And: User FAVORITE % TIME DAY DEDICATION choosen
+And: Year of birth 
+And: User PHYSICAL COMMITMENT FOR PREFERRED EXPERIENCES
+And: PROFILE BY DEFAULT PICTURE 
+And: PAYMENT INFORMATION 
+Then: System also recollect user navigation search activity 
+Then: System keeps searched dates from user researches
+And: adding its data to user registration exitng preferences.
+
+Scenario
+Feature: SYTEM RECOMENDATION 
+Then: System keeps also searching dates and destinations from user activity
+And: Displying similar activities at similar dates serches during user navigation 
+Then: Newsletter system will sent by e-mail similar activities
+And: sent an email if new matching activities gets available for those dates 
+And: check for activity that matches user profile and destinations
+And: within PREVOUSLY ADMINISTRATION DASHBOARD
+And: AGREEDED periodicity
+
 -----------------------------------------------------
 
-3. Scenario
+3. Scenario USER NEW DASHBOAR IS CREATED
+
+3.1 Scenario
 Feature: UPDATING PICTURE AT USER DASHBOARD
 Given: User wants to change by defect profile picture 
 Then: User click on top of by defect Picture 
@@ -170,16 +194,6 @@ Then: System updates new picture at user database info registred
 And: User Nick name can be also change by clicking on it
 And. updated & RECORDED at user DATABASE unique key identifier.
 
-3.2 Scenario
-Feature: ADDDING BRIEF PRESONAL DESCRIPTION & LENGUAGE 
-Then: User fill with with 200 charcters text THINGS USER LIKE IN LIFE
-It will be shown at USER PROFILE when checked at any given time
-¨ i like to spent time in contact with nautre and wildlife 
-I love mountains, and have climbed highest peaks int the world¨
-Then: ADD COMMUNICATION  SKILLS
-And: add Lenguages skills from droplist
-User: Cliscks lenguages
-And: Add to databse USER PROFILE
 
 3.1 Scenario
 Feature: USER DASHBOARD MESSAGES BOX
@@ -192,19 +206,21 @@ Then: System will open a dialog box with conversation intended
 And: User can scroll up and down to check current conversation
 
 3.2 Scenario
-Feature: USER EXPERIENCE LIST & DASHBOARD CALENDAR
+Feature: USER DASHBOARD EXPERIENCE LIST 
 Then: A list will shows Activity history & booked 
 Then: User can see Activities done & booked
+
+3.3 Scenario
+Features: DASHBOARD CALENDAR
 Then: User can also check for adventures currently available at any given Time/dates.
-Then: User clicks for a specific date at user dashboard calendario. 
+Then: User clicks for a specific date at calendario. 
 Then: Calendar will shows EXPERIENCES AVAILBLE for those dates.
-Then: System keeps also searched dates from user researches
-And: shows sent an email if new matching activities gets available for those dates 
 User: Can ADD ACTIVITIES TO FAVORITE
 And: see SEE FOAVORITE ACTIVITY/TOUR/TRIP at calendar
 Then: User can clicks in 
 Then: be redireccted to EXPERIENCE OFFER
-then: User can clik on 
+then: User can clik on
+
 
 3.2 Scenario
 Given: USER WANT TO CONTACT A NEW EXPERIENCE ORGANIZER
@@ -312,7 +328,7 @@ Then: TILE might contains, main SPORT/activity
 And: Main Destination (or Location) 
 Then: title will be ended by words, LESSONS , tour or tirp
 And: Accoridgn to above implication decision from seller.
-(Exmaple: 360º ' windsurfing . Hawaii .tour )
+(Exmaple: 360º ' windsurfing . Hawaii tour )
 And: System will limit Experiences titel HIGHLITH extension 
 Then: at maximun 40 characters.
 
@@ -324,7 +340,7 @@ Then: User clicks to Add ITINERARY TABLE
 Then: ACTIVITY ITINERARY TABLE opens 
 And: ITINERARY IS TITLED by system shows the EXPERIENCE TITLE.
 Then. Organizer is adding 1 STAGE 
-And: SSTAGES will be named by its LOCATION.
+And: STAGES will be named by its LOCATION.
 Then: System should be linked to MAP DATA BASE ( GOOGLE MAP)
 Then: User can clicks directly on the map ubication
 And: ADD LOCATION NAME to the 1 STAGE
@@ -346,13 +362,25 @@ Feature: ADDING Nº OF DAYS TO THE ITINERARY TABLE STAGES
 Then: ORGANIZER clikS on the stage CREATED the days activity will remaind at subject location.
 then : Organizer can add number of days spent at that stage accoridng to experince plan
 Then: Organizer add 2 day for that STAGE at the itinerary table.
+And: Keep adding stages as per location.
+Then: Days per stages 
+Stages will be numered 
+And: Shows at the table close to days spended
+Then: Dedication chart per day can be showm
+
+4.3 Scenario: 
+Feature: PIE CHARTS FOR DAY TIME SPENDING TIME PLANNED BY ORGINZER
+Then: System will now show PIE CHART FOR EACH DAY AT ITINERARY TABLE STAGES
+And: PIE CHART will be added to the STAGE INFO for EACH DAY (1 DAY= 1PIE)
+And : DISPLAYED at ITINERARY TABLE FOR EACH DAY AT EACH STAGE OF EXPERIENCE OFFER
+Then: Recorded at DATABASE EXPERINCES OFFER
+
+Feature: DEDICATION TIME PIE CHART PER DAY CREATION
 Then: FOR EACH DAY seleccted sytem will show 3 categories
 Then: Day 1 system shows 3 categories to be filled
 Then: Day 2 system shows 3 categories to be filled
 And: organizer will marck 3 categories by clicking progress bar at each histogram 
 Then: Organizer will assigned a % VALUE to each CATEGORY 
-
-Feature: DEDICATION TIME PIE CHART PER DAY 
 Then: Oranizer discribe DAYS ACTIVITY by giving each day a % at 3 different categories
 Then: User add % of that day that will be dedicated to Sport, Nature, Landscapes & Sightseeing. 
 And: User add % of that day that will be dedicated to Relax, free time or Mind Activities. 
@@ -369,12 +397,6 @@ Then: ORGANIZER ADD 1DAY PLANNED FOR EXPERIENCE Sport 60% + Relax 20%
 Then system adds Culture 20% as lat value possible.
 And: System will creat a PIE CHART TIME DEDICATION FOR EACH DAY 
 
-4.3 Scenario: 
-Feature: PIE CHARTS FOR DAY TIME SPENDING TIME PLNNED BY ORGINZER
-Then: System will now show PIE CHART FOR EACH DAY AT ITINERARY TABLE STAGES
-And: PIE CHART will be added to the STAGE INFO for EACH DAY (1 DAY= 1PIE)
-And : DISPLAYED at ITINERARY TABLE FOR EACH DAY AT EACH STAGE OF EXPERIENCE OFFER
-Then: Recorded at DATABASE EXPERINCES OFFER
 
 4.3 Scenario 
 Feature: RUTE MAP
@@ -392,7 +414,7 @@ And: Can add a SMALL picture linked to each stage of Experience.
 Then it can be displayED with shrot infro from each stage
 
 4.4 Scenario 
-Feature: ORGANIZER ADD EXPERIENCE OFFER DATE AND TIME TO CALENDAR 
+Feature: ORGANIZER PLACE EXPERIENCE OFFER DATE AND TIME AT CALENDAR 
 And: Instructor PLACE DATES ACTIVITY AVAILABILITY AT interactive CALENDAR
 E INSTRUCTOR / GUIDE OR ORGANIZER PROVIDES DATES FOR ACTITIVY
 Then: Instructor fix HOURS ACTIVITY STARS & FINISHS
