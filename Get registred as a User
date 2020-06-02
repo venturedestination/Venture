@@ -241,11 +241,14 @@ Then: If users click on organizer picture DISPLAYED THERE
 Then User can ACCESS ORGANIZER PUBLIC PROFILE  
 Then: contact activity organizer 
 Then: Dialog conversation box will open
-And: System will add IT TO USER and ORGANIZER CONVERSATION MESSAGES LIST respectively 
+And: System will add IT TO USER and ORGANIZER CONVERSATION MESSAGES BOXES respectively 
+
+3.3 Scenario
+feature: ON LINE CHAT
 Then: Dialog box shows local time each person involved at any given time
 Then. System assing a DAY OR NIGHT TIME ICON TO USER/ORGANIZER stauts accordin time zones respectively
 And: During organizer/user NIGHT time will show NIGHT MOON ICON
-And: During organizer/user DAY time will show NIGHT MOON ICON
+And: During organizer/user DAY time will show DAY SUN ICON
 And: a message from systme will prevent night local time zone
 And: That the organizer might reply tomorrow locaL day & time
 And: If evtually they both connected and any them reply
@@ -253,6 +256,7 @@ Then: Conversation can take place
 And. IN any case message box will be sent from outbox USER
 And: to ORGANIZER in message box
 And: the other way around
+DATABSE RECORDEDDD
 
 3.3 Scenario
 Feature: REVIEW SYSTEM messagess
@@ -417,17 +421,6 @@ Then it can be displayED with short descroiption infro from each stage
 aND: Only by placing mouse track on the LOCATION at RUTE MAP
 Then USER WILL GET A LOACTION/STAGE DESCRIPTION INFO.
 
-
-4.4 Scenario 
-Feature: ORGANIZER PLACE EXPERIENCE OFFER DATE AND TIME AT CALENDAR 
-And: Instructor PLACE DATES ACTIVITY AVAILABILITY AT interactive CALENDAR
-E INSTRUCTOR / GUIDE OR ORGANIZER PROVIDES DATES FOR ACTITIVY
-Then: Instructor fix HOURS ACTIVITY STARS & FINISHS
-And: SELECT START/ENDING DATE AND TIME
-Then: SELECT EXPERIENCE AVAILABILITY
-Then User can add EXPERIENCE periodicity
-And: or JUST CLICKING AVALAIBLE DATES AT CALENDAR
-
 4.5 Scenario 
 Feature: REGISTRING CONTENT FOR EXPERIENCE OFFER
 Then: Organizer Add OVERVIEW TEXT for DESTINATION & ACTIVITY 
@@ -435,6 +428,7 @@ aND: Organizer introduce BASIC INFORMATION DESCRIPTION
 And: Organizer Add GALLERY MAIN PICTURE high resolution for DESTINATION
 And: Main picture will be shown by system at offer trip header 
 And: After OFFER VALIDATONs PROCESS BY SUPPORT ( ADMINSTRARION DASHBOARD)
+
 
 4.6 Scenario
 Given: REGISTRING EXPERIENCE OFFER PACKAGE DETAILS 
@@ -502,20 +496,45 @@ Then: organizer can calculate price for its own trip accordingly
 And: befor Submite TOUR/ACTIVITY OFFER
 
 
+4.4 Scenario 
+Feature: ORGANIZER PLACE THE EXPERIENCE OFFER DATE AND TIME AT CALENDAR 
+And: Instructor PLACE DATES ACTIVITY AVAILABILITY AT interactive CALENDAR
+E INSTRUCTOR / GUIDE OR ORGANIZER PROVIDES DATES FOR ACTITIVY
+Then: Instructor fix HOURS ACTIVITY STARS & FINISHS
+And: SELECT START/ENDING DATE AND TIME
+Then: SELECT EXPERIENCE AVAILABILITY
+Then User can add EXPERIENCE periodicity
+And: or JUST CLICKING AVALAIBLE DATES AT CALENDAR
+
+Then: PAYMENT POLICY
+then: BOOKING 46 Days or more before date of departure: 25% of total cost.
+And: 45 - 30 Days before date of departure: 50% of total cost.
+And: 30 days before date of departure: 100% of total cost.
+Then: booking stands liable to be cancelled if 100% payment is not received 
+And: lesS 30 days before date of departure.
+
+REGUALR USER CANCELLATION POLICY USER
+15 days or more before departure: 15% of total cost
+15- 7 days before departure: 30% of total cost
+Less than 7 days before departure: 50% of total cost
+Less than 3 days before departure : 100% of total cost
+Cancellation charges per person
+
 4.10 Scenario 
-Feature: ACTIVITY VALIDATION PORCESS
+Feature: TRIP VALIDATION PORCESS
 Given: Trip activity organizer wants to stay always on the safe side 
 Then: User can plan and lunch OFFER that need to meet certain criteria to be validated 
 Then: Organizer can determine minimun number of booking for its validation before certain date.
 And: Users can also estabilsh a maximum Deposit of 25% from total activity cost.
-Then: PAYMENT POLICY
-then: 46 Days or more before date of departure: 25% of total cost.
-And: 31 - 45 Days before date of departure: 50% of total cost.
+then: BOOKING 46 Days or more before date of departure: 25% of total cost.
+And: 45 - 30 Days before date of departure: 50% of total cost.
 And: 30 days before date of departure: 100% of total cost.
 Then: booking stands liable to be cancelled if 100% payment is not received 
-And: les 30 days before date of departure.
+Given: 30 days before date of departure.
+Cancellation charges per person
 
-
+Scedanrio
+Feature: VALIDATION 
 And: After validation date has expired
 And: booking requirements had been accomplished
 Then: System will validate activity automatically
@@ -529,14 +548,9 @@ And: also Major cause EVENT will be well discribed.
 ORGANIZER CANCELATION POLICY
 Then: For organizer It will be 3 days for WEATHER DEPINGING ACTIVITIES
 And: 7 days before tours expereinces (and no weather depending activity) 
-And: 30 days before organized trips takes place
+And: 30 days before organized trips takes place NO COST
+Then: SUPPORT WILL STUDY EACH CASE
 
-USER CANCELLATION POLICY USER
-Cancellation charges per person
-15 days or more before departure: 15% of total cost
-15- 7 days before departure: 30% of total cost
-Less than 7 days before departure: 50% of total cost
-Less than 3 days before departure : 100% of total cost
 
 4.10 Scenario 
 Feature: WEATHER BANNER MATCHIN EXPERINCE TIME ZONE 
