@@ -421,14 +421,6 @@ Then it can be displayED with short descroiption infro from each stage
 aND: Only by placing mouse track on the LOCATION at RUTE MAP
 Then USER WILL GET A LOACTION/STAGE DESCRIPTION INFO.
 
-4.5 Scenario 
-Feature: REGISTRING CONTENT FOR EXPERIENCE OFFER
-Then: Organizer Add OVERVIEW TEXT for DESTINATION & ACTIVITY 
-aND: Organizer introduce BASIC INFORMATION DESCRIPTION
-And: Organizer Add GALLERY MAIN PICTURE high resolution for DESTINATION
-And: Main picture will be shown by system at offer trip header 
-And: After OFFER VALIDATONs PROCESS BY SUPPORT ( ADMINSTRARION DASHBOARD)
-
 
 4.6 Scenario
 Given: REGISTRING EXPERIENCE OFFER PACKAGE DETAILS 
@@ -506,7 +498,16 @@ Then: SELECT EXPERIENCE AVAILABILITY
 Then User can add EXPERIENCE periodicity
 And: or JUST CLICKING AVALAIBLE DATES AT CALENDAR
 
-Then: PAYMENT POLICY
+4.5 Scenario 
+Feature: REGISTRING CONTENT FOR EXPERIENCE OFFER
+Then: Organizer Add OVERVIEW TEXT for DESTINATION & ACTIVITY 
+aND: Organizer introduce BASIC INFORMATION DESCRIPTION
+And: Organizer Add GALLERY MAIN PICTURE high resolution for DESTINATION
+And: Main picture will be shown by system at offer trip header 
+And: After OFFER VALIDATONs PROCESS BY SUPPORT ( ADMINSTRARION DASHBOARD)
+
+
+Then:REGUALR PAYMENT POLICY
 then: BOOKING 46 Days or more before date of departure: 25% of total cost.
 And: 45 - 30 Days before date of departure: 50% of total cost.
 And: 30 days before date of departure: 100% of total cost.
@@ -523,8 +524,8 @@ Cancellation charges per person
 4.10 Scenario 
 Feature: TRIP VALIDATION PORCESS
 Given: Trip activity organizer wants to stay always on the safe side 
-Then: User can plan and lunch OFFER that need to meet certain criteria to be validated 
-Then: Organizer can determine minimun number of booking for its validation before certain date.
+Then: User can PLAN AND LUNCH OFFER that need to meet certain criteria to be validated 
+Then: Organizer can determine minimun number of booking for its validation before 30 DAYS
 And: Users can also estabilsh a maximum Deposit of 25% from total activity cost.
 then: BOOKING 46 Days or more before date of departure: 25% of total cost.
 And: 45 - 30 Days before date of departure: 50% of total cost.
@@ -550,6 +551,7 @@ Then: For organizer It will be 3 days for WEATHER DEPINGING ACTIVITIES
 And: 7 days before tours expereinces (and no weather depending activity) 
 And: 30 days before organized trips takes place NO COST
 Then: SUPPORT WILL STUDY EACH CASE
+Then: Offering client alternatives
 
 
 4.10 Scenario 
@@ -580,7 +582,7 @@ And: New Payment method has been updated
 
 5. Scenario
 Feature: ORGANIZER  NEW PROFILE
-Given: OFFER EXPERIENCE FINISEHED 
+Given: OFFER EXPERIENCE FINISHED 
 Then: ORGANIZER PROFILE WILL BE UPDATE WHEN FIRST ACTIVITY RECOREDED
 NEW FIELDS WILL BE ADDED TO  BASIC USER PROFILE 
 And:IN ORDER TO allow ORGANIZER PROFILE FUNCTIONALIES
@@ -605,16 +607,6 @@ And: Check SPORTs knowlage and experience
 Ansd Self Brief description  200 characters
 And: Lenguages skills
 Then: Information get registred at database
-
-5 Scenario
-Feature: TRIP ORGANIZER CALCULATOR
-Given: LODGE , GEAR, TRANSPORTATION & MEALS
-Then. User can add an estimated price for each of above fields 
-Then: 20% margin will be added by defect 
-And: 10% from VENTURE DESTINATION REFFERRAL FEE
-And: ADD prices TO CALACULATOR TOUR for LODGE, GEAR AN TRANSPORTATION, MEALS
-Then: organizer can calculate price for its own trip accordingly
-And: befor Submite TOUR/ACTIVITY OFFER
 
 5 Scenario
 Feature: REVIEW SYSTEM 
