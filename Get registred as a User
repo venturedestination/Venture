@@ -8,11 +8,12 @@ Then: User clicks then SING UP
 Feature: USER REGISRATION FORM
 Given: User clicks SING UP  
 And: User clicks in the gap to fill in NAME/NICK (Limited characters)
-Then: System compare it with database nicksnames (UNIQUE KEY)
+Then: System compare it with database nicksnames 
+And: System will creat unique key ID for each user
 And if NAME dose already exist at database
 Then: system place a red tick at gap
-And: shows alternatives for similar Names/Nicks available.
-And: if user select not yet existing at database Name/Nick
+And: shows alternatives for similar Names/Nicks available at datbase.
+And: if user select correct not yet existing at database Name/Nick
 Then: System places a green tick at the name gap .
 
 2.1 Scenario
@@ -22,7 +23,7 @@ Then: System recognizes a valid mail characterictics
 And: when valid e.mail is recognized.
 And: System places a green tick at the gap
 And: when INvalid e.mail is recognized
-Then: example : user@provider.domain 
+Then: example : user@providerdomain.extension 
 Then: system place a red tick in the gap
 
 2.2 Scenario
@@ -45,26 +46,25 @@ Then: System places a green tick at the gap
 
 2.3 Scenario
 Given: FAVORITE SPORT REGISTRATION
-Then: User click on ELEMENT DROPLIST
-Then User click to add TO FAVORITES SPORT ACTIVITIES.
-And: User select from element droplist LAND ACTIVITIS: Hiking, Cycling, Running, etc	
+Then: User click on BY ELEMENT ACTIVITIES DROPLIST
+Then User click to add TO FAVORITES SPORT/ACTIVITIES.
+And: User select from LAND ACTIVITIS: Hiking, Cycling, Running, etc	
 And: User select WATER ACTIVITIS: Sailing, Rafting, Surfing  etc	
 And: User select AIR ACTIVITIES:Parachuting , paragliding, Delta winging  etc	
 And: User selects SNOW ACTIVITIES: Skiing , Snowboard, make an iglu..
 And: User select MIND ACTIVITIES: Yoging, thai ching , Marcial arts,etc
 Then: System complie AT DATABASE sumatory for ACTIVITY per client
-Then: User select THE FAVORITE ONE FORM ALL ACTIVITES/SPORT selected.
-Then: System will record preferences at clinent database
+Then: User finally select THE FAVORITE ONE FORM ALL ACTIVITES/SPORT selected.
+Then: System will record FAVORIT ACTIVITIES at clinent database
 tHEN: FAVORITE ICON SPORT/ ACTIVITY will be used AS USER PROFILE PICTURE 
-And: And will be related and linked to nickname UNIQUE KEY at database.
-Then: important To cerate a unique ID USER NUMBER for database records.
+And: And therefore will be related and linked to UNIQUE KEY at database.
 
 2.4. Scenario
 Given:WHEN ACTIVITY IT IS NOT IN THE SPORT ICON DROPLIST
 Then: User CAN clicks ADD OTHERS SPORTs/activities.
-Then: Choose type of ELEMENT CATEGORY TO BE INNCLUDED ON FROM LAND-WATER-AIR-SNOW-& MIND 
+Then: Choose first ELEMENT CATEGORY where it might be INNCLUDED.
 And: User fill in the NAME OF NOT REGISTRE ACTIVITY at blank gap presented.
-Then: System will send NOT REGISTRED ACTIVITIES to ADMINISTRATOR PANEL
+Then: System will send SPORT/ACTIVITIES propusal to ADMINISTRATOR PANEL
 And: SUPPORT will consider its inclusion at the GENERAL activities list
 Then: if a NEW SPORT/ACTIVITY is finally registred 
 Then: a new ACTIVITIES SPORT ICONS will be created BY SUPPORT
@@ -85,40 +85,44 @@ And : record the information at USER PROFILE database.
 ***PROCCES EXPLAIN AT ORGANIZER EXPERIENCE REGISTRATION***
 
 3.2 Scenario
-Feature: USER BRIEF PRESONAL DESCRIPTION & LENGUAGES
+Feature: USER BRIEF PRESONAL DESCRIPTION & SPEAKING LENGUAGE/S
 Then: User fill with with 200 charcters text THINGS YOU LIKE IN LIFE
 ***¨ i like to spent time in contact with nautre and wildlife 
 I love mountains, and I have climbed myself the highest peaks int the world¨***
 And: when organizer RECEIVES USER APPLICATION 
 Then: It will be shown Under the picture at USER PROFILE 
 And: I can be checked at any given time
-Then: ADD COMMUNICATION  SKILLS
-And: add Lenguages skills from droplist
+And: add SPEAKING LEANGUAGE from droplist
 User: Cliscks lenguages
 And: Add to databse USER PROFILE
 
 2.7 Scenario
-Feature: CURRENT 3 MOST DESIRABLE VENTURE DESTINATIONS
+Feature: CURRENT 3 MOST DESIRABLE VENTURE DESTINATIONS YOU WANT TO GO
 Given: We want to know user desier and offer them accordingly
-Then: User gets asked wich three location in the world will like then to visit.
-Then: User can click at an interactive WORLD MAP 3 location COORDANATES
-Then: System will keep DESTINATION USER PREFERENCES 
+Then: User gets asked wich three location in the world THEY will like to currently visit.
+Then: User could  in case of AN INTERACTIVE MAP DATABASE 
+Then: Click 3 location or EXACT COORDANATES
+Then: System will keep 3 DESTINATION USER PREFERENCES 
 And: Will be able to show offer accordingly.
+Then: If user goes to destination selected with our company
+THen : congratualtion message will be sent
+And: User will be ask to for a new DESTINATION to be added to list
 
 2.7 Scenario
-Given: PHYSICAL COMMITMENT DESAIRE FOR EXPERIENCE 
-And: If User physical commitment diser is HIGH.
-Then: User clicks physical DEMANDING EXPERIENCES
-And: If User physical commitment disire is MEDIUM.
-Then: User clicks physical  REGULAR DEAMND EXPERIENCE
-And: If User physical commitment disere is LOW.
-Then: User clicks NOT DEMANDING EXPERIENCES.
+Given: PHYSICAL COMMITMENT DESIRE FOR EXPERIENCE 
+And: If User physical commitment desire is HIGH.
+Then: User clicks for physical DEMANDING EXPERIENCES
+And: If User physical commitment desireis MEDIUM.
+Then: User clicks for physical REGULAR DEAMND EXPERIENCE
+And: If User physical commitment desire is LOW.
+Then: User clicks for NOT DEMANDING EXPERIENCES.
 And: User pushes submit buttom 
 And:System recordS USER PHYSICAL COMMITMENT PREFERENCES
 ( example:USER1= Not demanding activities)
 
 Feature: USER YEAR OF BIRTH
-Given: We will like to know user physical condition 
+Given: We will like to know users ages
+Then: Some adventres be recommended for certain ages
 Then: User select YEAR OF BIRTH 
 And: Click in birth years droplist
 And: Year of birth is also registred
@@ -128,8 +132,8 @@ Then: information message is displayed
 And: USER BASIC REGISTRATION FORM COMPLETED
  
 2.8 Scenario
-Given: WRONG OR NOT COMPLETED GAP AT REGISTRATION 
-Then: User wants to submite formulaire 
+Feature: WRONG OR NOT COMPLETED GAP AT REGISTRATION 
+Given: User wants to submite FORM.
 And: There is any Gap which still displays a red tick OR NOT COMPLETED
 Then System redirects user to gap failed in order to be filled properly
 Then: Wehn User place correct info 
@@ -150,9 +154,9 @@ And: User is NOW LOGGED IN
 Festure: PAYMENT INFORMATION 
 Then: PAYMENT INFORMATION WILL BE ALSO RECORDED AT USER PROFILE 
 aND: added TO USER DATA INFO when USER book first activity
-And: WHEN user become an ORGANIZER
-And: OR When user clicks in AT USER DASHBOARD
-And: Fill, update or modify it
+And: WHEN user become an EXPERIENCE ORGANIZER
+And: OR When user clicks in AT USER DASHBOARD PAYMENT UPDATE
+And: to Fill, update, or modify it
 ***Proces explain at USER DASHBOARD***
 
 
@@ -161,8 +165,9 @@ Given: it is placed  by default at user profile database sice registration
 Then: System asSiGNED by default picture 
 And: Taking from FAVORITE SPORT ICON user selection 
 And: Database recorded it after registration
-And: Unique User NICK name will be displayed below the sport icon to diferenciate
-Then: Nick name will ID unique key at database infro entry.
+And: ADDING TI Unique User NICK name 
+And: It will be displayed below the sport icon to diferenciate form other users
+Then: with ID unique key at database info entry.
 
 2.10 Scenario 
 Given:: USER info SYSTEM REGISTRATION 
@@ -173,18 +178,19 @@ And: User FAVORITE SPORT & ACTIVITIES selected
 And: User FAVORITE % TIME DAY DEDICATION choosen
 And: Year of birth 
 And: User PHYSICAL COMMITMENT FOR PREFERRED EXPERIENCES
-And: PROFILE BY DEFAULT PICTURE 
+And: PROFILE created
+And: added BY DEFAULT PICTURE 
 And: PAYMENT INFORMATION 
 Then: System also recollect user navigation search activity 
-Then: System keeps searched dates from user researches
+Then: System keeps searched dates from user researches (ID)
 And: adding its data to user registration exitng preferences.
 
 Scenario
 Feature: SYTEM RECOMENDATION 
-Then: System keeps also searching dates and destinations from user activity
+Then: System keeps tracks from dates and destinations from user activity
 And: Displying similar activities at similar dates serches during user navigation 
-Then: Newsletter system will sent by e-mail similar activities
-And: sent an email if new matching activities gets available for those dates 
+Then: Newsletter system will sent by e-mail similar activities periodically.
+And: Special email if new matching activities gets available matching user preferences. 
 And: check for activity that matches user profile and FAVORITE DESTINATIONs.
 And: within PREVOUSLY ADMINISTRATION DASHBOARD
 And: AGREEDED periodicity
@@ -197,10 +203,11 @@ And: AGREEDED periodicity
 Feature: UPDATING PICTURE AT USER DASHBOARD
 Given: User wants to change by defect profile picture 
 Then: User click on top of by defect Picture 
-Then: System displayS up load picture from browser  
+Then: System displayS browser
+And: User up load picture from browser  
 And: User clicks upload picture from computer
 Then: System updates new picture at user database info registred
-And: User Nick name can be also change by clicking on it
+And: User Nick name can be also change by clicking on it 
 And. updated & RECORDED at user DATABASE unique key identifier.
 
 
@@ -399,6 +406,12 @@ Then: by reducing or increasing propcioanlly each category to a total of 100% da
 Then: ORGANIZER ADD 1DAY PLANNED FOR EXPERIENCE Sport 60% + Relax 20% 
 Then system adds Culture 20% as lat value possible.
 And: System will creat a PIE CHART TIME DEDICATION FOR EACH DAY 
+
+Scenariao
+SOECIAL EPERIENCES 
+HIGH PHISICLA CMMITMENT 
+wEATHER DEPENDING ACTIVITIES
+RANGE OF AGES RECOMENDED
 
 
 4.3 Scenario 
