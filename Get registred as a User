@@ -9,21 +9,21 @@ Feature: USER REGISRATION FORM
 Given: User clicks SING UP  
 And: User clicks in the gap to fill in NAME/NICK (Limited characters)
 Then: System compare it with database nicksnames 
-And: System will creat unique key ID for each user
-And if NAME dose already exist at database
+And: System will creat unique key ID for each user at database.
+And if NAME dose already exist at database registrations
 Then: system place a red tick at gap
 And: shows alternatives for similar Names/Nicks available at datbase.
-And: if user select correct not yet existing at database Name/Nick
+And: if user select correct not yet existing database Name/Nick
 Then: System places a green tick at the name gap .
 
 2.1 Scenario
 Given: USER EMAIL REGISTRATION 
 Then: User click fill in e.mail with valid email account
 Then: System recognizes a valid mail characterictics
+Then: example : user@domain.extension 
 And: when valid e.mail is recognized.
 And: System places a green tick at the gap
 And: when INvalid e.mail is recognized
-Then: example : user@providerdomain.extension 
 Then: system place a red tick in the gap
 
 2.2 Scenario
@@ -32,10 +32,10 @@ Given: *System Passwords requirements 6 alphanumeric character
 Then: User clicks in the gap 
 And: fills in the new PASSWORD 
 And: If Insert valid pasword for account  
-And: According database requierements 
-Then: System recognizes a correct PASSWORD characterictics* 
+And: According System characterictics* requierements
+Then: System recognizes a correct PASSWORD 
 And: places a green tick at the gap
-Then: System recorded at database PASSWORD
+Then: System recorded at database NEW PASSWORD
 Then: User now fill in CONFIRM NEW PASSWORD gap 
 Then: System check confirmated PASSWORDS matches database. 
 And: If it is dose not match database.
@@ -48,7 +48,7 @@ Then: System places a green tick at the gap
 Given: FAVORITE SPORT REGISTRATION
 Then: User click on BY ELEMENT ACTIVITIES DROPLIST
 Then User click to add TO FAVORITES SPORT/ACTIVITIES.
-And: User select from LAND ACTIVITIS: Hiking, Cycling, Running, etc	
+And: User select from LAND ACTIVITIS: Climbing, Hiking, Cycling, Running, etc	
 And: User select WATER ACTIVITIS: Sailing, Rafting, Surfing  etc	
 And: User select AIR ACTIVITIES:Parachuting , paragliding, Delta winging  etc	
 And: User selects SNOW ACTIVITIES: Skiing , Snowboard, make an iglu..
@@ -63,14 +63,14 @@ And: And therefore will be related and linked to UNIQUE KEY at database.
 Given:WHEN ACTIVITY IT IS NOT IN THE SPORT ICON DROPLIST
 Then: User CAN clicks ADD OTHERS SPORTs/activities.
 Then: Choose first ELEMENT CATEGORY where it might be INNCLUDED.
-And: User fill in the NAME OF NOT REGISTRE ACTIVITY at blank gap presented.
+And: User fill in the NAME OF NOT REGISTRE ACTIVITY at blank gap display.
 Then: System will send SPORT/ACTIVITIES propusal to ADMINISTRATOR PANEL
 And: SUPPORT will consider its inclusion at the GENERAL activities list
 Then: if a NEW SPORT/ACTIVITY is finally registred 
 Then: a new ACTIVITIES SPORT ICONS will be created BY SUPPORT
 And: displayed at the DROPLIST ICON activities
 Then: Next time user access to SORT DROPLIST 
-Then: NEW ICONS will displayed among the others
+Then: NEW ICONS will displayed among them
 
 2.5 Scenario
 Given:IDEALS EXPERIENCES
@@ -85,22 +85,21 @@ And : record the information at USER PROFILE database.
 ***PROCCES EXPLAIN AT ORGANIZER EXPERIENCE REGISTRATION***
 
 3.2 Scenario
-Feature: USER BRIEF PRESONAL DESCRIPTION & SPEAKING LENGUAGE/S
+Feature: USER BRIEF PRESONAL DESCRIPTION & SPEAKING LENGUAGE/S PROFILE
 Then: User fill with with 200 charcters text THINGS YOU LIKE IN LIFE
 ***¨ i like to spent time in contact with nautre and wildlife 
 I love mountains, and I have climbed myself the highest peaks int the world¨***
+Then: It will be shown Under the picture at USER BRIEF SHARED PROFILE 
 And: when organizer RECEIVES USER APPLICATION 
-Then: It will be shown Under the picture at USER PROFILE 
-And: I can be checked at any given time
 And: add SPEAKING LEANGUAGE from droplist
 User: Cliscks lenguages
 And: Add to databse USER PROFILE
 
 2.7 Scenario
-Feature: CURRENT 3 MOST DESIRABLE VENTURE DESTINATIONS YOU WANT TO GO
-Given: We want to know user desier and offer them accordingly
+Feature: 3 CURRENT MOST DESIRABLE VENTURE DESTINATIONS YOU WANT TO GO
+Given: We want to know user desier destinations and offer them accordingly
 Then: User gets asked wich three location in the world THEY will like to currently visit.
-Then: User could  in case of AN INTERACTIVE MAP DATABASE 
+Then: User could  in case of API location service privider
 Then: Click 3 location or EXACT COORDANATES
 Then: System will keep 3 DESTINATION USER PREFERENCES 
 And: Will be able to show offer accordingly.
@@ -150,17 +149,7 @@ And click LINK received for e-mail confirmation.
 And: back to www.venturedestination.com 
 And: User is NOW LOGGED IN
 
-
-Festure: PAYMENT INFORMATION 
-Then: PAYMENT INFORMATION WILL BE ALSO RECORDED AT USER PROFILE 
-aND: added TO USER DATA INFO when USER book first activity
-And: WHEN user become an EXPERIENCE ORGANIZER
-And: OR When user clicks in AT USER DASHBOARD PAYMENT UPDATE
-And: to Fill, update, or modify it
-***Proces explain at USER DASHBOARD***
-
-
-Feature: DEFAULT PICTURE 
+Feature: DEFAULT PICTURE AT PROFILE
 Given: it is placed  by default at user profile database sice registration 
 Then: System asSiGNED by default picture 
 And: Taking from FAVORITE SPORT ICON user selection 
@@ -181,14 +170,19 @@ And: User PHYSICAL COMMITMENT FOR PREFERRED EXPERIENCES
 And: PROFILE created
 And: added BY DEFAULT PICTURE 
 And: PAYMENT INFORMATION 
-Then: System also recollect user navigation search activity 
+aND: added TO USER DATA INFO when USER book first activity
+And: WHEN user become an ORGANIZER and registrer an activity.
+And: OR When user clicks in AT USER DASHBOARD PAYMENT UPDATE
+And: to Fill, update, or modify it
+***Process explain at USER DASHBOARD***
+Then: System also recollect user NAVIGATION SEARCH ACTIVITY.
 Then: System keeps searched dates from user researches (ID)
 And: adding its data to user registration exitng preferences.
 
 Scenario
-Feature: SYTEM RECOMENDATION 
+Feature: SYSTEM RECOMENDATION 
 Then: System keeps tracks from dates and destinations from user activity
-And: Displying similar activities at similar dates serches during user navigation 
+And: Displying similar activities at similar dates serched by user during navigation 
 Then: Newsletter system will sent by e-mail similar activities periodically.
 And: Special email if new matching activities gets available matching user preferences. 
 And: check for activity that matches user profile and FAVORITE DESTINATIONs.
@@ -208,16 +202,17 @@ And: User up load picture from browser
 And: User clicks upload picture from computer
 Then: System updates new picture at user database info registred
 And: User Nick name can be also change by clicking on it 
-And. updated & RECORDED at user DATABASE unique key identifier.
-
+And. updated & RECORDED at user DATABASE unique key user identity
 
 3.2 Scenario
 Feature: USER DASHBOARD EXPERIENCE LIST 
 Then: A list will shows Activity history & booked 
-Then: User can see Activities done & booked
+Then: User can check list Activities done & booked
+And: Click on them for more info 
+Amd: Get back to the experience offer in case still availale
 
 3.1 Scenario
-Feature: USER DASHBOARD MESSAGES BOX
+Feature: USER DASHBOARD MESSAGES / CHAT BOX
 Given: User can establish they current AVAILABILITY STATUS 
 Then: Will click ON LINE OR NOT ON LINE
 Then: User click on HISTORY LIST Messages 
@@ -232,23 +227,11 @@ Features: DASHBOARD CALENDAR
 Then: User can also check for adventures currently available at any given Time/dates.
 Then: User clicks for a specific date at calendario. 
 Then: Calendar will shows EXPERIENCES AVAILBLE for those dates.
-User: Can ADD ACTIVITIES TO FAVORITE
+And: User Can ADD ACTIVITIES TO FAVORITE
 And: see SEE FOAVORITE ACTIVITY/TOUR/TRIP at calendar
 Then: User can clicks in 
 Then: be redireccted to EXPERIENCE OFFER
-then: User can clik on
-
-
-3.2 Scenario
-Given: USER WANT TO CONTACT A NEW EXPERIENCE ORGANIZER
-Then: User goes to ACTIVITY/ TOUR/ TIRP currently availabe at calendar
-And: By clicking on SEE ACTIVITIES at certain date
-Then: User gets to ACTIVITY/ TOUR offer Page
-Then: If users click on organizer picture DISPLAYED THERE 
-Then User can ACCESS ORGANIZER PUBLIC PROFILE  
-Then: contact activity organizer 
-Then: Dialog conversation box will open
-And: System will add IT TO USER and ORGANIZER CONVERSATION MESSAGES BOXES respectively 
+then: User can clik in 
 
 3.3 Scenario
 feature: ON LINE CHAT
@@ -268,9 +251,9 @@ DATABSE RECORDEDDD
 3.3 Scenario
 Feature: REVIEW SYSTEM messagess
 Given: Tour or activity finished 
-Then: USER receive a QUESTIONAIRE at inbox messages USER DASHBOARD
+Then: USER receive a QUESTIONAIRE at the inbox messages USER DASHBOARD
 And: System sent message: Be the first to share your experience with us. 
-Then: USER clicks in to rates EXPERIENCE and ORGANIZER 1 TO 5 STARS
+Then: USER clicks in to rates EXPERIENCE and ORGANIZER RATES FROM 1 TO 5 STARS
 And: ADD comments filling the gap in blank with not over 100 Characters
 Then : Send your feedback to first to SUPPORT 
 Then: NOT fillter applyed to positive REVIEWs ABOVER 3 OUT 5 
@@ -512,7 +495,7 @@ Then User can add EXPERIENCE periodicity
 And: or JUST CLICKING AVALAIBLE DATES AT CALENDAR
 
 4.5 Scenario 
-Feature: REGISTRING CONTENT FOR EXPERIENCE OFFER
+Feature: REGISTRING CONTENT FOR THE EXPERIENCE OFFER
 Then: Organizer Add OVERVIEW TEXT for DESTINATION & ACTIVITY 
 aND: Organizer introduce BASIC INFORMATION DESCRIPTION
 And: Organizer Add GALLERY MAIN PICTURE high resolution for DESTINATION
@@ -620,6 +603,17 @@ And: Check SPORTs knowlage and experience
 Ansd Self Brief description  200 characters
 And: Lenguages skills
 Then: Information get registred at database
+
+3.2 Scenario
+Given: USER WANT TO CONTACT A NEW EXPERIENCE ORGANIZER
+Then: User goes to EXPERIENCES currently availabe at calendar
+And: By clicking on SEE ACTIVITIES at certain date
+Then: User gets to ACTIVITY/ TOUR offer Page
+Then: If users click on organizer picture DISPLAYED THERE 
+Then User can ACCESS ORGANIZER PUBLIC PROFILE  
+Then: contact activity organizer 
+Then: Dialog conversation box will open
+And: System will add IT TO USER and ORGANIZER CONVERSATION MESSAGES BOXES respectively 
 
 5 Scenario
 Feature: REVIEW SYSTEM 
