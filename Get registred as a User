@@ -5,7 +5,7 @@ Given: A NEW USER who wants to GET REGISTRED .
 Then: User clicks then SING UP 
 
 2. Scenario
-Feature: USER REGISRATION FORM
+Feature: USER NICKNAME REGISRATION 
 Given: User clicks SING UP  
 And: User clicks in the gap to fill in NAME/NICK (Limited characters)
 Then: System compare it with database nicksnames 
@@ -60,21 +60,21 @@ tHEN: FAVORITE ICON SPORT/ ACTIVITY will be used AS USER PROFILE PICTURE
 And: And therefore will be related and linked to UNIQUE KEY at database.
 
 2.4. Scenario
-Given:WHEN ACTIVITY IT IS NOT IN THE SPORT ICON DROPLIST
+Given: ADDING NEW ACTIVITIES TO SPORT LIST
 Then: User CAN clicks ADD OTHERS SPORTs/activities.
 Then: Choose first ELEMENT CATEGORY where it might be INNCLUDED.
 And: User fill in the NAME OF NOT REGISTRE ACTIVITY at blank gap display.
 Then: System will send SPORT/ACTIVITIES propusal to ADMINISTRATOR PANEL
 And: SUPPORT will consider its inclusion at the GENERAL activities list
-Then: if a NEW SPORT/ACTIVITY is finally registred 
-Then: a new ACTIVITIES SPORT ICONS will be created BY SUPPORT
-And: displayed at the DROPLIST ICON activities
+Then: if a NEW SPORT/ACTIVITY is finally approve & registred 
+Then: a new ACTIVITIES SPORT ICONS will be created also BY SUPPORT
+And: displayed at the DROPLIST SPORT ICON activities
 Then: Next time user access to SORT DROPLIST 
-Then: NEW ICONS will displayed among them
+Then: NEW ICONS will displayed among rest of sport icons
 
 2.5 Scenario
-Given:IDEALS EXPERIENCES
-Then: User rate FAVORITE DEDICATION TIME FOR A PERFECT DAY OF EXPERIENCE
+Given:USER IDEALS EXPERIENCES
+Then: User rate FAVORITE DEDICATION TIME FOR A PERFECT DAY ON THEIR IDEAL EXPERIENCE
 Given: 3 categories to be rated for USER DAY IDEAL EXPERIENCE.
 Then: User add favorite % of day time dedicated to Outdor Sport, Nature, Landscapes & Sightseeing.
 Then: User add favorite % of day time dedicated to Relax, free time or Mind Activities ,  
@@ -85,36 +85,44 @@ And : record the information at USER PROFILE database.
 ***PROCCES EXPLAIN AT ORGANIZER EXPERIENCE REGISTRATION***
 
 3.2 Scenario
-Feature: USER BRIEF PRESONAL DESCRIPTION & SPEAKING LENGUAGE/S PROFILE
-Then: User fill with with 200 charcters text THINGS YOU LIKE IN LIFE
+Fearture: USER BRIEF SHARED with ORGANIZER PROFILE 
+Given: USER BRIEF PRESONAL DESCRIPTION FAVORITE SPORT & SPEAKING LENGUAGE/S and others 
+Then: User fill with with 200 charcters text THINGS she/he LIKE IN LIFE
 ***¨ i like to spent time in contact with nautre and wildlife 
 I love mountains, and I have climbed myself the highest peaks int the world¨***
 Then: It will be shown Under the picture at USER BRIEF SHARED PROFILE 
-And: when organizer RECEIVES USER APPLICATION 
-And: add SPEAKING LEANGUAGE from droplist
-User: Cliscks lenguages
-And: Add to databse USER PROFILE
+And : From user it is actually located is added by system according USER IP 
+Then: it can be modify at user profile later on.
+Then: USER add SPEAKING LEANGUAGE from droplist
+User: Clicks lenguages comunication posibilities.
+Then: Lenguage added to the system.
+Then: INFO MEMBER SINCE add actoamically by system from inscription time.
+Then: System also show FAVORITE SPORT FORM USER.
+And: ADVENTURE RANKING
+And: when ORGANIZER RECEIVES USER APPLICATION 
+Then: ORGANIZER can click in to CONTACT USER
 
 2.7 Scenario
-Feature: 3 CURRENT MOST DESIRABLE VENTURE DESTINATIONS YOU WANT TO GO
+Feature: USER 3 CURRENT MOST DESIRABLE VENTURE DESTINATIONS
 Given: We want to know user desier destinations and offer them accordingly
 Then: User gets asked wich three location in the world THEY will like to currently visit.
-Then: User could  in case of API location service privider
+Then: User could  in case of API location service privider (CHECK HERE.COM)
 Then: Click 3 location or EXACT COORDANATES
 Then: System will keep 3 DESTINATION USER PREFERENCES 
 And: Will be able to show offer accordingly.
 Then: If user goes to destination selected with our company
 THen : congratualtion message will be sent
-And: User will be ask to for a new DESTINATION to be added to list
+And: User will be ask to for a new DESIRE DESTINATION
+And Be added to list to replace already achive one!
 
 2.7 Scenario
 Given: PHYSICAL COMMITMENT DESIRE FOR EXPERIENCE 
 And: If User physical commitment desire is HIGH.
-Then: User clicks for physical DEMANDING EXPERIENCES
+Then: User clicks preferibly physical DEMANDING EXPERIENCES
 And: If User physical commitment desireis MEDIUM.
-Then: User clicks for physical REGULAR DEAMND EXPERIENCE
+Then: User clicks preferibly physical REGULAR DEAMND EXPERIENCE
 And: If User physical commitment desire is LOW.
-Then: User clicks for NOT DEMANDING EXPERIENCES.
+Then: User clicks preferibly NOT DEMANDING EXPERIENCES.
 And: User pushes submit buttom 
 And:System recordS USER PHYSICAL COMMITMENT PREFERENCES
 ( example:USER1= Not demanding activities)
@@ -131,13 +139,12 @@ Then: information message is displayed
 And: USER BASIC REGISTRATION FORM COMPLETED
  
 2.8 Scenario
-Feature: WRONG OR NOT COMPLETED GAP AT REGISTRATION 
+Feature: SYSTEM REDIRECT TO NOT COMPLETED or FAIL REGISTRAION GAP 
 Given: User wants to submite FORM.
 And: There is any Gap which still displays a red tick OR NOT COMPLETED
 Then System redirects user to gap failed in order to be filled properly
-Then: Wehn User place correct info 
+Then: WhEn User place correct info 
 And: press submit registration 
-Then: Gets e.mail confirmation.
 
 2.9 Scenario
 Feature: E:MAIL ACCOUNT CONRFIRMATION FOR COMPLETE REGISTRATION
@@ -165,30 +172,29 @@ Given: USER above iformation gets registered at system
 Then: PERSONAL CONTACT DATA provided
 And: User FAVORITE SPORT & ACTIVITIES selected  
 And: User FAVORITE % TIME DAY DEDICATION choosen
-And: Year of birth 
-And: User PHYSICAL COMMITMENT FOR PREFERRED EXPERIENCES
+And: YEAR OF BIRTH
+And: PHYSICAL COMMITMENT FOR PREFERRED EXPERIENCES
 And: PROFILE created
-And: added BY DEFAULT PICTURE 
-And: PAYMENT INFORMATION 
+And: DEFAULT PICTURE 
+And : IP CURRENT LOCATION
+And: PAYMENT INFORMATION (in case already exist) 
 aND: added TO USER DATA INFO when USER book first activity
 And: WHEN user become an ORGANIZER and registrer an activity.
 And: OR When user clicks in AT USER DASHBOARD PAYMENT UPDATE
 And: to Fill, update, or modify it
 ***Process explain at USER DASHBOARD***
-Then: System also recollect user NAVIGATION SEARCH ACTIVITY.
-Then: System keeps searched dates from user researches (ID)
-And: adding its data to user registration exitng preferences.
+
 
 Scenario
 Feature: SYSTEM RECOMENDATION 
-Then: System keeps tracks from dates and destinations from user activity
-And: Displying similar activities at similar dates serched by user during navigation 
-Then: Newsletter system will sent by e-mail similar activities periodically.
-And: Special email if new matching activities gets available matching user preferences. 
-And: check for activity that matches user profile and FAVORITE DESTINATIONs.
-And: within PREVOUSLY ADMINISTRATION DASHBOARD
-And: AGREEDED periodicity
-
+Given: System keeps tracks from dates and destinations from user activity
+And: System keeps searched dates from user researches (ID database)
+Then: System also recollect user NAVIGATION SEARCH ACTIVITY.
+And: check for activity that matches user DESIRE DATES and FAVORITE DESTINATIONs.
+Then: Displying similar activities at similar dates serched by user during navigation.
+Then: NEWSLETTER system will sent by e-mail similar activities periodically.
+And: Special email if new matching activities gets available according user preferences. 
+And: adding its data to user registration exitng preferences.
 -----------------------------------------------------
 
 3. Scenario USER NEW DASHBOAR IS CREATED
@@ -202,25 +208,29 @@ And: User up load picture from browser
 And: User clicks upload picture from computer
 Then: System updates new picture at user database info registred
 And: User Nick name can be also change by clicking on it 
-And. updated & RECORDED at user DATABASE unique key user identity
+Then: Profil can be chececk 
+And: User can Change BRIEF DESCRITION 
+And: User can change FAVORITE SPORT OR DESTINATIONS
+And: Current location or comunication skills
+And. updated & RECORDED at user DATABASE
 
 3.2 Scenario
-Feature: USER DASHBOARD EXPERIENCE LIST 
+Feature: USER DASHBOARD EXPERIENCE LIST AND FAVORIT ACTIVITIES ADDED
 Then: A list will shows Activity history & booked 
 Then: User can check list Activities done & booked
 And: Click on them for more info 
 Amd: Get back to the experience offer in case still availale
+Then: USER GETS A LIST OF FOVIRTE ACTIVITIES ADDED by thierselfs. 
 
 3.1 Scenario
 Feature: USER DASHBOARD MESSAGES / CHAT BOX
-Given: User can establish they current AVAILABILITY STATUS 
+Given: User can establish they current AVAILABILITY STATUS ON IT
 Then: Will click ON LINE OR NOT ON LINE
 Then: User click on HISTORY LIST Messages 
 And: User can see all anyprevious conversations
 Then: User clicks on a specific conversation 
 Then: System will open a dialog box with conversation intended
 And: User scrolls up and down to check current conversation
-
 
 3.3 Scenario
 Features: DASHBOARD CALENDAR
@@ -280,23 +290,21 @@ And: According numbre of activities done & booked
 Feature: ORGANIZER RANKING )
 --------------------------
 3.6 Scenario
-Feature: DIRECT ACCESS AVAILABLE at USER DASHBOARD 
+Feature: DIRECT ACCESS at USER DASHBOARD 
 Then: CREAT A TOUR/ACTIVITY button available
 And JOINT TO FORUM/ OPEN A QUERY 
 OR LOOK FOR SPORT/ ACTIVITY OR DESTINATION AT THE GUIDE
 And ASK FOR SUPPORT
 
 3.7 Scenario 
-Feature: WEATHER MAP BASIC FORECAST BANNER 
-Given: WEATHER MAP USER DASHBOARD 
+Feature: WEATHER BASIC FORECAST WINDOW 
+Given: WEATHER MAP 
 Then: the week local wather forecast is shown
 And Locally when at the USER DASHBOARD
-And: OR ACCORDING TO DESTINATION
-And: ACTIVITY OFFER
-And: local time for activiy displayed
-Then: Be aware to show correctly LOCAL TIME ZONE for each case.
-It can be add to de sytem from databse linked service porvider
-And: also forecast DATABASE SERVICE PROVIDER can be linked accordingly
+And: OR ACCORDING TO DESTINATION FOR EXPERIENCE OFFER
+Then: local time FROM THAT DESTINATION WILL BE displayed
+Then: Be aware to show correctly LOCAL TIME ZONE for each case DATA and NIGH/DAY TIME.
+Then: System checked API with FORECAST DATABASE SERVICE PROVIDER (CHECK WINDFINDER.COM) 
 
 3.8. Scenario 
 Given: USUER DASHBOARD PAYMENT METHOD UPDATE
@@ -322,15 +330,18 @@ And: If user wants to participate guiding an expedition
 Then: Cliks to add activity as AS A TOUR GUIDE 
 And: if user wants Not direct participation 
 Then : Clicks add activity AS A TRIPS ORGANIZER
+Then: System will add a unique key identification FOR EXPERIENCE POSTED
+And: A database will be maneging the OFFER AVAILBLE INDEPENDENTLY For ADMINSTRATION PORPOUSES.
+Then: Information realted with the offer will be keep it linked to USER ID
 
 4.1 Scenario 
-Feature:  ORGANIZER GIVES HER EXPERIENCE A TITLE
-And: USERS wants to add a TITLE FOR THE EXPERIENCE
-Then: TILE might contains, main SPORT/activity 
-And: Main Destination (or Location) 
-aND: WITH THE WORDS: LESSONS , TOUR or TRIP
-And: Accoridgn to above decision from seller.
-(Exmaple: ' windsurfing .(LESSONS) Hawaii (TRIP/TOUR ))
+Feature:  GIVING THE EXPERIENCE A NAME
+Given: ORGANIZER wants to add a TITLE FOR THEIR EXPERIENCE
+Then: NAME/TITLE might contains, main SPORT/activity 
+And: Main DESTINATION (or Location) 
+aND: THE WORDS: LESSONS , TOUR or TRIP
+And: Accoridgn to ORGANIZER registration preference.
+(Exmaple: ¨Amazing¨  WINDSURF (LESSONS) HAWAII (TRIP/TOUR )
 And: System will limit Experiences title to a Highlight type extension 
 Then: example maximun 40 characters.
 
@@ -341,34 +352,34 @@ Then: If activity moves through out different Location.
 Then: User clicks to Add ITINERARY TABLE 
 Then: ACTIVITY ITINERARY TABLE opens 
 And: ITINERARY TABLE IS TITLED by system database 
-And: with the EXPERIENCE TITLE.
-Then. Organizer is adding STAGE FIRST 
+And: with already existing EXPERIENCE TITLE
+Then. Organizer is adding now FIRST STAGE to the table. 
 And: STAGES will be named by its differents LOCATIONs.
-Then: System should be linked to MAP DATA BASE ( GOOGLE MAP)
-Then: User can add them by clicks directly on the map ubication
-And: GAP AVAILABEL FOR LOCATION NAME
-And: when Organizer typE IT in.
-Then: System shoudl finds a match LOCATION at Database
-Then: Sytem autocomplete the name of location at the gap
+Then: System should be linked to MAP DATA BASE (HERE.COM)
+Then: User add LOCATIONS by clicks directly on the map ubication
+And: User can also type at GAP AVAILABLE FOR LOCATION NAME
+And: when Organizer starts to types in 
+Then: System should finds a match LOCATION at Database
+Then: Sytem autocomplete the name for user location serarch 
 Then: FIRST STAGE now displays with LOCATION NAME AND COORDANATES
 Then: An UBICATION mark is display at the MAP for the LOCATION SELECTED
 Then: STAGE will show the name of LOCATION SELECTED at the ITINERERY TABLE
-And: Keep adding stages as per locations.
-then: Stages will be numered consecutively. 
-then : Organizer can now add number of days spent at each stage 
-Then: Organizer add numbers of days each STAGE crated at the itinerary table.
+And: Keep adding stages as per LOCATIONS INVOLVED
+then: STAGES will be numered consecutively 1,2,3..
+then : Organizer can now add NUMBER OF DAYS spent at each stage 
 And: Keep adding stages as per location.
 Then: Days per stages 
-Then: Dedication chart per day can be showm
+Then: Dedication chart per day can be showm* (SEE PIE CHART)
 
 4.3 Scenario: 
-Feature: PIE CHARTS FOR DAY TIME SPENDING TIME PLANNED BY ORGINZER
+Feature:*PIE CHARTS FOR DAY TIME SPENDING TIME PLANNED BY ORGINZER
 Then: System will now show PIE CHART FOR EACH DAY AT ITINERARY TABLE STAGES
 And: PIE CHART will be added to the STAGE INFO for EACH DAY (1 DAY= 1PIE)
 And : DISPLAYED at ITINERARY TABLE FOR EACH DAY AT EACH STAGE OF EXPERIENCE OFFER
-Then: Recorded at DATABASE EXPERINCES OFFER
+Then: Recorded at DATABASE 
+And: Show at EXPERINCES OFFER Description
 
-Feature: DEDICATION TIME PIE CHART PER DAY CREATION
+Feature: CREATION OF DEDICATION TIME PIE CHART PER DAY
 Then: FOR EACH DAY seleccted sytem will show 3 categories
 Then: Day 1 system shows 3 categories to be filled
 Then: Day 2 system shows 3 categories to be filled
@@ -380,21 +391,24 @@ And: User add % of that day that will be dedicated to Relax, free time or Mind A
 And: User add % of that day that will be dedicated to Culture & Gastronomy. 
 Then: TOTAL DAY % VALUE DAY ATTACHED TO THEM will KEEP A sumatory not over 100%
 And: at any given time as soon as any % value is added by orginazer to the categories 
-Then: System will always place acumulated % value for last category till completing 100%
+Then: System will always place THE acumulated % value for last category till completing 100%
 And: system wont allow more than 100% at total sumatory or and on any of categories.
 And: IN case organizer not agree with valued added by system
 Then: Organizer can cliks on top of any % BAR VALUE of each category to change its value.
 And: Adding a new % value autoomatically wil deliver differnt value to other categries.
-Then: by reducing or increasing propcioanlly each category to a total of 100% day value. 
+Then: by reducing or increasing propcioanlly each category till a total of 100% day value. 
 Then: ORGANIZER ADD 1DAY PLANNED FOR EXPERIENCE Sport 60% + Relax 20% 
 Then system adds Culture 20% as lat value possible.
 And: System will creat a PIE CHART TIME DEDICATION FOR EACH DAY 
 
 Scenariao
-SOECIAL EPERIENCES 
-HIGH PHISICLA CMMITMENT 
-wEATHER DEPENDING ACTIVITIES
-RANGE OF AGES RECOMENDED
+Feature: SPORT EXPERIENCES MARKED AS SPECIAL 
+Given: EXPERIENCE REGISTRATION CERTAIN SPORT/ ACTIVITIES CAN BE MARKED AS:
+Then:  ADVANCE SPORT/ACTIVITY where certain knowlage is requiered.
+And: WEATHER DEPENDING ACTIVITIES (Se cancelation policy)
+Then: ESPECIAL REQUIERMENT WILL BE ADDE TO PDF ACTIVITY DISCLAIMER  
+And: THIS EXPERIENEC WILL BE MARK AS SPECIAL AT THE OFFER
+Then: USER can check special requierements befor booking.
 
 
 4.3 Scenario 
@@ -405,84 +419,51 @@ Then: System can creat and inphographic MAP
 And: Organizer ADD also 1 PICTURES by STAGES at the experience
 Then: System shows INTERACTIVE MAP when placing mouse on top 
 And: INFORMATION will be taken from ITINERARY TABLE. 
-And: CREATING A RUTE linked different locations at the MAP 
-And: MAP could be linked to a location database service provider
-And: where to get the database info from 
+And: From LOCATION SERVICE PORVIDER 
+Then: THE SYSTME CAN CREATING A RUTE linked different locations
+And: It will be shown at EXPERIENCE OFFER 
 Then: System will link locations with stages numbers
-Then: showing starting and ending point for activity 
-Then: Organizer can add brief stage description
-Then: Organizer will get balnk tex box 
+Then: showing starting and ending point for activity at the MAP. 
+Then: Organizer will get balnk tex box in order to ADD STAGE BRIEF DESCRIPTION  
 Then: Organizer fill it with LOCATION /STAGE BRIEF DESCRIPTION.100 characters
-Then it can be displayED with short descroiption infro from each stage
+Then it can be displayED with short description info from each stage
 aND: Only by placing mouse track on the LOCATION at RUTE MAP
-Then USER WILL GET A LOACTION/STAGE DESCRIPTION INFO.
-
+Then That way USER WILL GET LOACTION/STAGE DESCRIPTION INFO.
 
 4.6 Scenario
-Given: REGISTRING EXPERIENCE OFFER PACKAGE DETAILS 
-Feature: INCLUDED / EXCLUDED and EXTRAS PACKAGE DETAILS 
-Featre: CALCULATOR TABLE 
-Then: PACKAGE DETAILS 4 different fields to be filled
-aND: Organizer clicks LODGE 
-Then: Insert Lodge TYPE TEXT
-And: If lodge it is not included
+Given: PACKAGE DETAILS 
+Feature: INCLUDED / EXCLUDED and EXTRAS AT PACKAGE DETAILS
+Then: 4 DIFFERENT FILEDS TO BE FILLED LODGE-GEAR-TRANSPORTATION-MEALS
+aND: Organizer clicks LODGE-GEAR-TRANSPORTATION-MEALS
+Then: Insert LODGE-GEAR-TRANSPORTATION-MEALS TYPE TEXT
+And: BULLET POINT description content limited by row charcter extension.
+And: Organizer can add a PIRCTURE FOR -GEAR-TRANSPORTATION-MEALS
+And: If LODG-GEAR-TRANSPORTATION-MEALS it is not included
 Then: Organizer clicks not included 
-And : If it is included
-Then: Organizer includs it 
-And: Gives a brief description text 200 Characters
 Then: Organizer clicks Extra 
-aND:  aDD PRICE
-And: Then user can added TOTAL PRICE when boooking EXPERIENCE  
-And: Organizer can add a PIRCTURE FOR LODGE 
-And: click to add pictures for user referrence 
-Then: Organizer can Insert price at CALCULATOR TABLE FOR LODGE
------------------
-tHEN: GEAR
-Then: Insert Gear
-And: If Gear it is not included
-Then: Organizer clicks not included 
-And : If it can be included 
-ANd : If Gear included desription
-And: if as an extra 
-Then: Organizerclicks Extra 
-And: Add prices to be added later total expierence amount
-Then: Organizer gives brief description of what it is included 
-And: Then click to add Gear pictures for user referrence 
-----------------------
-And: TRANSPORTATION
-Then: Insert Transportation 
-And: If Transportation it is not included
-Then: User clicks not included 
-And : If it IS included
-Then: gives a brief description of what same as an extra 
-Then: User clicks Extra 
-ANd : If Transportation  included or and Extra
-Then: Users gives brief description of what WOULD BE INCLUDED
-And: Then click to add Transportation pictures for user referrence 
-Then user choose Gear inluded and excluded
------------------------------
-And: MEALS: INcluded or not extra....
-
-4.7. Scenario
-Feature: REGISTRING ACTIVITY RISK
-Then: ORGANIZER CAN ADD PDF DISCLAIMER.
-And: PDF HAVE TO BE UPLOADED with activity risk responsabilities.
-Then: System add DISCLAIMER TO EXPERIENCE OFFER TERMS & CONDITION to be signed by USER
-And: before EXPERIENCE TAKE PLACE
-Then: When booking activity user needs to approve PDF disclarimer for subject activity. 
+And: Gives a brief description 
+aND: Add EXTRA PRICE (CHECK AFFILIATION POSSIBILITIES)
+And: EXTRA PRICE wil be added if usser clicks it when boooking EXPERIENCE  
 
 5 Scenario
 Feature: TRIP ORGANIZER CALCULATOR
 Given: We want to make thing easy for ORGANIZER
-Then: Build a calcularo that help calculate EXPERICNCE OFFER TOTAL PRICE
-Given: LODGE , GEAR, TRANSPORTATION & MEALS
-Then. User can add an estimated price for each of above fields 
-Then: 20% margin will be added by defect 
-And: 10% from VENTURE DESTINATION REFFERRAL FEE COST
+Then: Build a TRIP CAN BE EASY ADDIN A CALCULATOR EXPERICNCE OFFER TOTAL PRICE
 And: ADD prices TO CALACULATOR TOUR for LODGE, GEAR AN TRANSPORTATION, MEALS
+Then. User can add an estimated price for each of above fields 
+Then: % margin will be added by defect 
+And: % from VENTURE DESTINATION REFFERRAL FEE COST
+And: % MARGIN TO LOOK AFTER NATURE PROJECT
 Then: organizer can calculate price for its own trip accordingly
-And: befor Submite TOUR/ACTIVITY OFFER
+And: befor Submite TOUR/ACTIVITY/TRIP EXPERIENCE OFFER
 
+4.7. Scenario
+Feature: UP LOAD PDF FILE FOR ACTIVITY DISCLAIMER
+Then: ORGANIZER ADD PDF DISCLAIMER.
+And: PDF HAVE TO BE UPLOADED with according to activity risk, right and responsabilities.
+Then: System add DISCLAIMER TO EXPERIENCE OFFER TERMS & CONDITION to be signed by USER
+And: when booking and before EXPERIENCE TAKE PLACE
+Then: User needs to approve PDF disclarimer all type of activity. 
 
 4.4 Scenario 
 Feature: ORGANIZER PLACE THE EXPERIENCE OFFER DATE AND TIME AT CALENDAR 
@@ -495,43 +476,50 @@ Then User can add EXPERIENCE periodicity
 And: or JUST CLICKING AVALAIBLE DATES AT CALENDAR
 
 4.5 Scenario 
-Feature: REGISTRING CONTENT FOR THE EXPERIENCE OFFER
+Feature: ADDING HEADER CONTENT FOR THE EXPERIENCE OFFER
 Then: Organizer Add OVERVIEW TEXT for DESTINATION & ACTIVITY 
-aND: Organizer introduce BASIC INFORMATION DESCRIPTION
+Then: Discribe activity and destiniton with 2OO characte each 
 And: Organizer Add GALLERY MAIN PICTURE high resolution for DESTINATION
-And: Main picture will be shown by system at offer trip header 
+And: Main picture will be shown by system at offer trip a header 
 And: After OFFER VALIDATONs PROCESS BY SUPPORT ( ADMINSTRARION DASHBOARD)
+And: Therfor supoert can change elements of the OFFER before being published.
 
+ORGANIZER CANCELATION POLICY
+Then: For organizer It will be 3 days for WEATHER DEPINGING ACTIVITIES
+And: 7 days before tours expereinces (and no weather depending activity) 
+And: 30 days before organized trips takes place NO COST
+Then: booking stands liable to be cancelled if 100% payment is not received 
+And: lesS 30 days before date of departure.
+Then: SUPPORT WILL STUDY EACH CASE
+Then: Offering client alternatives
 
-Then:REGUALR PAYMENT POLICY
+Then:REGUALR USER PAYMENT POLICY
 then: BOOKING 46 Days or more before date of departure: 25% of total cost.
 And: 45 - 30 Days before date of departure: 50% of total cost.
 And: 30 days before date of departure: 100% of total cost.
-Then: booking stands liable to be cancelled if 100% payment is not received 
-And: lesS 30 days before date of departure.
-
-REGUALR USER CANCELLATION POLICY USER
-15 days or more before departure: 15% of total cost
-15- 7 days before departure: 30% of total cost
-Less than 7 days before departure: 50% of total cost
-Less than 3 days before departure : 100% of total cost
-Cancellation charges per person
 
 4.10 Scenario 
-Feature: TRIP VALIDATION PORCESS
+Feature: LUNCHING TRIP FOR VALIDATION 
 Given: Trip activity organizer wants to stay always on the safe side 
 Then: User can PLAN AND LUNCH OFFER that need to meet certain criteria to be validated 
 Then: Organizer can determine minimun number of booking for its validation before 30 DAYS
 And: Users can also estabilsh a maximum Deposit of 25% from total activity cost.
-then: BOOKING 46 Days or more before date of departure: 25% of total cost.
-And: 45 - 30 Days before date of departure: 50% of total cost.
+then: BOOKING 46 Days or more before date of departure: 25% of total cost can be charged.
+And: 45 - 30 Days before date of departure: 50% of total cost would be charge.
 And: 30 days before date of departure: 100% of total cost.
 Then: booking stands liable to be cancelled if 100% payment is not received 
 Given: 30 days before date of departure.
-Cancellation charges per person
+
+REGUALR USER CANCELLATION POLICY USER
+Given: Cancellation charges per person
+15 days or more before departure: 15% of total cost
+15- 7 days before departure: 30% of total cost
+Less than 7 days before departure: 50% of total cost
+Less than 3 days before departure : 100% of total cost
+
 
 Scedanrio
-Feature: VALIDATION 
+Feature: EXPERIENCE OFFER SUPPORT FINAL VALIDATION 
 And: After validation date has expired
 And: booking requirements had been accomplished
 Then: System will validate activity automatically
@@ -541,13 +529,6 @@ Then; CAN BE EXPERIENCES MARKS AS DEPENDING ON WEATHER CONDITION
 Then: Organizer can click to cancel experience due to  bad weather condition 3 days in advance.
 And: Due to wather conditions prevously established at CANCELATION POLICY
 And: also Major cause EVENT will be well discribed.
-
-ORGANIZER CANCELATION POLICY
-Then: For organizer It will be 3 days for WEATHER DEPINGING ACTIVITIES
-And: 7 days before tours expereinces (and no weather depending activity) 
-And: 30 days before organized trips takes place NO COST
-Then: SUPPORT WILL STUDY EACH CASE
-Then: Offering client alternatives
 
 
 4.10 Scenario 
@@ -578,9 +559,9 @@ And: New Payment method has been updated
 
 5. Scenario
 Feature: ORGANIZER  NEW PROFILE
-Given: OFFER EXPERIENCE FINISHED 
+Given: OFFER EXPERIENCE VALIDATION 
 Then: ORGANIZER PROFILE WILL BE UPDATE WHEN FIRST ACTIVITY RECOREDED
-NEW FIELDS WILL BE ADDED TO  BASIC USER PROFILE 
+Then: NEW FIELDS WILL BE ADDED TO  BASIC USER PROFILE creating the ORGANIZER PROFILE 
 And:IN ORDER TO allow ORGANIZER PROFILE FUNCTIONALIES
 
 5. Scenario
