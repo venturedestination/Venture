@@ -3,6 +3,10 @@ Given: USER click to LOG IN if Account already created
 Then:  Users gets to already existing USER DASHBOARD
 Given: A NEW USER who wants to GET REGISTRED .
 Then: User clicks then SING UP 
+Then: After registration porces USER DASHBOARD WILL BE CREATED 
+Then: From user dashboard USER CAN ADD AN EXPERIENCE AND BECOME AN ORGANIZER
+Given: The user profile 
+ORGANIZER NEW NICKNAME REGISRATION
 
 2. Scenario
 Feature: USER NICKNAME REGISRATION 
@@ -244,7 +248,7 @@ Then: be redireccted to EXPERIENCE OFFER
 then: User can clik in 
 
 3.3 Scenario
-feature: ON LINE CHAT
+feature: ON LINE CHAT contact activity ORGANIZER
 Then: Dialog box shows local time each person involved at any given time
 Then. System assing a DAY OR NIGHT TIME ICON TO USER/ORGANIZER stauts accordin time zones respectively
 And: During organizer/user NIGHT time will show NIGHT MOON ICON
@@ -483,6 +487,18 @@ And: Organizer Add GALLERY MAIN PICTURE high resolution for DESTINATION
 And: Main picture will be shown by system at offer trip a header 
 And: After OFFER VALIDATONs PROCESS BY SUPPORT ( ADMINSTRARION DASHBOARD)
 And: Therfor supoert can change elements of the OFFER before being published.
+
+Scenario 
+LAST BUT NOT THE LEAST
+ORGANIZER NEW NICKNAME REGISRATION
+ORGANIZER EMAIL REGISTRATION 
+ORGANIZER NEW PASSWORD REGISTRATION
+ORGANIZER NEW DESCRIPTION
+I love mountains, and I have climbed myself the highest peaks int the world¨***
+ORGANIZER NEW PICTURE PROFILE 
+System wil add a new ID number for ORGANIZER
+uSER PROFILE AND ORGANIZER ARE SEPARTED 
+
 
 ORGANIZER CANCELATION POLICY
 Then: For organizer It will be 3 days for WEATHER DEPINGING ACTIVITIES
