@@ -2,22 +2,25 @@
 Given:  Account already exist
 Then: USER click to LOG IN
 Then:  Users gets to the already existing USER DASHBOARD.
+
+1.2 Scenario: 
 Given: VISITOR wants to become a NEW USER clicks then SING UP.
-And: After NEW USER registration porcess has finished 
+And: After NEW USER REGISTRATION PORCESS has finished 
 Then: New personal USER DASHBOARD WILL BE CREATED 
 And: NEW USER can now LOG IN.
 And : Database will registrer a unique key FOR ID USER
 Then: From USER DASHBOARD USER CAN ADD AN EXPERIENCE 
 Then: During the process user will become therefore a NEW EXPERIENCE ORGANIZER
 And: During NEW EXPERIENCE registration 
-Then: NEW ORGANIZER will provide a NEW E.MAIL ACCOUNT
+Then: NEW ORGANIZER will provide a NEW E.MAIL ACCOUNT*
 And: NEW ORGANIZER NICKNAME
 And: NEW ORGANIZER PASSWORD
 And: NEW BRIEF DESCRIPTION
-And: Once new offer process registratiion has finished
+And: Once new EXPERIENCE OFFER REGISTRATION has finished
 Then: New personal ORGANIZER DASHBOARD WILL BE CREATED 
 And : System will registrer a unique key ID for ORGANIZER at Database 
-Then: Once ADMINSTATION EXPERINCE VALIDATION PROCESS HAS BEEN POSITIVE
+Then: Once ADMINSTATION EXPERINCE VALIDATION PROCESS FINSHED AT ADMINSTRATOR DASHBOARD
+And: IF FINALLY FOUND POSITIVE
 Then : System will registrer a unique key ID for EACH OFFER EXPERIENCE at Database 
 Then: Next time VISITOR get to the website can LOG IN AS A USER OR AS AN ORGANIZER
 Then: IT should depende wich e.mail account and passwords uses
@@ -34,7 +37,6 @@ Then: system place a red tick at gap
 And: shows alternatives for similar Names/Nicks available at datbase.
 And: if user select correct not yet existing database Name/Nick
 Then: System places a green tick at the name gap .
-
 
 2.1 Scenario
 Given: USER EMAIL REGISTRATION 
@@ -65,7 +67,7 @@ Then: User type matching password
 Then: System places a green tick at the gap
 
 2.3 Scenario
-Given: FAVORITE SPORT REGISTRATION
+Feature: FAVORITE SPORT REGISTRATION
 Then: User click on BY ELEMENT ACTIVITIES DROPLIST
 Then User click to add TO FAVORITES SPORT/ACTIVITIES.
 And: User select from LAND ACTIVITIS: Climbing, Hiking, Cycling, Running, etc	
@@ -104,14 +106,14 @@ Then: System will complie clients FAVORITE DEDICATION TIME FOR their IDEAL EXPER
 And : record the information at USER PROFILE database.
 ***PROCCES EXPLAIN AT ORGANIZER EXPERIENCE REGISTRATION***
 
-3.2 Scenario
-Fearture: USER BRIEF SHARED with ORGANIZER PROFILE 
-Given: USER BRIEF PRESONAL DESCRIPTION FAVORITE SPORT & SPEAKING LENGUAGE/S and others 
-Then: User fill with with 200 charcters text THINGS she/he LIKE IN LIFE
-***¨ i like to spent time in contact with nautre and wildlife***
+2.6 Scenario
+Fearture: USER BRIEF DESCRIPTION
+Then: User fill in with with 200 charcters the text box with THINGS she/he LIKE to do IN LIFE
+***¨ I like to spent time in contact with nautre and wildlife, walking, hiking and admiring this beautiful planet***
 Then: It will be shown Under the picture at USER BRIEF SHARED PROFILE 
-And : From user it is actually located is added by system according USER IP 
-Then: it can be modify at user profile later on.
+And : IP will DETECT USER LOCATION
+And: Record it at USER ID database profile
+Then: it can be modify later on by USER AT DASHBOARD DATA PROFILE*
 Then: USER add SPEAKING LEANGUAGE from droplist
 User: Clicks lenguages comunication posibilities.
 Then: Lenguage added to the system.
@@ -120,6 +122,7 @@ Then: System also show FAVORITE SPORT FORM USER.
 And: ADVENTURE RANKING
 And: when ORGANIZER RECEIVES USER APPLICATION 
 Then: ORGANIZER can click in to CONTACT USER
+***USER DASBOARD DATA PROFILE 3.1 scenario*** 
 
 2.7 Scenario
 Feature: USER 3 CURRENT MOST DESIRABLE VENTURE DESTINATIONS
@@ -219,7 +222,7 @@ And: adding its data to user registration exitng preferences.
 3. Scenario USER NEW DASHBOAR IS CREATED
 
 3.1 Scenario
-Feature: UPDATING PICTURE AT USER DASHBOARD
+Feature: UPDATING USER DASHBOARD DATA PROFILE
 Given: User wants to change by defect profile picture 
 Then: User click on top of by defect Picture 
 Then: System displayS browser
@@ -227,7 +230,6 @@ And: User up load picture from browser
 And: User clicks upload picture from computer
 Then: System updates new picture at user database info registred
 And: User Nick name can be also change by clicking on it 
-Then: Profil can be chececk 
 And: User can Change BRIEF DESCRITION 
 And: User can change FAVORITE SPORT OR DESTINATIONS
 And: Current location or comunication skills
