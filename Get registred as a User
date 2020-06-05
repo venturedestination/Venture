@@ -10,8 +10,7 @@ Then: USER DASHBOARD WILL BE CREATED
 And : Database will registrer a unique key FOR ID USER
 Then: FROM USER DASHBOARD user can ADD AN EXPERINCE.
 And: BUTTON WILL BE ENABLE AT USER DASBOARD BY ADMINISRATION/SUPPORT
-Then: USER can press now the button TO ADD AN EXPERIENCE.
-Then: therefore a NEW EXPERIENCE DASBOAR ORGANIZER will be created out of it.
+Then: USER can press the button TO ADD A NEW EXPERIENCE.
 And: During NEW EXPERIENCE registration 
 Then: New ORGANIZER DASHBOARD WILL BE CREATED 
 Then: ORGANIZER will provide a NEW E.MAIL ACCOUNT*
@@ -93,6 +92,11 @@ Then: Next time user access to SORT DROPLIST
 Then: NEW ICONS will displayed among rest of sport icons
 
 2.5 Scenario
+Feature: SYSTEM REGISTER DEFAULT PICTURE AT USER DATABASE PROFILE
+Given: Database should recoreded ICON after FAVORITE SPORT registration
+Then: System asSiGNED by default picture according to it
+
+2.6 Scenario
 Feature:USER IDEAL EXPERIENCES
 Then: User RATE FAVORITE DEDICATION TIME FOR A PERFECT DAY ON THEIR IDEAL EXPERIENCE
 Given: 3 categories to be rated for USER DAY IDEAL EXPERIENCE.
@@ -142,22 +146,22 @@ And: USER BASIC REGISTRATION FORM COMPLETED
  
 
 2.9 Scenario
-Fearture: USER BRIEF DESCRIPTION
+Fearture: USER BRIEF PUBLIC PROFILE
 Then: User fill in with with 200 charcters the text box with THINGS she/he LIKE to do IN LIFE
 ***¨ I like to spent time in contact with nautre and wildlife, walking, hiking and admiring this beautiful planet***
 Then: It will be shown Under the picture at USER BRIEF PROFILE
-And: Available form EXPERIENCE ORGANIZER when receive an APPLICATION FROM USER.
-And : IP will DETECT USER LOCATION
-And: Record it at USER ID database profile
-Then: it can be modify later on by USER AT DASHBOARD DATA PROFILE*
-Then: USER add SPEAKING LEANGUAGE from droplist
-User: Clicks lenguages comunication posibilities.
+And : IP will DETECT ALSO USER LOCATION.
+Then: it can be modified at USER DASHBOARD DATA PROFILE.
+Then: USER chose SPEAKING LEANGUAGE by clicking from lenguages droplist
 Then: Lenguage added to the system.
-Then: INFO MEMBER SINCE add actoamically by system from inscription time.
-Then: System also show FAVORITE SPORT FORM USER.
-And: ADVENTURE RANKING
+Then: MEMBER SINCE INFO 
+Then: System also show FAVORITE ELEMENT
+And: NICK/NAME 
+And: PICture
+And: ADVENTURE RANKING IN STARS
 And: when ORGANIZER RECEIVES USER APPLICATION 
-Then: ORGANIZER can click in to CONTACT USER
+Then: when ORGANIZER click in to CONTACT USER
+Then: ORGANIZER HAVE ACCES TO USER BRIEF PROFIL
 ***USER DASBOARD DATA PROFILE 3.1 scenario*** 
 
 2.10 Scenario
@@ -178,13 +182,6 @@ And click LINK received for e-mail confirmation.
 And: back to www.venturedestination.com 
 Then: User is LOGGED IN.
 
-Feature: REGISTER DEFAULT PICTURE AT USER DATABASE PROFILE
-Given: Database should recoreded ICON after FAVORITE SPORT registration
-And: Since favorite sport and nick name registration.
-Then: System asSiGNED by default picture according to it
-Then: it is placed  by default at user profile database.
-And: User Nick name will be displayed below sport icon 
-Then: available at user public BRIEF DATABASE PORFILE.
 
 2.10 Scenario 
 Feature:: SYSTEM INFO REGISTRATION & RECOMEDATIONS
@@ -197,17 +194,19 @@ And: PHYSICAL COMMITMENT FOR PREFERRED EXPERIENCES
 And: USER BRIEF DESCRIPTION 
 And: DEFAULT PICTURE 
 And : LOCATION BY CURRENT IP.
+Then: membar since
 
 Scenario
 Feature: SYSTEM RECOMENDATION 
-Given: System keeps tracks from dates and destinations from user activity
-And: System keeps searched dates from user researches (ID database)
-Then: System also recollect user NAVIGATION SEARCH ACTIVITY.
+Given: System keeps tracks from dates and destinations serches
+And: extract them from user activity
+And: System keeps info at each case databes ID
 And: check for activity that matches user searched DATES and FAVORITE DESTINATIONs.
 Then: Displying similar activities at similar dates serched during user navigation.
 Then: NEWSLETTER system will sent by e-mail similar activities periodically.
-And: Special email if new matching activities gets available according user preferences. 
-And: adding its data to user registration exitng preferences.
+And:if new matching activities gets available according user preferences.
+Then: User recieve and specific dates.
+Then: all data is adde to user registration exitng preferences.
 
 ***PAYMENT INFORMATION***added TO USER DATA INFO when USER book first activity
 WHEN user become an ORGANIZER and registrer an activity.
@@ -217,7 +216,7 @@ to Fill it, update it, or modify it
 -----------------------------------------------------
 
 3. Scenario 
-Given: USER NEW DASHBOAR IS CREATED
+Given: SYSTEM CREAT A USER NEW DASHBOAR
 
 3.1 Scenario
 Feature: UPDATING USER DASHBOARD DATA PROFILE
@@ -231,9 +230,7 @@ And: User Nick name can be also change by clicking on it
 And: User can Change BRIEF DESCRITION 
 And: User can change FAVORITE SPORT OR DESTINATIONS
 And: Current location or comunication skills
-And. updated & RECORDED at user DATABASE
-And Member since data
-And: Current LOCATION 
+And. updated process RECORDED at User DATABASE
 
 3.2 Scenario
 Feature: USER DASHBOARD EXPERIENCE LIST AND FAVORIT ACTIVITIES ADDED
@@ -241,7 +238,7 @@ Then: A list will shows Activity history & booked
 Then: User can check list Activities done & booked
 And: Click on them for more info 
 Amd: Get back to the experience offer in case still availale
-Then: USER GETS A LIST OF FOVIRTE ACTIVITIES ADDED by thierselfs. 
+Then: USER can check also LIKE OFFERS
 
 3.3 Scenario
 Feature: USER DASHBOARD CHAT BOX
@@ -255,24 +252,27 @@ And: User scrolls up and down to check current conversation
 
 3.4 Scenario
 feature: ON LINE CHAT contact activity ORGANIZER
-Then: Dialog box shows local time each person involved at any given time
-Then. System assing a DAY OR NIGHT TIME ICON TO USER/ORGANIZER stauts accordin time zones respectively
-And: During organizer/user NIGHT time will show NIGHT MOON ICON
-And: During organizer/user DAY time will show DAY SUN ICON
-And: a message from systme will prevent when sendig a message form night local time zone
-And: Showing that ORGANIZER/USER might reply tomorrow locaL daytime.
-And: If evtually they both connected and any them reply Conversation can take place 
-And. Message will be sent to USER/ORGANIZER INBOX
-Then: conversation will be recoerded at each database profle.
+Then: Dialog box shows LISTENERT LOCAL TIME 
+Then. System assing a DAY OR NIGHT TIME ICON TO LISTENER time zone
+And: During NIGHT time will show progressive NIGHT MOON ICON
+And: During DAY time will show progressive DAY SUN ICON
+And: a message from systme will prevent when sendig a message to LISTENER
+And: Showing that LSITENER might reply tomorrow at its locaL daytime.
+And Message will be sent to LISTENER INBOX
+And: If evetually they both connected 
+And: any of them reply 
+Then: Conversation can take place 
+Then: conversation will be recoerded at database AT OFFER ID
 
 3.5 Scenario
 Features: DASHBOARD CALENDAR
 Then: User can check for adventures available at any given Time/dates.
 Then: User clicks for a specific date at calendario. 
 Then: Calendar will shows EXPERIENCES AVAILBLE for that dates.
-And: User Can ADD ACTIVITIES TO FAVORITE by clicking on the ¨heart¨
-Then: SEE FAVORITE ACTIVITY/TOUR/TRIP at calendar mark in color.
-Then: User clicks in and redirected to the EXPERIENCE OFFER PAGE
+And: User Can ADD ACTIVITIES TO FAVORITE by clicking on the ¨heart¨ liked
+Then: SEE FAVORITE ACTIVITY/TOUR/TRIP at calendar marked
+Then: User clicks in 
+And: wil be redirected to the EXPERIENCE OFFER PAGE
 
 3.6 Scenario
 Feature: REVIEW SYSTEM 
@@ -280,19 +280,20 @@ Given: Lesson , Tour or Trip finished
 Then: USER receive a QUESTIONAIRE at the inbox messages USER/ORGANIZER DASHBOARD
 And: System sent message: Be the first to share your experience with us. 
 Then: USER clicks in to rates EXPERIENCE and ORGANIZER RATES FROM 1 TO 5 STARS
-And: USER can also ADD comments filling the gap in blank with not over 100 Characters
-Then : feedbacks will be sent first to SUPPORT for validation. 
+And: USER can also ADD comments by filling the gap with 100 Characters max.
+Then : feedbacks will be sent to SUPPORT for validation. 
 Then: NOT fillter applyed to positive REVIEWs ABOVER 3 OUT 5 
 Then: reviews info will be added to database ORGANIZER PROFILE
-And: IN case reviwes go under 3 stars
+And: IN case reviews go under 3 stars
 Then: SUPPORT FROM ADMINSTRATION DASHBOARD will contact USER.
-And: Or ORGANIZER BEFORE REVIEW TO BE PUBLISHED.
-And: EXPERIENCES can be cancelled threfore
-And: User and organizer can be conpensated accordingly or not.
+And: Or the experience ORGANIZER 
+And: Before Review is finally published
 Then: SUPPORT needs to mantain good reviews and communication.
-And: even postpne or teminats subject EXPERIENCES OFFERs
+And: even postpone or teminats subject EXPERIENCES OFFERs
+And: User and or organizer can be conpensated according to any issue.
 Then: USER will revceived rating form ORGANIZER as per COMMITMENT
-And: will be availble at USER DASHBOARD REVIEWS 
+And: Add comment till 100 characters (not compulsory)
+And: information will be availble at USER DASHBOARD REVIEWS 
 
 3.7 Scenario
 Feature: USER RANKING )
@@ -300,10 +301,7 @@ Given: All adventure done & booked keep at USER PROFILE LIST
 And: Adventurer  is given a Ranking
 And: User gets LEVEL 1,2,3 or Expert
 And: According numbre of activities done & booked
---------------------
-5.5 Scenario
-Feature: ORGANIZER RANKING )
---------------------------
+
 3.8 Scenario
 Feature: DIRECT ACCESS at USER DASHBOARD 
 Then: CREAT A TOUR/ACTIVITY button available
@@ -616,6 +614,8 @@ Then: User clicks review from organizer.
 And: Check SPORTs knowlage and experience
 And: Lenguages skills
 Then: Information get registred at database
+And: ORGANIZER RANKING )
+
 
 5.2 Scenario
 Given: USER WANT TO CONTACT A NEW EXPERIENCE ORGANIZER
