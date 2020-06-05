@@ -1,12 +1,27 @@
 1. Scenario: 
-Given: USER click to LOG IN if Account already created
-Then:  Users gets to already existing USER DASHBOARD
-Given: A NEW USER who wants to GET REGISTRED .
-Then: User clicks then SING UP 
-Then: After registration porces USER DASHBOARD WILL BE CREATED 
-Then: From user dashboard USER CAN ADD AN EXPERIENCE AND BECOME AN ORGANIZER
-Given: The user profile 
-ORGANIZER NEW NICKNAME REGISRATION
+Given:  Account already exist
+Then: USER click to LOG IN
+Then:  Users gets to the already existing USER DASHBOARD.
+Given: VISITOR wants to become a NEW USER clicks then SING UP.
+And: After NEW USER registration porcess has finished 
+Then: New personal USER DASHBOARD WILL BE CREATED 
+And: NEW USER can now LOG IN.
+And : Database will registrer a unique key FOR ID USER
+Then: From USER DASHBOARD USER CAN ADD AN EXPERIENCE 
+Then: During the process user will become therefore a NEW EXPERIENCE ORGANIZER
+And: During NEW EXPERIENCE registration 
+Then: NEW ORGANIZER will provide a NEW E.MAIL ACCOUNT
+And: NEW ORGANIZER NICKNAME
+And: NEW ORGANIZER PASSWORD
+And: NEW BRIEF DESCRIPTION
+And: Once new offer process registratiion has finished
+Then: New personal ORGANIZER DASHBOARD WILL BE CREATED 
+And : System will registrer a unique key ID for ORGANIZER at Database 
+Then: Once ADMINSTATION EXPERINCE VALIDATION PROCESS HAS BEEN POSITIVE
+Then : System will registrer a unique key ID for EACH OFFER EXPERIENCE at Database 
+Then: Next time VISITOR get to the website can LOG IN AS A USER OR AS AN ORGANIZER
+Then: IT should depende wich e.mail account and passwords uses
+*** check possibility to keep same email with different password***
 
 2. Scenario
 Feature: USER NICKNAME REGISRATION 
@@ -19,6 +34,7 @@ Then: system place a red tick at gap
 And: shows alternatives for similar Names/Nicks available at datbase.
 And: if user select correct not yet existing database Name/Nick
 Then: System places a green tick at the name gap .
+
 
 2.1 Scenario
 Given: USER EMAIL REGISTRATION 
@@ -92,8 +108,7 @@ And : record the information at USER PROFILE database.
 Fearture: USER BRIEF SHARED with ORGANIZER PROFILE 
 Given: USER BRIEF PRESONAL DESCRIPTION FAVORITE SPORT & SPEAKING LENGUAGE/S and others 
 Then: User fill with with 200 charcters text THINGS she/he LIKE IN LIFE
-***¨ i like to spent time in contact with nautre and wildlife 
-I love mountains, and I have climbed myself the highest peaks int the world¨***
+***¨ i like to spent time in contact with nautre and wildlife***
 Then: It will be shown Under the picture at USER BRIEF SHARED PROFILE 
 And : From user it is actually located is added by system according USER IP 
 Then: it can be modify at user profile later on.
@@ -409,57 +424,13 @@ Scenariao
 Feature: SPORT EXPERIENCES MARKED AS SPECIAL 
 Given: EXPERIENCE REGISTRATION CERTAIN SPORT/ ACTIVITIES CAN BE MARKED AS:
 Then:  ADVANCE SPORT/ACTIVITY where certain knowlage is requiered.
-And: WEATHER DEPENDING ACTIVITIES (Se cancelation policy)
-Then: ESPECIAL REQUIERMENT WILL BE ADDE TO PDF ACTIVITY DISCLAIMER  
-And: THIS EXPERIENEC WILL BE MARK AS SPECIAL AT THE OFFER
-Then: USER can check special requierements befor booking.
-
-
-4.3 Scenario 
-Feature: INTERACTIVE RUTE MAP
-Given: We want to make funny the process 
-And: atractive offer inphografic map will be created by sytem.
-Then: System can creat and inphographic MAP
-And: Organizer ADD also 1 PICTURES by STAGES at the experience
-Then: System shows INTERACTIVE MAP when placing mouse on top 
-And: INFORMATION will be taken from ITINERARY TABLE. 
-And: From LOCATION SERVICE PORVIDER 
-Then: THE SYSTME CAN CREATING A RUTE linked different locations
-And: It will be shown at EXPERIENCE OFFER 
-Then: System will link locations with stages numbers
-Then: showing starting and ending point for activity at the MAP. 
-Then: Organizer will get balnk tex box in order to ADD STAGE BRIEF DESCRIPTION  
-Then: Organizer fill it with LOCATION /STAGE BRIEF DESCRIPTION.100 characters
-Then it can be displayED with short description info from each stage
-aND: Only by placing mouse track on the LOCATION at RUTE MAP
-Then That way USER WILL GET LOACTION/STAGE DESCRIPTION INFO.
-
-4.6 Scenario
-Given: PACKAGE DETAILS 
-Feature: INCLUDED / EXCLUDED and EXTRAS AT PACKAGE DETAILS
-Then: 4 DIFFERENT FILEDS TO BE FILLED LODGE-GEAR-TRANSPORTATION-MEALS
-aND: Organizer clicks LODGE-GEAR-TRANSPORTATION-MEALS
-Then: Insert LODGE-GEAR-TRANSPORTATION-MEALS TYPE TEXT
-And: BULLET POINT description content limited by row charcter extension.
-And: Organizer can add a PIRCTURE FOR -GEAR-TRANSPORTATION-MEALS
-And: If LODG-GEAR-TRANSPORTATION-MEALS it is not included
-Then: Organizer clicks not included 
-Then: Organizer clicks Extra 
-And: Gives a brief description 
-aND: Add EXTRA PRICE (CHECK AFFILIATION POSSIBILITIES)
-And: EXTRA PRICE wil be added if usser clicks it when boooking EXPERIENCE  
-
-5 Scenario
-Feature: TRIP ORGANIZER CALCULATOR
-Given: We want to make thing easy for ORGANIZER
-Then: Build a TRIP CAN BE EASY ADDIN A CALCULATOR EXPERICNCE OFFER TOTAL PRICE
-And: ADD prices TO CALACULATOR TOUR for LODGE, GEAR AN TRANSPORTATION, MEALS
-Then. User can add an estimated price for each of above fields 
-Then: % margin will be added by defect 
-And: % from VENTURE DESTINATION REFFERRAL FEE COST
-And: % MARGIN TO LOOK AFTER NATURE PROJECT
-Then: organizer can calculate price for its own trip accordingly
-And: befor Submite TOUR/ACTIVITY/TRIP EXPERIENCE OFFER
+And: WEATHER DEPENDING ACTIVITIES (with special cancelation policy)
+Then: Organizer can click to cancel experience due to  bad weather condition 3 days in advance.
+And: Due to wather conditions prevously established at CANCELATION POLICY & PDF DISCLAIMER
+And: also Major cause EVENT will be well discribed.
+Then: REQUIERMENT WILL BE ADDE TO PDF ACTIVITY DISCLAIMER  
+And: THIS EXPERIENEC WILL BE MARK AS SPECIAL VISIBLE AT THE OFFER
+Then: USER can check special requierements befor booking BY cliking in.
 
 4.7. Scenario
 Feature: UP LOAD PDF FILE FOR ACTIVITY DISCLAIMER
@@ -469,15 +440,62 @@ Then: System add DISCLAIMER TO EXPERIENCE OFFER TERMS & CONDITION to be signed b
 And: when booking and before EXPERIENCE TAKE PLACE
 Then: User needs to approve PDF disclarimer all type of activity. 
 
+4.3 Scenario 
+Feature: INTERACTIVE RUTE MAP
+Given: We want to make EXPERIENCE registration process fun & OFFER visualy actractive. 
+And: aN INTERACTIVE RUTE MAP will be created by sytem.
+Then: System can creat and inphographic MAP out of the information porvide at ITINERARY TABLE
+And: Organizer after RUT MAP has been created
+Then can also ADD a PICTURES by clicking in the DESTINATION 
+Then: System would shows it when placing mouse on top 
+And: INFORMATION will be taken from ITINERARY TABLE. 
+And: From LOCATION SERVICE PORVIDER 
+Then: THE SYSTME CAN CREATING A RUTE linked different locations
+And: It will be shown at EXPERIENCE OFFER 
+Then: System will link locations with stages numbers
+Then: showing starting and ending point for activity at the MAP. 
+Then: Organizer will get balnk tex box in order to ADD STAGE BRIEF DESCRIPTION  
+Then: Organizer fill it with LOCATION /STAGE BRIEF DESCRIPTION.100 characters
+Then it can be displayED as short description info from each stage
+aND: Only by placing mouse track on the LOCATION at RUTE MAP
+Then: USER WILL GET LOACTION/STAGE DESCRIPTION INFO.
+
+4.6 Scenario
+Given: PACKAGE DETAILS 
+Feature: INCLUDED / EXCLUDED and EXTRAS AT PACKAGE DETAILS
+Then: 4 DIFFERENT FILEDS TO BE FILLED LODGE-GEAR-TRANSPORTATION-MEALS
+aND: Organizer clicks LODGE-GEAR-TRANSPORTATION-MEALS
+Then: Insert LODGE-GEAR-TRANSPORTATION-MEALS TYPE TEXT
+And: BULLET POINT description content limited by row extension.
+And: Organizer can add a PIRCTURE FOR LODGE-GEAR-TRANSPORTATION-MEALS
+And: If LODG-GEAR-TRANSPORTATION-MEALS it is not included
+Then: Organizer clicks not included 
+Then: Organizer can also add them as an EXTRA by giving a brief description 
+aND: Adding the EXTRA PRICE (CHECK AFFILIATION POSSIBILITIES)
+And: EXTRA PRICE wil be added if usser clicks it when boooking EXPERIENCE to total cost
+
+5 Scenario
+Feature: TRIP ORGANIZER CALCULATOR
+Given: We want to make thing easy for ORGANIZER
+Then: Build a TRIP CAN BE MADE EASIER BY ADDING A CALCULATOR 
+And: in order to add a new EXPERIENCE OFFER TOTAL PRICE
+And: ADD prices TO CALACULATOR TOUR for LODGE, GEAR, TRANSPORTATION & MEALS
+Then. User can add an estimated price for each of above fields 
+Then: % margin will be added by at total cost 
+And: % from VENTURE DESTINATION REFERRAL FEE COST
+And: % MARGIN TO LOOK AFTER NATURE PROJECT
+Then: organizer can calculate price for its own trip accordingly
+Then: ORGANIZER  will Submite TOUR/ACTIVITY/TRIP as a NEW EXPERIENCE OFFER
+And: EXPERIENCE OFFER WILL BE SENT TO ADMINSTRATION DASHBOARD SUPPORT FOR VALIDATION 
+
 4.4 Scenario 
-Feature: ORGANIZER PLACE THE EXPERIENCE OFFER DATE AND TIME AT CALENDAR 
-And: Instructor PLACE DATES ACTIVITY AVAILABILITY AT interactive CALENDAR
-E INSTRUCTOR / GUIDE OR ORGANIZER PROVIDES DATES FOR ACTITIVY
-Then: Instructor fix HOURS ACTIVITY STARS & FINISHS
-And: SELECT START/ENDING DATE AND TIME
-Then: SELECT EXPERIENCE AVAILABILITY
-Then User can add EXPERIENCE periodicity
+Feature: ORGANIZER PLACE CURRENT EXPERIENCE OFFER DATE AND TIME AT CALENDAR 
+And: USER CAN PLACE DATES ACTIVITY AVAILABILITY by adding periodicity CALENDAR
 And: or JUST CLICKING AVALAIBLE DATES AT CALENDAR
+Then: ORGANIZER PROVIDES DATES FOR ACTITIVY
+And: SELECT START/ENDING DATE AND TIME
+Then: Instructor fix HOURS ACTIVITY STARS & FINISHS
+
 
 4.5 Scenario 
 Feature: ADDING HEADER CONTENT FOR THE EXPERIENCE OFFER
@@ -489,16 +507,17 @@ And: After OFFER VALIDATONs PROCESS BY SUPPORT ( ADMINSTRARION DASHBOARD)
 And: Therfor supoert can change elements of the OFFER before being published.
 
 Scenario 
-LAST BUT NOT THE LEAST
-ORGANIZER NEW NICKNAME REGISRATION
-ORGANIZER EMAIL REGISTRATION 
-ORGANIZER NEW PASSWORD REGISTRATION
-ORGANIZER NEW DESCRIPTION
-I love mountains, and I have climbed myself the highest peaks int the world¨***
-ORGANIZER NEW PICTURE PROFILE 
-System wil add a new ID number for ORGANIZER
-uSER PROFILE AND ORGANIZER ARE SEPARTED 
-
+Feature: NEW INFO FOR ORGAINZER DASHBOARD CREATION 
+Given : INFORMATION FOR NEW EXPERINCE will be added under a unique key ID special FOR OFFERS
+And: System wil add a new ID number for the EXPERIENCES CREATED
+And: To be able to manage DIFERENT OFFERS CREATED AND AVAILABLE AT THE WEBSITE
+Then: ORGANIZER CAN ADD NOW A DIFFERENT EMAIL EMAIL ACCOUNT FOR NOTIFICATIONS (Corporate one) 
+And:add NEW PASSWORD TO ACCESS AS ORGANIZER TO ITS DASHBOAR AND PROFILE 
+And:NEW DESCRIPTION AS ORGANIZER FOR EXPERIENCES CREATED
+And: Self Brief description and motivation to creat the EXPERIENCE 200 characters
+Example : I love mountains, and I have climbed myself the highest peaks int the world , so I will love to teach peolple about it¨***
+And: ORGANIZER NEW PICTURE PROFILE can be updated at NEW ORGANIZER DASHBOARD
+Then: USER PROFILE will have a differnt ID FORM ORGANIZER AT DATABASE.
 
 ORGANIZER CANCELATION POLICY
 Then: For organizer It will be 3 days for WEATHER DEPINGING ACTIVITIES
@@ -520,6 +539,9 @@ Given: Trip activity organizer wants to stay always on the safe side
 Then: User can PLAN AND LUNCH OFFER that need to meet certain criteria to be validated 
 Then: Organizer can determine minimun number of booking for its validation before 30 DAYS
 And: Users can also estabilsh a maximum Deposit of 25% from total activity cost.
+
+Secenario
+Feature: PROGRESIVE PAYMENT POLICY FOR USER AND ORGANIZER EXPERIENCE VALIDATION.
 then: BOOKING 46 Days or more before date of departure: 25% of total cost can be charged.
 And: 45 - 30 Days before date of departure: 50% of total cost would be charge.
 And: 30 days before date of departure: 100% of total cost.
@@ -534,17 +556,13 @@ Less than 7 days before departure: 50% of total cost
 Less than 3 days before departure : 100% of total cost
 
 
-Scedanrio
-Feature: EXPERIENCE OFFER SUPPORT FINAL VALIDATION 
+
 And: After validation date has expired
 And: booking requirements had been accomplished
 Then: System will validate activity automatically
 And: Showing ativity at the calendar as confirmed
 Then: System will allows maximun day for cancelation before Activiy takes place 
-Then; CAN BE EXPERIENCES MARKS AS DEPENDING ON WEATHER CONDITION 
-Then: Organizer can click to cancel experience due to  bad weather condition 3 days in advance.
-And: Due to wather conditions prevously established at CANCELATION POLICY
-And: also Major cause EVENT will be well discribed.
+
 
 
 4.10 Scenario 
@@ -577,14 +595,14 @@ And: New Payment method has been updated
 Feature: ORGANIZER  NEW PROFILE
 Given: OFFER EXPERIENCE VALIDATION 
 Then: ORGANIZER PROFILE WILL BE UPDATE WHEN FIRST ACTIVITY RECOREDED
-Then: NEW FIELDS WILL BE ADDED TO  BASIC USER PROFILE creating the ORGANIZER PROFILE 
+Then: NEW FIELDS WILL BE ADDED TO  BASIC USER PROFILE creating the ORGANIZER DASHBOARD
 And:IN ORDER TO allow ORGANIZER PROFILE FUNCTIONALIES
 
 5. Scenario
 Feature: ORGANIZER NOW PUBLIC PROFILE 
 Given: USERS CAN HAVE ACCESS NOW TO ORGANIZER PUBLIC PROFILE 
 aND: BY CLICKING AT ACTIVITY OFFER CREATED the ORGANIZER picturE
-Then: USER gets access to A LIST OF ACTIVITIES AVAILBLE FORM ORGANIZER. 
+Then: USER gets access to THE LIST OF ACTIVITIES AVAILBLE FORM ORGANIZER. 
 And: USER Select actvity from ORGANIZER porfile NEW LIST
 then: Click on the ACTIVITY LIST to question about any of them.
 Than : A DIALOG box will opens with curent EXPERIENCE subject.
@@ -594,10 +612,10 @@ Then: message will be sent to Organizer inbox
 And: Organizer can replay when available
 And : In case both are connected on line
 Then : They can chat real time at dialog box 
+And: it will show TIME ZONE FORM EACH OF THEM
 Then: User clicks reviews for activity selected
 Then: User clicks review from organizer.
 And: Check SPORTs knowlage and experience
-Ansd Self Brief description  200 characters
 And: Lenguages skills
 Then: Information get registred at database
 
