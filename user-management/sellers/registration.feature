@@ -49,29 +49,6 @@ Feature: User registration
             | 123456   |
 
 
-        1.2 Scenario: 
-        Given: VISITOR wants to become a NEW USER clicks SIGN UP.
-        And: After NEW USER REGISTRATION PROCESS has finished. 
-        Then: USER DASHBOARD WILL BE CREATED.
-        And : Database will register a unique key FOR ID USER.
-        Then: FROM USER DASHBOARD users can ADD AN EXPERIENCE.
-        And: (*) BUTTON WILL BE ENABLE AT USER DASHBOARD BY ADMIN/SUPPORT.
-        Then: USER can press the button at DASHBOARD TO ADD A NEW EXPERIENCE.
-        And: During NEW EXPERIENCE registration 
-        Then: New ORGANIZER DASHBOARD WILL BE CREATED 
-        Then: ORGANIZER will provide a NEW E.MAIL ACCOUNT*
-        And: Can change NICK/NAME
-        And: GET A NEW PASSWORD AS ORGANIZER 
-        And: NEW BRIEF DESCRIPTION AS ORGANIZER 
-        Then: Once new EXPERIENCE OFFER REGISTRATION has finished
-        And: System will create ALSO THE ORGANIZER DASHBOARD
-        And : System will register a unique key ID NEW ORGANIZER at Database 
-        Then: Once ADMINISTRATION HAS VALIDATE EXPERIENCE OFFER 
-        Then : System will register a unique key ID for OFFER EXPERIENCE VALIDATED at Database 
-        Then: Next time visiting the WEBSITE can LOG IN AS A USER OR AS AN ORGANIZER
-        Then: IT will depend which email account and passwords uses to access.
-        *** check possibility to keep same email with different password***
-
     2.3 Scenario
 Feature: FAVORITE SPORT REGISTRATION
     Then: User click on BY 5 ELEMENT ACTIVITIES DROPLIST.
