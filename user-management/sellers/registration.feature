@@ -3,11 +3,6 @@ Feature: User registration
     I want to register
     so that I can join activities
 
-1. Scenario: 
-Given:  Account already exists
-Then: USER click to LOG IN
-Then:  Users get to the already existing USER DASHBOARD.
-
 1.2 Scenario: 
 Given: VISITOR wants to become a NEW USER clicks SIGN UP.
 And: After NEW USER REGISTRATION PROCESS has finished. 
