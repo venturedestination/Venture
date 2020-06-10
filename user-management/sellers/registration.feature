@@ -17,6 +17,12 @@ Feature: User registration
         Then I get to my dashboard
         And I receive an email confirming my registration in testuser@gmail.com
 
+    Scenario: User name already exists
+        Given the user name jackie.chan is already registered
+        And I am in the registration form
+        When I type jackie.chan in the user name field
+        Then I get a user name already registered error
+
 1.2 Scenario: 
 Given: VISITOR wants to become a NEW USER clicks SIGN UP.
 And: After NEW USER REGISTRATION PROCESS has finished. 
@@ -39,17 +45,6 @@ Then : System will register a unique key ID for OFFER EXPERIENCE VALIDATED at Da
 Then: Next time visiting the WEBSITE can LOG IN AS A USER OR AS AN ORGANIZER
 Then: IT will depend which email account and passwords uses to access.
 *** check possibility to keep same email with different password***
-
-2. Scenario
-Given: User clicks SIGN UP.
-Then: User clicks in the gap to fill in NAME/NICK (Limited characters).
-Then: System compare it with database nicknames.
-And: System will create a unique key ID for each user in the database.
-And if NAME does already exist at database registrations.
-Then: system places a red tick at the gap.
-And: shows alternatives for similar Names/Nicks available at database.
-And: if the user selects the correct not yet existing database Name/Nick.
-Then: System places a green tick at the name gap .
 
 2.1 Scenario
 Given: USER EMAIL REGISTRATION. 
