@@ -1,39 +1,46 @@
-Feature:
-Given: Registerry AS SELLER
-Then you can find it at MY ACCOUNT, USER PROFILE 
-As a registered Seller 
-I want to log in as a Seller
-So that I can manage or creat my new activities
+Feature: Seller log in
+    As a seller
+    I want to log in
+    So that I can manage my activities.
 
-Scenario: Successful log in
-Given I am in the log in screen
-When I type my user name properly
-And I type my password properly
-And I click log in
-Then I get to my account screen
+    Scenario Outline: Successful log in
+        Given I am in the log in screen
+        And I am registered with user name <user>
+        And my password is <password>
+        When I type <user> in the user name field
+        And I type <password> in the password field
+        And I click log in
+        Then I get to my account screen
 
-Scenario: Wrong user name
-Given I am in the log in screen
-When I misstype my user name
-And I type my password properly
-And I click log in
+        Examples:
+            | user | password |
+            | test | abc123   |
+            | user | pass70   |
 
-Scenario: User is already logged at My seller Account 
-Given I can see my Seller control Panel
-When 
-And 
-And 
+    Scenario Outline: Wrong user name
+        Given I am in the log in screen
+        And I am registered with user name <username>
+        And my password is <password>
+        When I type <typed-username> in the user name field
+        And I type <password> in the password field
+        And I click log in
+        Then I get a wrong user name or password error
 
-Scenario: Succesfull log in already at seller panel
-Given I am in the seller panel now , 
-When I click in Add tour / creat a new activity 
-And formulario opens with infrormation require to be filled
-And information to be filled 10 fileds, instruction info  
-And 
-Then 
+        Examples:
+            |     username    | password  | typed-username  |
+            | testuser        | pass12    | user            |
+            | peter.porker    | sp1d3rh4m | peter.parker    |
 
-Scenario: Wrong user name
-Given 
-When 
-And 
-And 
+    Scenario Outline: Wrong password
+        Given I am in the log in screen
+        And I am registered with user name <username>
+        And my password is <password>
+        When I type <username> in the user name field
+        And I type <typed-password> in the password field
+        And I click log in
+        Then I get a wrong user name or password error
+
+        Examples:
+            |    username   | password  |  typed-password  |
+            | test.user     | p4nd3m1c  | p4r4n014         |
+            | vim-user      | t3st123   | test124          |
