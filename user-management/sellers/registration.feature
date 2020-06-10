@@ -3,6 +3,20 @@ Feature: User registration
     I want to register
     so that I can join activities
 
+    Scenario: Successful registration
+        Given I am not a registered user
+        And I am in the registration form
+        And the user name testuser is available
+        When I type testuser in the user name field
+        And I type password in the password field
+        And I type password in the repeat password field
+        And I type testuser@gmail.com in the email field
+        And I type Test in the first name field
+        And I type User in the last name field
+        And I click in register
+        Then I get to my dashboard
+        And I receive an email confirming my registration in testuser@gmail.com
+
 1.2 Scenario: 
 Given: VISITOR wants to become a NEW USER clicks SIGN UP.
 And: After NEW USER REGISTRATION PROCESS has finished. 
