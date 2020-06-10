@@ -34,6 +34,20 @@ Feature: User registration
             | lol.com      |
             | false@google |
 
+    Scenario Outline: User password does not meet the requirements
+        Given I am in the registration form
+        When I type <password> in the password field
+        Then I get invalid password error
+
+        Examples:
+            | password |
+            | a        |
+            | 1        |
+            | a1       |
+            | lol      |
+            | abcdef   |
+            | 123456   |
+
 
         1.2 Scenario: 
         Given: VISITOR wants to become a NEW USER clicks SIGN UP.
@@ -57,22 +71,6 @@ Feature: User registration
         Then: Next time visiting the WEBSITE can LOG IN AS A USER OR AS AN ORGANIZER
         Then: IT will depend which email account and passwords uses to access.
         *** check possibility to keep same email with different password***
-
-        2.2 Scenario
-Feature: USER PASSWORD REGISTRATION.
-    Given: System Passwords will require 6 alphanumeric characters. 
-    Then: User clicks in the gap. 
-    And: fills in the new PASSWORD According System requirements.
-    Then: System recognizes the correct PASSWORD characteristics.
-    And: places a green tick at the gap.
-    Then: System recorded  NEW PASSWORD at database.
-    Then: User now fill in the CONFIRM NEW PASSWORD gap .
-    Then: System check confirmation PASSWORDS matches database. 
-    And: If it does not match the database.
-    Then: system place a red tick at the gap 
-    And: ask to repeat till both passwords match.
-    Then: User finally types the matching password.
-    Then: System places a green tick at the gap.
 
     2.3 Scenario
 Feature: FAVORITE SPORT REGISTRATION
