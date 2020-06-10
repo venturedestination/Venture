@@ -58,16 +58,6 @@ Feature: User registration
         Then: IT will depend which email account and passwords uses to access.
         *** check possibility to keep same email with different password***
 
-        2.1 Scenario
-        Given: USER EMAIL REGISTRATION. 
-        Then: User click fill in e.mail with valid email account.
-        Then: System recognizes valid mail characteristics.
-        Then: example : user@domain.extension. 
-        And: when valid e.mail is recognized.
-        Then: System places a green tick at the gap.
-        And: when INvalid e.mail is recognized.
-        Then: system places a red tick in the gap.
-
         2.2 Scenario
 Feature: USER PASSWORD REGISTRATION.
     Given: System Passwords will require 6 alphanumeric characters. 
