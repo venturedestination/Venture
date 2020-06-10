@@ -1,3 +1,8 @@
+Feature: User registration
+    As a non-registered user
+    I want to register
+    so that I can join activities
+
 1. Scenario: 
 Given:  Account already exists
 Then: USER click to LOG IN
@@ -27,7 +32,6 @@ Then: IT will depend which email account and passwords uses to access.
 *** check possibility to keep same email with different password***
 
 2. Scenario
-Feature: USER REGISTRATION.
 Given: User clicks SIGN UP.
 Then: User clicks in the gap to fill in NAME/NICK (Limited characters).
 Then: System compare it with database nicknames.
