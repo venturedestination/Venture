@@ -15,7 +15,7 @@ Feature: Seller log in
         Examples:
             | user | password |
             | test | abc123   |
-            | user | pass70   |
+            | paco | pass70   |
 
     Scenario Outline: Wrong user name
         Given I am in the log in screen
