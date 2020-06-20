@@ -15,6 +15,47 @@ Feature: Traveller registration
         And I type "I like hiking and climbing" in the public description field
         And I select a profile picture
         And I select British English as my language preference
+        And I set "Manila" as a preferred location
+        And I set "Tokyo" as a preferred location
+        And I set "Philadelphia" as a preferred location
+        And I set "Parachuting" as my favourite air activity
+        And I set "Hiking" as my favourite land activity
+        And I set "Surfing" as my favourite water activity
+        And I set "Chess" as my favourite mind activity
+        And I rate Outdoor sports and sightseeing as 100%
+        And I rate Mind activities as 50%
+        And I rate Cultural activites as 65%
+        And I set my birthdate to 15/08/1990
+        And I click in register
+        Then I get to my dashboard
+        And I receive an email confirming my registration in testuser@gmail.com
+
+    Scenario: Successful registration with custom favourite sport
+        Given I am in the registration form 
+        And the user name test user is available
+        And I cannot find "Kite surf" in the list of favourite sports
+        When I type test user in the user name field
+        And I type password in the password field
+        And I type password in the repeat password field
+        And I type testuser@gmail.com in the email field
+        And I type Test in the first name field
+        And I type User in the last name field
+        And I type "I like hiking and climbing" in the public description field
+        And I select a profile picture
+        And I select Castillian Spanish as my language preference
+        And I set my birthdate to 15/08/1990
+        And I rate Outdoor sports and sightseeing as 100%
+        And I rate Mind activities as 50%
+        And I rate Cultural activites as 65%
+        And I set "Manila" as a preferred location
+        And I set "Tokyo" as a preferred location
+        And I set "Philadelphia" as a preferred location
+        And I set "Parachuting" as my favourite air activity
+        And I set "Hiking" as my favourite land activity
+        And I set "Chess" as my favourite mind activity
+        And I set "New Sport" as my favourite water activity
+        And I type "Kite Surf" in the new sport name field
+        And I click in Confirm
         And I click in register
         Then I get to my dashboard
         And I receive an email confirming my registration in testuser@gmail.com
@@ -64,81 +105,4 @@ Feature: Traveller registration
         When: I click in the link for email confirmation. 
         Then: System redirects me back to www.venturedestination.com 
         And: I now, can have access, to my Traveller profile.
-
-
-
-Feature: traveller registration
-    As a non-registered user
-    I want to register my Favourite & favourites Sport during registration.
-    So that I can be offered with best experiences according my favourite Sports.
-
-    Scenario:
-        Given: I am in the traveller registration.
-        When: I select land activities in favourite sports
-        And: I select water activities in favourite sports
-        And: I select air activities in favourite sports
-        And: I select mind activities in favourite sports
-        Then: I chose my favourite one from all favourite sport chosen above.
-        Then: I get a confirmation that my favourite sports and favourites registration have been set
-
-
-    Scenario Outline: If my favourite sport is not in the list.
-        Given I am in the registration form 
-        And: I cannot find my favourite sport in the list
-        Then: I click to add a new Sport to the list
-        Then: I choose the element category from water, air, land or mind I sport belongs to.
-        When: I type the new favourite sport at the field.
-        Then: I Press submit proposal for its inclusion in the sport list.
-        And: As long as I choose any sport form the list
-        Then: I get a confirmation that my favourite sports and favourites registration have been set
-
-Feature: traveller registration
-    As a non-registered user
-    I want to register my destination preferences 
-    so that I can be offered with best experiences available accordingly 
-
-    Scenario
-    Given I am in the registration form 
-    And: I want to register my preferences
-    Then: I choose my 3 current favourite destination 
-    Then: I get asked which three locations in the world I like to visit the most currently. 
-    Then: I click 3 locations from the map 
-    And: I get a confirmation that my destination preferences have been set
-
-
-Feature: traveller registration
-    As a non-registered user
-    I want to register my travel spending time preferences 
-    So that I can be offered with best experiences available accordingly 
-
-    Scenario:
-        Given I am in the registration form 
-        Then: System provide with 3 categories to be rated
-        And: I click my travel spending time preferences out of 100%
-        Then: I add my favourite % travel time dedicated to category 1 (Outdoor Sport or Nature or Landscapes or Sightseeing).
-        Then: I add favourite % time travel dedicated to category 2 (Relax or free time or Mind Activities)  
-        And: I add favourite % time travel dedicated to category 3 (People or Culture or Music & Gastronomy).
-        Example: (Nature & sports 40% and Relax 30% and culture 30% of the time (=100%)
-        And: I get a confirmation that my travel preferences have been set
-
-Feature: User registration
-    As a non-registered user
-    I want to register my physical activity demanding preferences for Experience 
-    so that I can be offered with the most suitable experiences available accordingly 
-
-    Scenario
-    Given I am in the registration form 
-    Then: I want to register my physical demanding preferences for the activity/Experience. 
-    Then: I get asked for my physical demand preference
-    And: If I look for High Demanding physical activity experience.
-    Then: I choose preferably Demanding experiences
-    Then: If my physical commitment is medium.
-    Then: I chose preferably physical activity regular Demanding experiences
-    And: If I am not looking for physical demanding activities.
-    Then: I choose preferably not demanding activities.
-    Then: I select my year of birth. 
-    And: I push submit information
-    And: System records traveller physical experiences preferences & age
-    And: I get a confirmation that my physical activity preferences for the experiences has been set
-    (example:USER1= Not demanding activities, from year 1981)
 
