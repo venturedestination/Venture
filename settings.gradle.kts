@@ -8,3 +8,5 @@
  */
 
 rootProject.name = "Venture"
+
+include(":core")
