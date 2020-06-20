@@ -9,4 +9,4 @@
 
 rootProject.name = "Venture"
 
-include(":core")
+include(":core", ":acceptance")
