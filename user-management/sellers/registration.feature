@@ -90,19 +90,3 @@ Feature: Traveller registration
             | lol      |
             | abcdef   |
             | 123456   |
-
-    Scenario Outline: Unsuccessful registration
-        Given: I am in the registration form.
-        And: I try to submit already complimented registration from 
-        And: There is still any gap not completed yet or incorrect.
-        Then System will redirect me to gap failed 
-        And: in order to be filled properly
-        Then: I place correct info, 
-        When: I see all in order
-        Then: I submit registration form
-        Then: E-mail it is setn to my personal email personal accoount provided.
-        And: I Received a message at my personal account. 
-        When: I click in the link for email confirmation. 
-        Then: System redirects me back to www.venturedestination.com 
-        And: I now, can have access, to my Traveller profile.
-
