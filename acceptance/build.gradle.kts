@@ -4,6 +4,6 @@ plugins {
 
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
-    testImplementation("io.cucumber:cucumber-java8:2.3.1")
-    testImplementation("io.cucumber:cucumber-junit:2.3.1")
+    testImplementation("io.cucumber:cucumber-java8:6.1.1")
+    testImplementation("io.cucumber:cucumber-junit:6.1.1")
 }
