@@ -49,6 +49,7 @@ jobs:
     - uses: ashley-taylor/junit-report-annotations-action@master
       with:
         access-token: ${{ secrets.GITHUB_TOKEN }}
+        path: 'acceptance/test-results/test/*.xml'
         if: always()
 
     # Runs a set of commands using the runners shell
