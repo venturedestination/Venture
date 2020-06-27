@@ -26,7 +26,7 @@ jobs:
       run: chmod +x ./gradlew
 
     - name: Build acceptance tests
-      run: ./gradlew acceptance:build
+      run: ./gradlew acceptance:build -x test
 
   test:
     runs-on: ubuntu-latest
