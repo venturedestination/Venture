@@ -114,7 +114,6 @@ class StepDefinitions : En {
         }
 
         Then("I get a confirmation that my profile picture has been set") {
-            throw Exception("This pipeline will fail")
         }
     }
 }
