@@ -46,8 +46,9 @@ jobs:
 
     - name: Run Acceptance Tests
       run: ./gradlew acceptance:build
+
     - name: Publish Acceptance Tests Report
-    - uses: ashley-taylor/junit-report-annotations-action@master
+      uses: ashley-taylor/junit-report-annotations-action@master
       with:
         access-token: ${{ secrets.GITHUB_TOKEN }}
         path: 'acceptance/build/test-results/test/*.xml'
