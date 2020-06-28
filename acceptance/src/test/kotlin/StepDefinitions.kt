@@ -29,6 +29,27 @@ class StepDefinitions : En {
         Given("I am in the update profile screen") {
         }
 
+        Given("I am not registered as an organizer") {
+        }
+
+        Given("I am in the organizer registration screen") {
+        }
+
+        Given("^the location at (\\d{1,3}.\\d{1,3}.\\d{1,3}.(N|S)) and (\\d{1,3}.\\d{1,3}.\\d{1,3}.(W|E)) is a favourite location for (.+)$") { latitude: String, longitude: String, userName: String ->
+        }
+
+        Given("^the location at (\\d{1,3}.\\d{1,3}.\\d{1,3}.(N|S)) and (\\d{1,3}.\\d{1,3}.\\d{1,3}.(W|E)) is not a favourite location for (.+)$") { latitude: String, longitude: String, userName: String ->
+        }
+
+        Given("^(.+) is not set as a favourite activity for (.+)$") { activity: String, user: String ->
+        }
+
+        Given("^(.+) is not registered as an option for favourite activity$") { activity: String ->
+        }
+
+        Given("^my percentage for (.+) activities is set to (\\d{1,3})$") { activityType: String, percent: Int ->
+        }
+
         When("^I type (\\S+) in the password field$") { typedPassword: String ->
         }
 
@@ -77,6 +98,9 @@ class StepDefinitions : En {
         When("I click in register") {
         }
 
+        When("I click Register Organizer") {
+        }
+
         When("I click in Confirm") {
         }
 
@@ -87,6 +111,33 @@ class StepDefinitions : En {
         }
 
         When("I select a picture") {
+        }
+
+        When("^I click in the location at (\\d{1,3}.\\d{1,3}.\\d{1,3}.(N|S)) and (\\d{1,3}.\\d{1,3}.\\d{1,3}.(W|E)) in the location map$") { latitude: String, longitude: String ->
+        }
+
+        When("I click in update profile") {
+        }
+
+        When("^I check (.+) as a favourite activity$") { activity: String ->
+        }
+
+        When("I click in add new favourite activity") {
+        }
+
+        When("^I type (.+) in the activity name$") { activity: String ->
+        }
+
+        When("^I choose (.+) as the activity category$") { category: String ->
+        }
+
+        When("I click add new activity") {
+        }
+
+        When("^I choose (\\d{1,3}) percent for (.+)$") { percent: Int, aspect: String ->
+        }
+
+        When("^I type (\\d{1,3}) in the (.+) percentage field$") { percent: Int, activityType: String ->
         }
 
         Then("I get to my account screen") {
@@ -114,6 +165,27 @@ class StepDefinitions : En {
         }
 
         Then("I get a confirmation that my profile picture has been set") {
+        }
+
+        Then("I get a passwords do not match error") {
+        }
+
+        Then("I get a successful registration confirmation") {
+        }
+
+        Then("^the location at (\\d{1,3}.\\d{1,3}.\\d{1,3}.(N|S)) and (\\d{1,3}.\\d{1,3}.\\d{1,3}.(W|E)) is (set|unset) as favourite location for (.+)$") { latitude: String, longitude: String, op: String, user: String ->
+        }
+
+        Then("^(.+) is set as a favourite activity for (.+)$") { activity: String, user: String ->
+        }
+
+        Then("^(.+) is created in the system$") { activity: String ->
+        }
+
+        Then("my activity aspects are updated") {
+        }
+
+        Then("^the value for (.+) activities is set to (\\d{1,3})$") { activityType: String, percent: Int ->
         }
     }
 }

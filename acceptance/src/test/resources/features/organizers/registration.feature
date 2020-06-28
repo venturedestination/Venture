@@ -16,7 +16,7 @@ Feature: Organizer registration
         And I type <password> in the repeat password field
         And I type <first-name> in the first name field
         And I type <last-name> in the last name field
-        And I choose <language> as my preferred language
+        And I select <language> as my language preference
         And I click Register Organizer
         Then I get a successful registration confirmation
 
@@ -39,8 +39,9 @@ Feature: Organizer registration
 
     Scenario Outline: Password doesn't meet the criteria
         When I type <password> in the password field
-        Then I get a password doesn't meet the criteria error
+        Then I get invalid password error
 
+        Examples:
             | password    |
             | n           |
             | 1           |
@@ -60,9 +61,9 @@ Feature: Organizer registration
             | p0rkb3lly     | porkb3lly           |
 
     Scenario Outline: User name already exist
-        Given <username> is an already registered username
+        Given the user name <username> is already registered 
         When I type <username> in the user name field
-        Then I get an already registered username error
+        Then I get a user name already registered error
 
         Examples:
             |  username |

@@ -17,6 +17,7 @@ Feature: Update traveller profile
         And I am logged in as <user>
         And I am in the update profile screen
         When I choose <demanding> activities
+        And I click in update profile
         Then my preference for <demanding> activities is set
 
         Examples:
@@ -37,7 +38,7 @@ Feature: Update traveller profile
         Examples:
             | user        | latitude    | longitude    |
             | bumbury1    | 14°35′45″N  | 120°58′38″E  | # Manila
-            | boomer.life | 37.39°N     | 5.99°W       | # Seville 
+            | boomer.life | 37°23′24″N  | 5°59′24″W    | # Seville 
 
     Scenario Outline: Remove favourite locations
         Given <user> is a traveller
@@ -50,7 +51,7 @@ Feature: Update traveller profile
         Examples:
             | user        | latitude    | longitude    |
             | bumbury1    | 14°35′45″N  | 120°58′38″E  | # Manila
-            | boomer.life | 37.39°N     | 5.99°W       | # Seville 
+            | boomer.life | 37°23′24″N  | 5°59′24″W    | # Seville 
 
     Scenario: Set favourite activities
         Given <user> is a traveller
@@ -137,7 +138,7 @@ Feature: Update traveller profile
         When I choose <nature> percent for Nature & Sport
         And I choose <free-time> percent for Free time
         And I choose <culture> percent for culture
-        And I click on update profile
+        And I click in update profile
         Then my activity aspects are updated
 
         Examples:
