@@ -12,7 +12,7 @@ Feature: Update traveller profile
         Then I get a confirmation that my profile picture has been set
 
 
-    Scenario Outline: Set physical activity preferences
+    Scenario Outline: Set physical demand preferences
         Given <user> is a traveller
         And I am logged in as <user>
         And I am in the update profile screen
@@ -25,3 +25,122 @@ Feature: Update traveller profile
             | lazy.loader   | Low demanding    |
             | test.user     | Medium demanding |
             | fitness.freak | High demanding   |
+
+    Scenario Outline: Set favourite locations
+        Given <user> is a traveller
+        And the location at <latitude> and <longitude> is not a favourite location for <user>
+        And I am logged in as <user>
+        When I click in the location at <latitude> and <longitude> in the location map
+        And I click in update profile
+        Then the location at <latitude> and <longitude> is set as favourite location for <user>
+
+        Examples:
+            | user        | latitude    | longitude    |
+            | bumbury1    | 14°35′45″N  | 120°58′38″E  | # Manila
+            | boomer.life | 37.39°N     | 5.99°W       | # Seville 
+
+    Scenario Outline: Remove favourite locations
+        Given <user> is a traveller
+        And the location at <latitude> and <longitude> is a favourite location for <user>
+        And I am logged in as <user>
+        When I click in the location at <latitude> and <longitude> in the location map
+        And I click in update profile
+        Then the location at <latitude> and <longitude> is unset as favourite location for <user>
+
+        Examples:
+            | user        | latitude    | longitude    |
+            | bumbury1    | 14°35′45″N  | 120°58′38″E  | # Manila
+            | boomer.life | 37.39°N     | 5.99°W       | # Seville 
+
+    Scenario: Set favourite activities
+        Given <user> is a traveller
+        And <activity> is not set as a favourite activity for <user>
+        And I am logged in as <user>
+        And I am in the update profile screen
+        When I check <activity> as a favourite activity
+        And I click in update profile
+        Then <activity> is set as a favourite activity for <user>
+
+        Examples:
+            |  user  |  activity    |
+            | sporty | Kite Surf    |
+            | mind   | Chess        |
+
+    Scenario: Set favourite activity with new activity
+        Given <user> is a traveller
+        And <activity> is not registered as an option for favourite activity
+        And I am logged in as <user>
+        And I am in the update profile screen
+        When I click in add new favourite activity
+        And I type <activity> in the activity name
+        And I choose <category> as the activity category
+        And I click add new activity
+        And I click in update profile
+        Then <activity> is created in the system 
+        And <activity> is set as a favourite activity for <user>
+
+        Examples:
+            |  user  |  activity    | category  |
+            | sporty | Kite Surf    | Water     |
+            | mind   | Chess        | Mind      |
+
+    Scenario Outline: Setting percentage for Nature & Sport activities
+        Given <user> is a traveller
+        And I am logged in as <user>
+        And my percentage for Nature & Sport activities is set to <nature-original>
+        And my percentage for Free time activities is set to <free-time-original>
+        And my percentage for Culture activities is set to <culture-original>
+        When I type <nature-new> in the Nature & Sport percentage field
+        Then the value for Free time activities is set to <free-time-new>
+        And the value for Culture activities is set to <culture-new>
+
+        Examples:
+            | user    | nature-original | free-time-original | culture-original | nature-new | free-time-new | culture-new |
+            | test1   | 33              | 33                 | 34               | 43         | 28            | 29          |
+            | lolious | 60              | 20                 | 20               | 30         | 35            | 35          |
+
+
+    Scenario Outline: Setting percentage for Free time activities
+        Given <user> is a traveller
+        And I am logged in as <user>
+        And my percentage for Nature & Sport activities is set to <nature-original>
+        And my percentage for Free time activities is set to <free-time-original>
+        And my percentage for Culture activities is set to <culture-original>
+        When I type <free-time-new> in the Free time percentage field
+        Then the value for Nature & Sport activities is set to <nature-new>
+        And the value for Culture activities is set to <culture-new>
+
+        Examples:
+            | user    | nature-original | free-time-original | culture-original | nature-new | free-time-new | culture-new |
+            | test1   | 33              | 33                 | 34               | 43         | 28            | 29          |
+            | lolious | 60              | 20                 | 20               | 30         | 35            | 35          |
+
+    Scenario Outline: Setting percentage for Culture activities
+        Given <user> is a traveller
+        And I am logged in as <user>
+        And my percentage for Nature & Sport activities is set to <nature-original>
+        And my percentage for Free time activities is set to <free-time-original>
+        And my percentage for Culture activities is set to <culture-original>
+        When I type <culture-new> in the Culture percentage field
+        Then the value for Nature & Sport activities is set to <nature-new>
+        And the value for Free time activities is set to <free-time-new>
+
+        Examples:
+            | user    | nature-original | free-time-original | culture-original | nature-new | free-time-new | culture-new |
+            | test1   | 33              | 33                 | 34               | 43         | 28            | 29          |
+            | lolious | 60              | 20                 | 20               | 30         | 35            | 35          |
+        
+    Scenario Outline: Set percentages of activity aspects
+        Given <user> is a traveller
+        And I am logged in as <user>
+        And I am in the update profile screen
+        When I choose <nature> percent for Nature & Sport
+        And I choose <free-time> percent for Free time
+        And I choose <culture> percent for culture
+        And I click on update profile
+        Then my activity aspects are updated
+
+        Examples:
+            |  user          | nature | free-time | culture |
+            | test.user      | 40     | 50        | 10      |
+            | user2          | 35     | 20        | 45      |
