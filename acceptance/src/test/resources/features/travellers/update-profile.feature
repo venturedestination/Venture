@@ -145,3 +145,30 @@ Feature: Update traveller profile
             |  user          | nature | free-time | culture |
             | test.user      | 40     | 50        | 10      |
             | user2          | 35     | 20        | 45      |
+
+    Scenario Outline: Setting public profile properly
+        Given <user> is a traveller
+        And I am logged in as <user>
+        And I am in the update profile screen
+        When I type <profile> in the profile field
+        And I click in update profile
+        Then my profile gets updated to <profile>
+
+        Examples:
+            |   user   | profile           |
+            | test.user| Test              |
+            | rob      | This is who I am  |
+
+    Scenario Outline: Setting a public profile longer than 200 characters
+        Given <user> is a traveller
+        And I am logged in as <user>
+        And I am in the update profile screen
+        When I type <profile> in the profile field
+        And I click in update profile
+        Then I get a profile too long error
+
+        Examples:
+            | user       | profile                                                                                                                                                                                                                                                                                                                                                                                                        |  
+            | test.user  | T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T| 
+
+        
