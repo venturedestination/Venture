@@ -140,6 +140,9 @@ class StepDefinitions : En {
         When("^I type (\\d{1,3}) in the (.+) percentage field$") { percent: Int, activityType: String ->
         }
 
+        When("^I type (.+) in the profile field") { profile: String ->
+        }
+
         Then("I get to my account screen") {
         }
 
@@ -186,6 +189,12 @@ class StepDefinitions : En {
         }
 
         Then("^the value for (.+) activities is set to (\\d{1,3})$") { activityType: String, percent: Int ->
+        }
+
+        Then ("^my profile gets updated to (.+)$") { profile: String ->
+        }
+
+        Then("I get a profile too long error") {
         }
     }
 }
