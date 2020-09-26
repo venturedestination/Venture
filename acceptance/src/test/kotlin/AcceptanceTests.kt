@@ -20,5 +20,5 @@ import org.junit.runner.RunWith
 @RunWith(Cucumber::class)
 @CucumberOptions(
     features = ["src/test/resources/features"],
-    tags = "not @ignored")
+    tags = "@implemented and not @ignored")
 class AcceptanceTests
